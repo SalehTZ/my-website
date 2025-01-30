@@ -1,0 +1,178 @@
+{
+  "name": "adritian-icons",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "22cf3e1e61eb72f5709bdd9ba87fb460",
+      "css": "threads",
+      "code": 59392,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "f17c7d2c6d0538532c9b1bfe27bc6086",
+      "css": "bluesky",
+      "code": 59393,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "7bd660dcae7933286cc6cd48008a350f",
+      "css": "x-twitter",
+      "code": 59394,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "78a202510fab97ccf154c90c63017fc7",
+      "css": "square-twitter",
+      "code": 61569,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "80533f94e92fbff05d81c4198edb1f8b",
+      "css": "behance",
+      "code": 61876,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "789b202e8bb7dfd894d7de63433472cc",
+      "css": "dribbble",
+      "code": 61821,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "f9bc495af91e43a90d3ea50a7e951006",
+      "css": "instagram",
+      "code": 61805,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "da346ddd4a063e1059216662e6d0a761",
+      "css": "user",
+      "code": 61447,
+      "src": "fa5solid"
+    },
+    {
+      "uid": "0225237a65185e82049f6cf4af0c0a5f",
+      "css": "face-smile",
+      "code": 61720,
+      "src": "fa6regular"
+    },
+    {
+      "uid": "de7a531bc39f744ea8d7dde2bc4cec7d",
+      "css": "youtube",
+      "code": 61799,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "0d6904fd6d71bb15eb031f2a1808383d",
+      "css": "quote-left",
+      "code": 61709,
+      "src": "fa6solid"
+    },
+    {
+      "uid": "a58032f4aafd0eec54803075f5b320d4",
+      "css": "email",
+      "code": 59395,
+      "src": "zocial"
+    },
+    {
+      "uid": "e812a789980550da24341fcbb4e52a52",
+      "css": "codepen",
+      "code": 61899,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "1b5d1a165d2a0faed2aebda42e980ec4",
+      "css": "square-facebook",
+      "code": 61570,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "4d8f2dbd4bf4f195e759c1121b364c8f",
+      "css": "square-github",
+      "code": 61586,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "91fb752fe999405a8dde5220cfb532a4",
+      "css": "linkedin",
+      "code": 61580,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "682603a472a824287f24a93476cce10c",
+      "css": "yelp",
+      "code": 61929,
+      "src": "fa6brands"
+    },
+    {
+      "uid": "4b1676624d44038d36d33bd538d549fe",
+      "css": "download",
+      "code": 61465,
+      "src": "fa6solid"
+    },
+    {
+      "uid": "1c9c53430169877cd218b79d3b1780bd",
+      "css": "file-pdf",
+      "code": 61889,
+      "src": "fa6solid"
+    },
+    {
+      "uid": "6c1121466423a9681a8408e889f5695d",
+      "css": "circle-arrow-left",
+      "code": 61608,
+      "src": "fa6solid"
+    },
+    {
+      "uid": "919ee1a7ee21d14e4d40122937a33160",
+      "css": "circle-arrow-right",
+      "code": 61609,
+      "src": "fa6solid"
+    },
+    {
+      "uid": "304f96ad84267f3857957b12d15ac009",
+      "css": "circle-arrow-up",
+      "code": 61610,
+      "src": "fa6solid"
+    },
+    {
+      "uid": "c9c307d1fa78fa912df2b7a1c7b1f53b",
+      "css": "circle-arrow-down",
+      "code": 61611,
+      "src": "fa6solid"
+    },
+    {
+      "uid": "6d60d32286fd0fd7967089117ba49da5",
+      "css": "cloud-arrow-down",
+      "code": 62337,
+      "src": "fa6solid"
+    },
+    {
+      "uid": "14fb7c860f56db56ef65c1d41a31488d",
+      "css": "square-arrow-up-right",
+      "code": 61772,
+      "src": "fa6solid"
+    },
+    {
+      "uid": "89815b2565674eb5018b3bd9b07b12d4",
+      "css": "circle-info",
+      "code": 61530,
+      "src": "fa6solid"
+    },
+    {
+      "uid": "dcf0306d04831e66595e9ff59f9f95c7",
+      "css": "table-list",
+      "code": 61451,
+      "src": "fa6solid"
+    },
+    {
+      "uid": "4bef0175d5b8f8b2a32bfeddf99621b5",
+      "css": "square-xing",
+      "code": 61801,
+      "src": "fa6brands"
+    }
+  ]
+}
