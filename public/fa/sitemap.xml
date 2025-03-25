@@ -2,6 +2,42 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
+            <loc>http://localhost:1313/fa/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://localhost:1313/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fa"
+                    href="http://localhost:1313/fa/"
+                    /></url><url>
+            <loc>http://localhost:1313/fa/posts/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://localhost:1313/posts/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fa"
+                    href="http://localhost:1313/fa/posts/"
+                    /></url><url>
+            <loc>http://localhost:1313/fa/first_post/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://localhost:1313/first_post/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fa"
+                    href="http://localhost:1313/fa/first_post/"
+                    /></url><url>
+            <loc>http://localhost:1313/fa/about/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://localhost:1313/about/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fa"
+                    href="http://localhost:1313/fa/about/"
+                    /></url><url>
             <loc>http://localhost:1313/fa/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
@@ -11,15 +47,6 @@
                     hreflang="fa"
                     href="http://localhost:1313/fa/categories/"
                     /></url><url>
-            <loc>http://localhost:1313/fa/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="en"
-                        href="http://localhost:1313/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="fa"
-                    href="http://localhost:1313/fa/"
-                    /></url><url>
             <loc>http://localhost:1313/fa/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
@@ -28,4 +55,23 @@
                     rel="alternate"
                     hreflang="fa"
                     href="http://localhost:1313/fa/tags/"
+                    /></url><url>
+            <loc>http://localhost:1313/fa/categories/documentation/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://localhost:1313/categories/documentation/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fa"
+                    href="http://localhost:1313/fa/categories/documentation/"
+                    /></url><url>
+            <loc>http://localhost:1313/fa/tags/flutter/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/fa/categories/tipsntricks/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://localhost:1313/categories/tipsntricks/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fa"
+                    href="http://localhost:1313/fa/categories/tipsntricks/"
                     /></url></urlset>

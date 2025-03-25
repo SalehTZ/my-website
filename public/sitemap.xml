@@ -4,12 +4,14 @@
   <sitemap>
     <loc>http://localhost:1313/en/sitemap.xml</loc>
     
-      <lastmod>2025-03-25T09:50:07+03:30</lastmod>
+      <lastmod>2025-03-25T11:56:49+03:30</lastmod>
     
   </sitemap>
   
   <sitemap>
     <loc>http://localhost:1313/fa/sitemap.xml</loc>
+    
+      <lastmod>2025-03-25T11:56:49+03:30</lastmod>
     
   </sitemap>
   

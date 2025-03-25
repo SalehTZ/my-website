@@ -4,7 +4,15 @@
         <link>http://localhost:1313/fa/</link>
         <description>SalehTZ blog and website</description>
         <generator>Hugo -- gohugo.io</generator><language>fa-IR</language><managingEditor>mstalebizadeh@gmail.com (SalehTZ)</managingEditor>
-            <webMaster>mstalebizadeh@gmail.com (SalehTZ)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+            <webMaster>mstalebizadeh@gmail.com (SalehTZ)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 25 Mar 2025 11:56:49 &#43;0330</lastBuildDate>
             <atom:link href="http://localhost:1313/fa/index.xml" rel="self" type="application/rss+xml" />
-        </channel>
+        <item>
+    <title>اولین پست</title>
+    <link>http://localhost:1313/fa/first_post/</link>
+    <pubDate>Tue, 25 Mar 2025 11:56:49 &#43;0330</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/fa/first_post/</guid>
+    <description><![CDATA[]]></description>
+</item>
+</channel>
 </rss>
