@@ -413,7 +413,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         clientSecret = ""
       # Valine comment config (https://github.com/xCss/Valine)
       [params.page.comment.valine]
-        enable = true
+        enable = false
         appId = "QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI"
         appKey = "WBmoGyJtbqUswvfLh6L8iEBr"
         placeholder = ""
@@ -443,14 +443,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         languageCode = ""
       # Telegram comments config (https://comments.app/)
       [params.page.comment.telegram]
-        enable = false
-        siteID = ""
+        enable = true
+        siteID = "0fIzTKbA"
         limit = 5
         height = ""
         color = ""
         colorful = true
-        dislikes = false
-        outlined = false
+        dislikes = true
+        outlined = true
       # Commento comment config (https://commento.io/)
       [params.page.comment.commento]
         enable = false
