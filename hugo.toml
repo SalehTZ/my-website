@@ -88,9 +88,9 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # date format
   dateFormat = "2006-01-02"
   # website title for Open Graph and Twitter Cards
-  title = "LoveIt"
+  title = "SalehTZ"
   # website description for RSS, SEO, Open Graph and Twitter Cards
-  description = "Hugo theme - LoveIt"
+  description = "SalehTZ blog and website"
   # website images for Open Graph and Twitter Cards
   images = ["/logo.png"]
 
@@ -111,7 +111,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # URL of the LOGO
       logo = ""
       # title name
-      name = "LoveIt"
+      name = "SalehTZ"
       # you can add extra information before the name (HTML format is supported), such as icons
       pre = "<i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i>"
       # you can add extra information after the name (HTML format is supported), such as icons
@@ -158,7 +158,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
   # App icon config
   [params.app]
     # optional site title override for the app when added to an iOS home screen or Android launcher
-    title = "LoveIt"
+    title = "SalehTZ"
     # whether to omit favicon resource links
     noFavicon = false
     # modern SVG favicon to use in place of older style .png and .ico files
@@ -220,10 +220,10 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       paginate = 6
   # Social config in home page
   [params.social]
-    GitHub = "github.com/salehtz"
-    Linkedin = "linkedin.com/in/salehtz"
+    GitHub = "salehtz"
+    Linkedin = "salehtz"
     X = ""
-    Instagram = "instagram.com/mrtz.dev"
+    Instagram = "mrtz.dev"
     # Facebook = ""
     Telegram = ""
     # Medium = ""
@@ -710,14 +710,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         name = "Categories"
         url = "/categories/"
         title = ""
-      [[languages.en.menu.main]]
-        weight = 4
-        identifier = "documentation"
-        pre = ""
-        post = ""
-        name = "Docs"
-        url = "/categories/documentation/"
-        title = ""
+      # [[languages.en.menu.main]]
+      #   weight = 4
+      #   identifier = "documentation"
+      #   pre = ""
+      #   post = ""
+      #   name = "Docs"
+      #   url = "/categories/documentation/"
+      #   title = ""
       [[languages.en.menu.main]]
         weight = 5
         identifier = "about"
@@ -726,14 +726,14 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         name = "About"
         url = "/about/"
         title = ""
-      [[languages.en.menu.main]]
-        weight = 6
-        identifier = "github"
-        pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-        post = ""
-        name = ""
-        url = "https://github.com/dillonzq/LoveIt"
-        title = "GitHub"
+      # [[languages.en.menu.main]]
+      #   weight = 6
+      #   identifier = "github"
+      #   pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
+      #   post = ""
+      #   name = ""
+      #   url = "https://github.com/dillonzq/LoveIt"
+      #   title = "GitHub"
     [languages.en.params]
       [languages.en.params.search]
         enable = true
@@ -753,84 +753,85 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         [languages.en.params.home.profile]
           enable = true
           gravatarEmail = ""
-          avatarURL = "/images/avatar.png"
+          avatarURL = "/images/avatar.jpg"
           title = ""
-          subtitle = "A Clean, Elegant but Advanced Hugo Theme"
+          subtitle = "Experienced Flutter Developer"
           typeit = true
           social = true
           disclaimer = ""
       [languages.en.params.social]
-        GitHub = "xxxx"
-        X = "xxxx"
-        Instagram = "xxxx"
-        Facebook = "xxxx"
-        Telegram = "xxxx"
-        Youtubelegacy = "xxxx"
-        HuggingFace = "xxxx"
-        Threads = "xxxx"
-        Phone = "555-555-555"
-        Email = "xxxx@xxxx.com"
+        GitHub = "salehtz"
+        X = "mr_tz_dev"
+        Instagram = "mr_tz.dev"
+        # Facebook = "xxxx"
+        Telegram = "anonytz"
+        # Youtubelegacy = "xxxx"
+        # HuggingFace = "xxxx"
+        # Threads = "xxxx"
+        Phone = "937-351-5600"
+        Email = "mstalebizade@gmail.com"
         RSS = true
-        [languages.en.params.social.Mastodon]
-          id = "@xxxx"
-          prefix = "https://mastodon.technology/"
+        # [languages.en.params.social.Mastodon]
+        #   id = "@xxxx"
+        #   prefix = "https://mastodon.technology/"
 
-  [languages.zh-cn]
+  [languages.fa]
     weight = 2
-    languageCode = "zh-CN"
-    languageName = "简体中文"
-    hasCJKLanguage = true
+    languageCode = "fa-IR"
+    languageName = "فارسی"
+    languageDirection = "rtl"
+    hasCJKLanguage = false
     copyright = "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License."
-    [languages.zh-cn.menu]
-      [[languages.zh-cn.menu.main]]
+    [languages.fa.menu]
+      [[languages.fa.menu.main]]
         weight = 1
         identifier = "posts"
         pre = ""
         post = ""
-        name = "所有文章"
+        name = "پست ها"
         url = "/posts/"
         title = ""
-      [[languages.zh-cn.menu.main]]
+      [[languages.fa.menu.main]]
         weight = 2
         identifier = "tags"
         pre = ""
         post = ""
-        name = "标签"
+        name = "تگ ها"
         url = "/tags/"
         title = ""
-      [[languages.zh-cn.menu.main]]
+      [[languages.fa.menu.main]]
         weight = 3
         identifier = "categories"
         pre = ""
         post = ""
-        name = "分类"
+        name = "دسته بندی ها"
         url = "/categories/"
         title = ""
-      [[languages.zh-cn.menu.main]]
-        weight = 4
-        identifier = "documentation"
-        pre = ""
-        name = "文档"
-        url = "/categories/documentation/"
-        title = ""
-      [[languages.zh-cn.menu.main]]
+      # [[languages.fa.menu.main]]
+      #   weight = 4
+      #   identifier = "documentation"
+      #   pre = ""
+      #   name = "文档"
+      #   url = "/categories/documentation/"
+      #   title = ""
+      [[languages.fa.menu.main]]
         weight = 5
         identifier = "about"
         pre = ""
         post = ""
-        name = "关于"
+        name = "درباره من"
         url = "/about/"
         title = ""
-      [[languages.zh-cn.menu.main]]
-        weight = 6
-        identifier = "github"
-        pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
-        post = ""
-        name = ""
-        url = "https://github.com/dillonzq/LoveIt"
-        title = "GitHub"
-    [languages.zh-cn.params]
-      [languages.zh-cn.params.search]
+      # [[languages.fa.menu.main]]
+      #   weight = 6
+      #   identifier = "github"
+      #   pre = "<i class='fab fa-github fa-fw' aria-hidden='true'></i>"
+      #   post = ""
+      #   name = ""
+      #   url = "https://github.com/dillonzq/LoveIt"
+      #   title = "GitHub"
+    [languages.fa.params]
+      [languages.fa.params.search]
         enable = true
         type = "algolia"
         contentLength = 4000
@@ -839,29 +840,31 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         snippetLength = 50
         highlightTag = "em"
         absoluteURL = false
-        [languages.zh-cn.params.search.algolia]
+        [languages.fa.params.search.algolia]
           index = "index"
           appID = "GZT24PWKNT"
           searchKey = "634ab679e825b815de2663de38908f9d"
-      [languages.zh-cn.params.home]
+      [languages.fa.params.home]
         rss = 10
-        [languages.zh-cn.params.home.profile]
+        [languages.fa.params.home.profile]
           enable = true
           gravatarEmail = ""
-          avatarURL = "/images/avatar.png"
+          avatarURL = "/images/avatar.jpg"
           title = ""
-          subtitle = "一个简洁、优雅且高效的 Hugo 主题"
+          subtitle = "Experienced Flutter Developer"
           typeit = true
           social = true
           disclaimer = ""
-      [languages.zh-cn.params.social]
-        GitHub = "xxxx"
-        Weibo = "xxxx"
-        Steam = "xxxx"
-        Zhihu = "xxxx"
-        Douban = "xxxx"
-        Devto = "xxxx"
-        Bilibili = "xxxx"
-        Email = "xxxx@xxxx.com"
-        Phone = "555-555-555"
+      [languages.fa.params.social]
+        GitHub = "salehtz"
+        # Steam = "MR_TZ"
+        X = "mr_tz_dev"
+        Instagram = "mr_tz.dev"
+        # Facebook = "xxxx"
+        Telegram = "anonytz"
+        # Youtubelegacy = "xxxx"
+        # HuggingFace = "xxxx"
+        # Threads = "xxxx"
+        Phone = "937-351-5600"
+        Email = "mstalebizade@gmail.com"
         RSS = true
