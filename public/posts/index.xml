@@ -1,7 +1,7 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>All Posts - My New Hugo Site</title>
+        <title>All Posts - My Website</title>
         <link>http://localhost:1313/posts/</link>
-        <description>All Posts | My New Hugo Site</description>
+        <description>All Posts | My Website</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Tue, 25 Mar 2025 08:42:45 &#43;0330</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /></channel>
 </rss>

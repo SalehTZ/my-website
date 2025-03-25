@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "http://salehtz.ir/"
 
 
 
@@ -10,7 +10,7 @@ theme = "LoveIt"
 
 # website title
 
-title = "My New Hugo Site"
+title = "My Website"
 
 
 
