@@ -2,3 +2,9 @@
 // Custom style
 // 自定义样式
 // ==============================
+
+html[lang="fa"] {
+    direction: rtl;
+    text-align: start;
+    // Add more RTL-specific styles here
+}
