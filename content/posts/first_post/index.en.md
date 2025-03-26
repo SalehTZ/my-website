@@ -3,7 +3,7 @@ title: "First Post"
 subtitle: ""
 date: 2025-03-25T11:56:49+03:30
 lastmod: 2025-03-25T11:56:49+03:30
-draft: true
+draft: false
 author: ""
 authorLink: ""
 description: ""

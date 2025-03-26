@@ -2,68 +2,68 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://salehtz.ir/</loc><lastmod>2025-03-26T08:46:55&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/</loc><lastmod>2025-03-26T08:46:55&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
-                        href="http://salehtz.ir/fa/"
+                        href="http://localhost:1313/fa/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://salehtz.ir/"
+                    href="http://localhost:1313/"
                     /></url><url>
-            <loc>http://salehtz.ir/posts/</loc><lastmod>2025-03-26T08:46:55&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/posts/</loc><lastmod>2025-03-26T08:46:55&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
-                        href="http://salehtz.ir/fa/posts/"
+                        href="http://localhost:1313/fa/posts/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://salehtz.ir/posts/"
+                    href="http://localhost:1313/posts/"
                     /></url><url>
-            <loc>http://salehtz.ir/about/</loc><lastmod>2025-03-25T12:30:22&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/about/</loc><lastmod>2025-03-25T12:30:22&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
-                        href="http://salehtz.ir/fa/about/"
+                        href="http://localhost:1313/fa/about/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://salehtz.ir/about/"
+                    href="http://localhost:1313/about/"
                     /></url><url>
-            <loc>http://salehtz.ir/categories/</loc><lastmod>2025-03-25T12:30:22&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/categories/</loc><lastmod>2025-03-25T12:30:22&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
-                        href="http://salehtz.ir/fa/categories/"
+                        href="http://localhost:1313/fa/categories/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://salehtz.ir/categories/"
+                    href="http://localhost:1313/categories/"
                     /></url><url>
-            <loc>http://salehtz.ir/categories/documentation/</loc><lastmod>2025-03-25T09:50:07&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/categories/documentation/</loc><lastmod>2025-03-25T09:50:07&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
-                        href="http://salehtz.ir/fa/categories/documentation/"
+                        href="http://localhost:1313/fa/categories/documentation/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://salehtz.ir/categories/documentation/"
+                    href="http://localhost:1313/categories/documentation/"
                     /></url><url>
-            <loc>http://salehtz.ir/tags/</loc><lastmod>2025-03-25T09:50:07&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/tags/</loc><lastmod>2025-03-25T09:50:07&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
-                        href="http://salehtz.ir/fa/tags/"
+                        href="http://localhost:1313/fa/tags/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://salehtz.ir/tags/"
+                    href="http://localhost:1313/tags/"
                     /></url><url>
-            <loc>http://salehtz.ir/categories/tipsntricks/</loc><lastmod>2025-03-25T12:30:22&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/categories/tipsntricks/</loc><lastmod>2025-03-25T12:30:22&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
-                        href="http://salehtz.ir/fa/categories/tipsntricks/"
+                        href="http://localhost:1313/fa/categories/tipsntricks/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://salehtz.ir/categories/tipsntricks/"
+                    href="http://localhost:1313/categories/tipsntricks/"
                     /></url><url>
-            <loc>http://salehtz.ir/tags/content/_index.zh-cn/</loc><lastmod>2025-03-25T09:50:07&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://salehtz.ir/tags/installation/_index.zh-cn/</loc><lastmod>2025-03-25T09:50:07&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>
+            <loc>http://localhost:1313/tags/content/_index.zh-cn/</loc><lastmod>2025-03-25T09:50:07&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/installation/_index.zh-cn/</loc><lastmod>2025-03-25T09:50:07&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>
