@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://localhost:1313/fa/</loc><lastmod>2025-03-26T08:46:55&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/fa/</loc><lastmod>2025-03-26T10:19:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://localhost:1313/"
@@ -11,7 +11,7 @@
                     hreflang="fa"
                     href="http://localhost:1313/fa/"
                     /></url><url>
-            <loc>http://localhost:1313/fa/posts/</loc><lastmod>2025-03-26T08:46:55&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/fa/posts/</loc><lastmod>2025-03-26T10:19:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://localhost:1313/posts/"
@@ -19,6 +19,15 @@
                     rel="alternate"
                     hreflang="fa"
                     href="http://localhost:1313/fa/posts/"
+                    /></url><url>
+            <loc>http://localhost:1313/fa/first_post/</loc><lastmod>2025-03-26T10:19:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://localhost:1313/first_post/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fa"
+                    href="http://localhost:1313/fa/first_post/"
                     /></url><url>
             <loc>http://localhost:1313/fa/about/</loc><lastmod>2025-03-25T12:30:22&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"

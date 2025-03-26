@@ -3,7 +3,8 @@
 // 自定义样式
 // ==============================
 
-html[lang="fa"] {
+html[lang="fa"],
+body.fa {
     direction: rtl;
     text-align: start;
     // Add more RTL-specific styles here

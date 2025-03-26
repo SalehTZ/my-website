@@ -6,5 +6,14 @@
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>mstalebizadeh@gmail.com (SalehTZ)</managingEditor>
             <webMaster>mstalebizadeh@gmail.com (SalehTZ)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 25 Mar 2025 11:56:49 &#43;0330</lastBuildDate>
             <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-        </channel>
+        <item>
+    <title>First Post</title>
+    <link>http://localhost:1313/first_post/</link>
+    <pubDate>Tue, 25 Mar 2025 11:56:49 &#43;0330</pubDate>
+    <author>Author</author>
+    <guid>http://localhost:1313/first_post/</guid>
+    <description><![CDATA[<h1 id="welcome-to-my-blog-">Welcome to My Blog 🚀</h1>
+<p>This is my first post — a small milestone that marks the beginning of my journey here.</p>]]></description>
+</item>
+</channel>
 </rss>
