@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>داکیومنتیشن - Category - My Website</title>
-        <link>http://localhost:1313/fa/categories/documentation/</link>
-        <description>داکیومنتیشن - Category - My Website</description>
-        <generator>Hugo -- gohugo.io</generator><language>fa-IR</language><managingEditor>mstalebizadeh@gmail.com (SalehTZ)</managingEditor>
-            <webMaster>mstalebizadeh@gmail.com (SalehTZ)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://localhost:1313/fa/categories/documentation/" rel="self" type="application/rss+xml" /></channel>
+        <title>داکیومنتیشن - دسته‌بندی - My Website</title>
+        <link>http://salehtz.ir/fa/categories/documentation/</link>
+        <description>داکیومنتیشن - دسته‌بندی - My Website</description>
+        <generator>Hugo -- gohugo.io</generator><language>fa</language><managingEditor>mstalebizadeh@gmail.com (SalehTZ)</managingEditor>
+            <webMaster>mstalebizadeh@gmail.com (SalehTZ)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://salehtz.ir/fa/categories/documentation/" rel="self" type="application/rss+xml" /></channel>
 </rss>

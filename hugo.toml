@@ -719,7 +719,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       #   url = "/categories/documentation/"
       #   title = ""
       [[languages.en.menu.main]]
-        weight = 5
+        weight = 4
         identifier = "about"
         pre = ""
         post = ""
@@ -777,7 +777,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
 
   [languages.fa]
     weight = 2
-    languageCode = "fa-IR"
+    languageCode = "fa"
     languageName = "فارسی"
     languageDirection = "rtl"
     hasCJKLanguage = false
@@ -815,7 +815,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       #   url = "/categories/documentation/"
       #   title = ""
       [[languages.fa.menu.main]]
-        weight = 5
+        weight = 4
         identifier = "about"
         pre = ""
         post = ""

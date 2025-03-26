@@ -1,0 +1,199 @@
+# Translations for Persian (Farsi)
+# ترجمات للغة الفارسية
+# https://gohugo.io/content-management/multilingual/#translation-of-strings
+
+# === baseof ==
+[backToTop]
+other = "بازگشت به بالا"
+
+[viewComments]
+other = "مشاهده دیدگاه‌ها"
+# === baseof ==
+
+# === Post ===
+[posts]
+other = "مطالب"
+# === Post ===
+
+# === Taxonomy ===
+[allSome]
+other = "همه {{ .Some }}"
+
+[tag]
+other = "برچسب"
+
+[tags]
+other = "برچسب‌ها"
+
+[category]
+other = "دسته‌بندی"
+
+[categories]
+other = "دسته‌بندی‌ها"
+# === Taxonomy ===
+
+# === Pagination ===
+[more]
+other = "بیشتر"
+# === Pagination ===
+
+# === partials/header.html ===
+[selectLanguage]
+other = "انتخاب زبان"
+
+[switchTheme]
+other = "تغییر قالب"
+# === partials/header.html ===
+
+# === partials/footer.html ===
+[poweredBySome]
+other = "قدرت‌گرفته از {{ .Hugo }} | طراحی توسط {{ .Theme }}"
+# === partials/footer.html ===
+
+# === partials/comment.html ===
+[valineLang]
+other = "fa"
+
+[valinePlaceholder]
+other = "دیدگاه شما..."
+
+[facebookLanguageCode]
+other = "fa_IR"
+
+[giscusLang]
+other = "fa"
+# === partials/comment.html ===
+
+# === partials/assets.html ===
+[search]
+other = "جستجو"
+
+[searchPlaceholder]
+other = "در عنوان‌ها یا محتوا جستجو کنید..."
+
+[clear]
+other = "پاک کردن"
+
+[cancel]
+other = "لغو"
+
+[noResultsFound]
+other = "هیچ نتیجه‌ای یافت نشد"
+
+[lunrLanguageCode]
+other = "fa"
+
+[copyToClipboard]
+other = "کپی به کلیپ‌بورد"
+
+[cookieconsentMessage]
+other = "این وب‌سایت از کوکی برای بهبود تجربه کاربری استفاده می‌کند."
+
+[cookieconsentDismiss]
+other = "باشه"
+
+[cookieconsentLink]
+other = "اطلاعات بیشتر"
+# === partials/assets.html ===
+
+# === partials/plugin/share.html ===
+[shareOn]
+other = "اشتراک‌گذاری لینک"
+# === partials/plugin/share.html ===
+
+# === posts/single.html ===
+[contents]
+other = "فهرست مطالب"
+
+[publishedOnDate]
+other = "منتشر شده در {{ .Date }}"
+
+[includedInCategories]
+other = "در دسته {{ .Categories }}"
+
+[wordCount]
+one = "یک کلمه"
+other = "{{ .Count }} کلمه"
+
+[readingTime]
+one = "یک دقیقه"
+other = "{{ .Count }} دقیقه"
+
+[views]
+other = "بازدید"
+
+[author]
+other = "نویسنده"
+
+[updatedOnDate]
+other = "به‌روزرسانی شده در {{ .Date }}"
+
+[readMarkdown]
+other = "خواندن متن مارک‌داون"
+
+[back]
+other = "بازگشت"
+
+[home]
+other = "خانه"
+
+[readMore]
+other = "مطالعه بیشتر"
+# === posts/single.html ===
+
+# === 404.html ===
+[pageNotFound]
+other = "صفحه پیدا نشد"
+
+[pageNotFoundText]
+other = "صفحه‌ای که دنبال می‌کنید پیدا نشد."
+# === 404.html ===
+
+# === shortcodes/admonition.html ===
+[note]
+other = "نکته"
+
+[abstract]
+other = "خلاصه"
+
+[info]
+other = "اطلاعات"
+
+[tip]
+other = "راهنما"
+
+[success]
+other = "موفق"
+
+[question]
+other = "سؤال"
+
+[warning]
+other = "هشدار"
+
+[failure]
+other = "ناموفق"
+
+[danger]
+other = "خطر"
+
+[bug]
+other = "خطای برنامه‌نویسی"
+
+[example]
+other = "مثال"
+
+[quote]
+other = "نقل قول"
+# === shortcodes/admonition.html ===
+
+# === shortcodes/version.html ===
+[new]
+other = "جدید"
+
+[changed]
+other = "ویرایش شده"
+
+[deleted]
+other = "حذف شده"
+# === shortcodes/version.html ===
