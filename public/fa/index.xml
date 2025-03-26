@@ -1,6 +1,6 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>My Website</title>
+        <title>SalehTZ</title>
         <link>http://localhost:1313/fa/</link>
         <description>SalehTZ blog and website</description>
         <generator>Hugo -- gohugo.io</generator><language>fa</language><managingEditor>mstalebizadeh@gmail.com (SalehTZ)</managingEditor>

@@ -10,7 +10,7 @@ theme = "LoveIt"
 
 # website title
 
-title = "My Website"
+title = "SalehTZ"
 
 
 
@@ -33,7 +33,7 @@ copyright = ""
 enableRobotsTXT = true
 
 # whether to use git commit log
-enableGitInfo = true
+enableGitInfo = false
 
 # whether to use emoji code
 enableEmoji = true

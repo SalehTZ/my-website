@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://localhost:1313/first_post/</loc><lastmod>2025-03-26T10:19:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/first_post/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
                         href="http://localhost:1313/fa/first_post/"
@@ -11,16 +11,7 @@
                     hreflang="en"
                     href="http://localhost:1313/first_post/"
                     /></url><url>
-            <loc>http://localhost:1313/</loc><lastmod>2025-03-26T10:19:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="fa"
-                        href="http://localhost:1313/fa/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://localhost:1313/"
-                    /></url><url>
-            <loc>http://localhost:1313/posts/</loc><lastmod>2025-03-26T10:19:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/posts/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
                         href="http://localhost:1313/fa/posts/"
@@ -29,7 +20,16 @@
                     hreflang="en"
                     href="http://localhost:1313/posts/"
                     /></url><url>
-            <loc>http://localhost:1313/about/</loc><lastmod>2025-03-25T12:30:22&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="fa"
+                        href="http://localhost:1313/fa/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://localhost:1313/"
+                    /></url><url>
+            <loc>http://localhost:1313/about/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
                         href="http://localhost:1313/fa/about/"
@@ -38,7 +38,7 @@
                     hreflang="en"
                     href="http://localhost:1313/about/"
                     /></url><url>
-            <loc>http://localhost:1313/categories/</loc><lastmod>2025-03-25T12:30:22&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
                         href="http://localhost:1313/fa/categories/"
@@ -47,7 +47,7 @@
                     hreflang="en"
                     href="http://localhost:1313/categories/"
                     /></url><url>
-            <loc>http://localhost:1313/categories/documentation/</loc><lastmod>2025-03-25T09:50:07&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/categories/documentation/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
                         href="http://localhost:1313/fa/categories/documentation/"
@@ -56,7 +56,7 @@
                     hreflang="en"
                     href="http://localhost:1313/categories/documentation/"
                     /></url><url>
-            <loc>http://localhost:1313/tags/</loc><lastmod>2025-03-25T09:50:07&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/tags/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
                         href="http://localhost:1313/fa/tags/"
@@ -65,7 +65,7 @@
                     hreflang="en"
                     href="http://localhost:1313/tags/"
                     /></url><url>
-            <loc>http://localhost:1313/categories/tipsntricks/</loc><lastmod>2025-03-25T12:30:22&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/categories/tipsntricks/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
                         href="http://localhost:1313/fa/categories/tipsntricks/"
@@ -74,5 +74,5 @@
                     hreflang="en"
                     href="http://localhost:1313/categories/tipsntricks/"
                     /></url><url>
-            <loc>http://localhost:1313/tags/content/_index.zh-cn/</loc><lastmod>2025-03-25T09:50:07&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
-            <loc>http://localhost:1313/tags/installation/_index.zh-cn/</loc><lastmod>2025-03-25T09:50:07&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority></url></urlset>
+            <loc>http://localhost:1313/tags/content/_index.zh-cn/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/installation/_index.zh-cn/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

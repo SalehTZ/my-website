@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>همه مطالب - My Website</title>
+        <title>همه مطالب - SalehTZ</title>
         <link>http://localhost:1313/fa/posts/</link>
-        <description>همه مطالب | My Website</description>
+        <description>همه مطالب | SalehTZ</description>
         <generator>Hugo -- gohugo.io</generator><language>fa</language><managingEditor>mstalebizadeh@gmail.com (SalehTZ)</managingEditor>
             <webMaster>mstalebizadeh@gmail.com (SalehTZ)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 25 Mar 2025 11:56:49 &#43;0330</lastBuildDate><atom:link href="http://localhost:1313/fa/posts/" rel="self" type="application/rss+xml" /><item>
     <title>اولین پست</title>

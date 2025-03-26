@@ -1,8 +1,8 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Documentation - Category - My Website</title>
+        <title>Documentation - Category - SalehTZ</title>
         <link>http://localhost:1313/categories/documentation/</link>
-        <description>Documentation - Category - My Website</description>
+        <description>Documentation - Category - SalehTZ</description>
         <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>mstalebizadeh@gmail.com (SalehTZ)</managingEditor>
             <webMaster>mstalebizadeh@gmail.com (SalehTZ)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="http://localhost:1313/categories/documentation/" rel="self" type="application/rss+xml" /></channel>
 </rss>
