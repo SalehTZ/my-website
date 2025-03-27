@@ -2,7 +2,8 @@
 title: "About Me"
 date: 2019-08-02T11:04:49+08:00
 draft: false
-description: "About Me"
+description: "A brief introduction to who I am and what I do."
+tags: []
 images: ["/avatar.jpg"]
 
 lightgallery: false
@@ -12,35 +13,6 @@ math:
 ---
 
 
-<p align="center">
-  <img src="https://github.com/mahdidahouei/mahdidahouei/assets/58371632/69870ff3-aee2-4f00-9422-d4bb4da5cf76" width="70">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Dart_logo.png/600px-Dart_logo.png?20220718193800" width="85">
-  <img src="https://i.giphy.com/media/KzJkzjggfGN5Py6nkT/200.webp" width="100">  
-  <img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100">
-  <img src="https://cultofthepartyparrot.com/parrots/hd/laptop_parrot.gif" width="100" height="100"/>
-</p>
-
-<br>
-<br>
-
-## 🧑🏻 About Me
-I'm Saleh Talebizadeh, a passionate and dedicated Flutter Developer with a strong focus on Flutter development. I have a proven track record in the computer software industry and am committed to continuous learning and staying up-to-date with the latest technologies. I'm actively seeking opportunities to excel in the field of Flutter development.
-
-<!-- ```psst👀, did you know I love coffee? You can consider donation if you love coffee too.```
-
-Tron/USDT(trc20): ```TACT68nhFLjeGSh6z1Yw9BDbRfKTs4EDJb```
-
-BTC: ```bc1qxl437ktmwpmsyca4qze5f4l6xka0mlrn2xakw6``` -->
-
-
-## 📊 GitHub Stats:
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SalehTZ&langs_count=9&layout=compact&theme=dark">
-  <img src="https://github-readme-stats.vercel.app/api?username=salehtz&theme=dark&hide_border=false&include_all_commits=true&count_private=true">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=salehtz&theme=dark&hide_border=false">
-</p>
-
-## 🔮 Skills
 ![Flutter](https://img.shields.io/badge/Flutter-%230175C2.svg?style=flat&logo=flutter&logoColor=FFFFFF)
 ![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=flat&logo=dart&logoColor=FFFFFF)
 ![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54)
@@ -58,57 +30,47 @@ BTC: ```bc1qxl437ktmwpmsyca4qze5f4l6xka0mlrn2xakw6``` -->
 ![IntelliJ IDEA](https://img.shields.io/badge/-IntelliJIDEA-000000?style=flat&logo=intellij-idea&logoColor=FFFFFF)
 ![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat&logo=linux&logoColor=222222)
 
-## 🧑🏻‍🎓 Education
+## 🧑🏻 About Me 🎯
+
+I'm **Mohammad Saleh Talebi Zadeh**, a passionate **Flutter developer** with a strong background in **IoT and smart home technologies**. I specialize in building **efficient, scalable, and high-performance applications**, leveraging my experience in **Riverpod, MQTT, UDP communication, UI/UX using Figma, and Linux/Ubuntu systems**. 
+
+## 🔮 What I Do 🚀
+
+- **Flutter Development**: Creating modern, cross-platform mobile applications with **Riverpod, custom widgets, and efficient state management**.
+- **IoT & Smart Home Solutions**: Developing and integrating **local and cloud-based IoT systems** using **MQTT, UDP, and other communication protocols**.
+- **UI/UX**: Designing intuitive and user-friendly interfaces using **Figma**.
+- **Linux & System Administration**: Configuring, optimizing, and maintaining **Ubuntu-based environments** for development and deployment.
+- **Open Source & Community**: Founder of **Persian Flutter Community**, contributing to the growth of Flutter developers in the Persian-speaking world.
+<!-- - **Enterprise Experience**: Worked with **Cateri Kuwait**, gaining expertise in **enterprise-level software solutions**. -->
+
+## 🛠️ Projects & Experience
+
+- 🚀 Developed a **smart home app** for controlling **IoT devices** via local UDP and MQTT.
+- 💬 Built a **local chat app** with **UDP socket communication** and Riverpod for state management.
+- 📝 Created a **Note app** with efficient storage and a clean UI.
+
+## 🎓 Education 📖
+
 - **Bachelor's Degree**: Computer Science
-  - Shahid Bahonar University, Kerman, Iran <img src="https://cultofthepartyparrot.com/flags/hd/iranparrot.gif" width="30" height="30"/>
+  - Shahid Bahonar University, Kerman, Iran&#x20;
   - Sep 2016 - Sep 2020
 
-## Languages
+## 🌍 Languages 🗣️
+
 - **English**: Fluent
 - **Persian**: Native
 
-</br>
-</br>
+## 🤝 Get in Touch 📩
 
-<div align="center">
-  <a href="http://www.instagram.com/mr_tz.dev/">
-    <img alt="Instagram" src="https://img.shields.io/badge/instagram-ea4456.svg?&style=for-the-badge&logo=instagram&logoColor=white" />
-  </a>
-  <a href="https://www.linkedin.com/in/salehtz/">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-</div>
+I'm always open to collaboration and discussions on **Flutter, IoT, Linux, and software development**. Let's connect!
 
 
-<br>
-
-### 🦜 Here are some [parrots](https://cultofthepartyparrot.com)
-
-<div>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/githubparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/flags/hd/iranparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/asyncparrot.gif" width="36" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/60fpsparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/jumpingparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/opensourceparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/dealwithitnowparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/hypnoparrotlight.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/databaseparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/fixparrot.gif" width="36" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/laptop_parrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/spinningparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/levitationparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/meldparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/slomoparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/moonwalkingparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/stableparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/scienceparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/pirateparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/footballparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/illuminatiparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/hypnoparrotdark.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/mustacheparrot.gif" width="30" height="30"/>
-</div>
+## 📊 GitHub Stats
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SalehTZ&langs_count=9&layout=compact&theme=dark">
+  <img src="https://github-readme-stats.vercel.app/api?username=salehtz&theme=dark&hide_border=false&include_all_commits=true&count_private=true">
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=salehtz&theme=dark&hide_border=false">
+</p>
 
 <!--
 ### 😂 Random Dev Meme
