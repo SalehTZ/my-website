@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="fa">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>ShrinkWrap vs Slivers in Flutter - SalehTZ</title><meta name="Description" content="A practical breakdown of shrinkWrap and slivers in Flutter with code examples, use-cases, and when to use each approach."><meta property="og:url" content="http://localhost:1313/fa/shrinkwrap_vs_slivers/">
+  <meta property="og:site_name" content="SalehTZ">
+  <meta property="og:title" content="ShrinkWrap vs Slivers in Flutter">
+  <meta property="og:description" content="A practical breakdown of shrinkWrap and slivers in Flutter with code examples, use-cases, and when to use each approach.">
+  <meta property="og:locale" content="fa">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-04-23T08:27:57+03:30">
+    <meta property="article:modified_time" content="2025-04-23T08:27:57+03:30">
+    <meta property="article:tag" content="فلاتر">
+    <meta property="article:tag" content="ShrinkWrap">
+    <meta property="article:tag" content="Slivers">
+    <meta property="article:tag" content="UI Optimization">
+    <meta property="og:image" content="http://localhost:1313/images/posts/shrinkwrap-vs-slivers-cover.webp">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/posts/shrinkwrap-vs-slivers-cover.webp">
+  <meta name="twitter:title" content="ShrinkWrap vs Slivers in Flutter">
+  <meta name="twitter:description" content="A practical breakdown of shrinkWrap and slivers in Flutter with code examples, use-cases, and when to use each approach.">
+<meta name="application-name" content="SalehTZ">
+<meta name="apple-mobile-web-app-title" content="SalehTZ"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/fa/shrinkwrap_vs_slivers/" /><link rel="prev" href="http://localhost:1313/fa/first_post/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.2/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "ShrinkWrap vs Slivers in Flutter",
+        "inLanguage": "fa",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/fa\/shrinkwrap_vs_slivers\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/localhost:1313\/images\/posts\/shrinkwrap-vs-slivers-cover.webp",
+                            "width":  1280 ,
+                            "height":  720 
+                        }],"genre": "posts","keywords": "Flutter, ShrinkWrap, Slivers, UI Optimization","wordcount":  376 ,
+        "url": "http:\/\/localhost:1313\/fa\/shrinkwrap_vs_slivers\/","datePublished": "2025-04-23T08:27:57+03:30","dateModified": "2025-04-23T08:27:57+03:30","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "xxxx","logo": "http:\/\/localhost:1313\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "SalehTZ"
+            },"description": "A practical breakdown of shrinkWrap and slivers in Flutter with code examples, use-cases, and when to use each approach."
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script>(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/fa/" title="SalehTZ"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SalehTZ</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/fa/posts/"> پست ها </a><a class="menu-item" href="/fa/tags/"> تگ ها </a><a class="menu-item" href="/fa/categories/"> دسته بندی ها </a><a class="menu-item" href="/fa/about/"> درباره من </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="در عنوان‌ها یا محتوا جستجو کنید..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="جستجو">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="پاک کردن">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="تغییر قالب">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a><a href="javascript:void(0);" class="menu-item language" title="انتخاب زبان">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>                      
+                    <select class="language-select" id="language-select-desktop" onchange="location = this.value;"><option value="/shrinkwrap_vs_slivers/">English</option><option value="/fa/shrinkwrap_vs_slivers/" selected>فارسی</option></select>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/fa/" title="SalehTZ"><span class="header-title-pre"><i class='far fa-kiss-wink-heart fa-fw' aria-hidden='true'></i></span>SalehTZ</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="در عنوان‌ها یا محتوا جستجو کنید..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="جستجو">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="پاک کردن">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        لغو
+                    </a>
+                </div><a class="menu-item" href="/fa/posts/" title="">پست ها</a><a class="menu-item" href="/fa/tags/" title="">تگ ها</a><a class="menu-item" href="/fa/categories/" title="">دسته بندی ها</a><a class="menu-item" href="/fa/about/" title="">درباره من</a><a href="javascript:void(0);" class="menu-item theme-switch" title="تغییر قالب">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a><a href="javascript:void(0);" class="menu-item" title="انتخاب زبان">
+                    <i class="fa fa-globe fa-fw" aria-hidden="true"></i>
+                    <select class="language-select" onchange="location = this.value;"><option value="/shrinkwrap_vs_slivers/">English</option><option value="/fa/shrinkwrap_vs_slivers/" selected>فارسی</option></select>
+                </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">فهرست مطالب</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">ShrinkWrap vs Slivers in Flutter</h1><h2 class="single-subtitle">Understand the key differences, use-cases, and performance trade-offs</h2><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://salehtz.ir" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>SalehTZ</a></span>&nbsp;<span class="post-category">در دسته <a href="/fa/categories/flutter/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Flutter</a>&nbsp;<a href="/fa/categories/ui/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>UI</a>&nbsp;<a href="/fa/categories/performance/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Performance</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-04-23">2025-04-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;376 کلمه&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 دقیقه&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>فهرست مطالب</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li><a href="#-خلاصه-shrinkwrap-در-برابر-slivers-در-فلاتر">🧠 خلاصه: ShrinkWrap در برابر Slivers در فلاتر</a>
+      <ul>
+        <li><a href="#-shrinkwrap">🔹 ShrinkWrap</a>
+          <ul>
+            <li><a href="#-مثال-با-shrinkwrap">✅ مثال با <code>shrinkWrap</code></a></li>
+          </ul>
+        </li>
+        <li><a href="#-slivers">🔹 Slivers</a>
+          <ul>
+            <li><a href="#-مثال-با-slivers">✅ مثال با <code>Slivers</code></a></li>
+          </ul>
+        </li>
+        <li><a href="#-مقایسه">🆚 مقایسه</a></li>
+      </ul>
+    </li>
+    <li><a href="#-جمعبندی">📝 جمع‌بندی</a></li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><iframe width="100%" height="400" src="https://www.youtube.com/embed/LUqDNnv_dh0" title="ShrinkWrap vs Slivers in Flutter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 id="-خلاصه-shrinkwrap-در-برابر-slivers-در-فلاتر">🧠 خلاصه: ShrinkWrap در برابر Slivers در فلاتر</h2>
+<p>در فلاتر، مدیریت صحیح ویجت‌های قابل اسکرول برای دستیابی به عملکرد بهتر و تجربه کاربری روان‌تر اهمیت بالایی دارد. این پست به بررسی دو روش رایج می‌پردازد: استفاده از <code>shrinkWrap</code> و به‌کارگیری <code>Slivers</code>.</p>
+<h3 id="-shrinkwrap">🔹 ShrinkWrap</h3>
+<ul>
+<li><strong>تعریف</strong>: ویژگی‌ای که اگر مقدار آن روی <code>true</code> تنظیم شود، باعث می‌شود ویجت قابل اسکرول، اندازه خود را بر اساس فرزندانش تنظیم کند و نه فضای موجود.</li>
+<li><strong>موارد استفاده</strong>:
+<ul>
+<li>زمانی که یک ویجت قابل اسکرول را داخل ویجت قابل اسکرول دیگری قرار می‌دهید (مثلاً <code>ListView</code> داخل <code>Column</code>).</li>
+<li>زمانی که تعداد ویجت‌های فرزند کم و مشخص است.</li>
+</ul>
+</li>
+<li><strong>نکات مهم</strong>:
+<ul>
+<li>استفاده در لیست‌های بزرگ می‌تواند باعث افت عملکرد شود، زیرا باید اندازه تمام فرزندان را محاسبه کند.</li>
+<li>ممکن است منجر به خطاهای محدودیت و overflow شود اگر به درستی مدیریت نشود.</li>
+</ul>
+</li>
+</ul>
+<h4 id="-مثال-با-shrinkwrap">✅ مثال با <code>shrinkWrap</code></h4>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-dart">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="کپی به کلیپ‌بورد"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="n">Column</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nl">children:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Header&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ListView</span><span class="p">.</span><span class="n">builder</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">shrinkWrap:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">physics:</span> <span class="n">NeverScrollableScrollPhysics</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">itemCount:</span> <span class="m">5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">itemBuilder:</span> <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">ListTile</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;آیتم </span><span class="se">\$</span><span class="s1">index&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
+<h3 id="-slivers">🔹 Slivers</h3>
+<ul>
+<li><strong>تعریف</strong>: ویجت‌هایی تخصصی که ناحیه‌های قابل اسکرول با رفتارهای سفارشی تولید می‌کنند و کنترل دقیق‌تری روی اسکرول فراهم می‌سازند.</li>
+<li><strong>موارد استفاده</strong>:
+<ul>
+<li>ساخت افکت‌های پیچیده اسکرول مانند نوار ابزار جمع‌شونده یا لیست‌های بی‌نهایت.</li>
+<li>بهینه‌سازی عملکرد هنگام کار با مجموعه داده‌های بزرگ.</li>
+</ul>
+</li>
+<li><strong>نکات مهم</strong>:
+<ul>
+<li>نیاز به درک عمیق‌تری از مکانیزم رندر فلاتر دارد.</li>
+<li>پیاده‌سازی آن نسبت به ویجت‌های اسکرول معمولی پیچیده‌تر و طولانی‌تر است.</li>
+</ul>
+</li>
+</ul>
+<h4 id="-مثال-با-slivers">✅ مثال با <code>Slivers</code></h4>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-dart">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="کپی به کلیپ‌بورد"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="n">CustomScrollView</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nl">slivers:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SliverAppBar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">expandedHeight:</span> <span class="m">200.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">floating:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">pinned:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">flexibleSpace:</span> <span class="n">FlexibleSpaceBar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;دموی Sliver&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SliverList</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">delegate:</span> <span class="n">SliverChildBuilderDelegate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">ListTile</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;آیتم </span><span class="se">\$</span><span class="s1">index&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">childCount:</span> <span class="m">20</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
+<h3 id="-مقایسه">🆚 مقایسه</h3>
+<table>
+  <thead>
+      <tr>
+          <th>ویژگی</th>
+          <th>ShrinkWrap</th>
+          <th>Slivers</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>پیچیدگی</strong></td>
+          <td>پیاده‌سازی ساده‌تر</td>
+          <td>پیچیده‌تر، نیازمند درک Sliverها</td>
+      </tr>
+      <tr>
+          <td><strong>عملکرد</strong></td>
+          <td>ناکارآمد در لیست‌های بزرگ</td>
+          <td>بهینه‌شده برای مجموعه داده‌های بزرگ</td>
+      </tr>
+      <tr>
+          <td><strong>سفارشی‌سازی</strong></td>
+          <td>محدود</td>
+          <td>بسیار قابل سفارشی‌سازی</td>
+      </tr>
+      <tr>
+          <td><strong>موارد استفاده</strong></td>
+          <td>ویجت‌های اسکرول کوچک و تو در تو</td>
+          <td>افکت‌های اسکرول پیشرفته و لیست‌های حجیم</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-جمعبندی">📝 جمع‌بندی</h2>
+<p>انتخاب بین <code>shrinkWrap</code> و <code>Slivers</code> به نیازهای خاص اپلیکیشن شما بستگی دارد. برای ویجت‌های اسکرول تو در تو و کوچک با تعداد مشخص فرزندان، استفاده از <code>shrinkWrap</code> ساده و مناسب است. اما اگر به دنبال اسکرول‌های پیچیده یا بهینه‌سازی عملکرد در داده‌های حجیم هستید، استفاده از <code>Slivers</code> گزینه بهتری خواهد بود.</p>
+<p>آشنایی با این ابزارها و استفاده درست از آن‌ها نقش مهمی در توسعه اپلیکیشن‌های سریع و پاسخ‌گو در فلاتر دارد.</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>به‌روزرسانی شده در 2025-04-23</span>
+            </div><div class="post-info-license">
+                <span>CC BY-NC-SA 4.0</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"><span>
+                            <a class="link-to-markdown" href="/fa/shrinkwrap_vs_slivers/index.md" target="_blank">خواندن متن مارک‌داون</a>
+                        </span></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="اشتراک‌گذاری لینک X" data-sharer="x" data-url="http://localhost:1313/fa/shrinkwrap_vs_slivers/" data-title="ShrinkWrap vs Slivers in Flutter" data-via="mr_tz_dev" data-hashtags="Flutter,ShrinkWrap,Slivers,UI Optimization"><i class="fab fa-x-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="اشتراک‌گذاری لینک Threads" data-sharer="threads" data-url="http://localhost:1313/fa/shrinkwrap_vs_slivers/" data-title="ShrinkWrap vs Slivers in Flutter"><i class="fab fa-threads fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="اشتراک‌گذاری لینک Facebook" data-sharer="facebook" data-url="http://localhost:1313/fa/shrinkwrap_vs_slivers/" data-hashtag="Flutter"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="اشتراک‌گذاری لینک Linkedin" data-sharer="linkedin" data-url="http://localhost:1313/fa/shrinkwrap_vs_slivers/"><i class="fab fa-linkedin fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="اشتراک‌گذاری لینک WhatsApp" data-sharer="whatsapp" data-url="http://localhost:1313/fa/shrinkwrap_vs_slivers/" data-title="ShrinkWrap vs Slivers in Flutter" data-web><i class="fab fa-whatsapp fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="اشتراک‌گذاری لینک Pinterest" data-sharer="pinterest" data-url="http://localhost:1313/fa/shrinkwrap_vs_slivers/" data-description="A practical breakdown of shrinkWrap and slivers in Flutter with code examples, use-cases, and when to use each approach."><i class="fab fa-pinterest fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="اشتراک‌گذاری لینک Hacker News" data-sharer="hackernews" data-url="http://localhost:1313/fa/shrinkwrap_vs_slivers/" data-title="ShrinkWrap vs Slivers in Flutter"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="اشتراک‌گذاری لینک Reddit" data-sharer="reddit" data-url="http://localhost:1313/fa/shrinkwrap_vs_slivers/"><i class="fab fa-reddit fa-fw" aria-hidden="true"></i></a><a href="https://t.me/share/url?url=http%3a%2f%2flocalhost%3a1313%2ffa%2fshrinkwrap_vs_slivers%2f&amp;text=ShrinkWrap%20vs%20Slivers%20in%20Flutter" target="_blank" title="اشتراک‌گذاری لینک Telegram"><i class="fab fa-telegram fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/fa/tags/flutter/">فلاتر</a>,&nbsp;<a href="/fa/tags/shrinkwrap/">ShrinkWrap</a>,&nbsp;<a href="/fa/tags/slivers/">Slivers</a>,&nbsp;<a href="/fa/tags/ui-optimization/">UI Optimization</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">بازگشت</a></span>&nbsp;|&nbsp;<span><a href="/fa/">خانه</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/fa/first_post/" class="prev" rel="prev" title="اولین پست"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>اولین پست</a></div>
+</div>
+<div id="comments"><div id="telegram-comments" class="comment"><script src="https://comments.app/js/widget.js?3" defer data-comments-app-website="0fIzTKbA" data-limit="5" data-colorful="1" data-dislikes="1" data-outlined="1"></script><noscript>
+                    Please enable JavaScript to view the comments powered by <a href="https://comments.app/">Telegram Comments</a>.
+                </noscript>
+            </div></div></article></div>
+            </main></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="بازگشت به بالا">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a>
+        </div>
+
+        <div id="fixed-buttons-hidden"><a href="#" id="view-comments" class="fixed-button" title="مشاهده دیدگاه‌ها">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><script src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script src="https://cdn.jsdelivr.net/npm/algoliasearch@5.20.2/dist/lite/builds/browser.umd.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.2/sharer.min.js"></script><script>window.config={"comment":{},"lightgallery":true,"search":{"algoliaAppID":"GZT24PWKNT","algoliaIndex":"index","algoliaSearchKey":"634ab679e825b815de2663de38908f9d","highlightTag":"em","maxResultLength":10,"noResultsFound":"هیچ نتیجه‌ای یافت نشد","snippetLength":50,"type":"algolia"}};</script><script src="/js/theme.min.js"></script></body>
+</html>

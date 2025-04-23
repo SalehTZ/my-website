@@ -2,16 +2,27 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://localhost:1313/first_post/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/categories/</loc><lastmod>2025-04-23T08:27:57&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
-                        href="http://localhost:1313/fa/first_post/"
+                        href="http://localhost:1313/fa/categories/"
                         /><xhtml:link
                     rel="alternate"
                     hreflang="en"
-                    href="http://localhost:1313/first_post/"
+                    href="http://localhost:1313/categories/"
                     /></url><url>
-            <loc>http://localhost:1313/posts/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/categories/flutter/</loc><lastmod>2025-04-23T08:27:57&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/flutter/</loc><lastmod>2025-04-23T08:27:57&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="fa"
+                        href="http://localhost:1313/fa/tags/flutter/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://localhost:1313/tags/flutter/"
+                    /></url><url>
+            <loc>http://localhost:1313/categories/performance/</loc><lastmod>2025-04-23T08:27:57&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/posts/</loc><lastmod>2025-04-23T08:27:57&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
                         href="http://localhost:1313/fa/posts/"
@@ -20,7 +31,7 @@
                     hreflang="en"
                     href="http://localhost:1313/posts/"
                     /></url><url>
-            <loc>http://localhost:1313/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/</loc><lastmod>2025-04-23T08:27:57&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
                         href="http://localhost:1313/fa/"
@@ -28,6 +39,47 @@
                     rel="alternate"
                     hreflang="en"
                     href="http://localhost:1313/"
+                    /></url><url>
+            <loc>http://localhost:1313/tags/shrinkwrap/</loc><lastmod>2025-04-23T08:27:57&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/shrinkwrap_vs_slivers/</loc><lastmod>2025-04-23T08:27:57&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="fa"
+                        href="http://localhost:1313/fa/shrinkwrap_vs_slivers/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://localhost:1313/shrinkwrap_vs_slivers/"
+                    /></url><url>
+            <loc>http://localhost:1313/tags/slivers/</loc><lastmod>2025-04-23T08:27:57&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/</loc><lastmod>2025-04-23T08:27:57&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="fa"
+                        href="http://localhost:1313/fa/tags/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://localhost:1313/tags/"
+                    /></url><url>
+            <loc>http://localhost:1313/categories/ui/</loc><lastmod>2025-04-23T08:27:57&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tags/ui-optimization/</loc><lastmod>2025-04-23T08:27:57&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority></url><url>
+            <loc>http://localhost:1313/tipntrick1/</loc><lastmod>2025-03-27T11:24:45&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url><url>
+            <loc>http://localhost:1313/tags/tips/</loc><lastmod>2025-03-27T11:24:45&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>0.7</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="fa"
+                        href="http://localhost:1313/fa/tags/tips/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://localhost:1313/tags/tips/"
+                    /></url><url>
+            <loc>http://localhost:1313/first_post/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="fa"
+                        href="http://localhost:1313/fa/first_post/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="en"
+                    href="http://localhost:1313/first_post/"
                     /></url><url>
             <loc>http://localhost:1313/about/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
@@ -37,37 +89,6 @@
                     rel="alternate"
                     hreflang="en"
                     href="http://localhost:1313/about/"
-                    /></url><url>
-            <loc>http://localhost:1313/tags/flutter/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="fa"
-                        href="http://localhost:1313/fa/tags/flutter/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://localhost:1313/tags/flutter/"
-                    /></url><url>
-            <loc>http://localhost:1313/tags/iot/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/tags/linux/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/tags/smart-home/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/tags/software-development/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/tags/</loc><lastmod>2019-08-02T11:04:49&#43;08:00</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="fa"
-                        href="http://localhost:1313/fa/tags/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://localhost:1313/tags/"
-                    /></url><url>
-            <loc>http://localhost:1313/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
-                        rel="alternate"
-                        hreflang="fa"
-                        href="http://localhost:1313/fa/categories/"
-                        /><xhtml:link
-                    rel="alternate"
-                    hreflang="en"
-                    href="http://localhost:1313/categories/"
                     /></url><url>
             <loc>http://localhost:1313/categories/documentation/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
@@ -87,5 +108,4 @@
                     hreflang="en"
                     href="http://localhost:1313/categories/tipsntricks/"
                     /></url><url>
-            <loc>http://localhost:1313/tags/content/_index.zh-cn/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
-            <loc>http://localhost:1313/tags/installation/_index.zh-cn/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>
+            <loc>http://localhost:1313/tags/content/_index.zh-cn/</loc><changefreq>weekly</changefreq><priority>0.5</priority></url></urlset>

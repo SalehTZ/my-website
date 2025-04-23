@@ -4,7 +4,131 @@
         <link>http://localhost:1313/fa/posts/</link>
         <description>همه مطالب | SalehTZ</description>
         <generator>Hugo -- gohugo.io</generator><language>fa</language><managingEditor>mstalebizadeh@gmail.com (SalehTZ)</managingEditor>
-            <webMaster>mstalebizadeh@gmail.com (SalehTZ)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 25 Mar 2025 11:56:49 &#43;0330</lastBuildDate><atom:link href="http://localhost:1313/fa/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>mstalebizadeh@gmail.com (SalehTZ)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 23 Apr 2025 08:27:57 &#43;0330</lastBuildDate><atom:link href="http://localhost:1313/fa/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>ShrinkWrap vs Slivers in Flutter</title>
+    <link>http://localhost:1313/fa/shrinkwrap_vs_slivers/</link>
+    <pubDate>Wed, 23 Apr 2025 08:27:57 &#43;0330</pubDate>
+    <author>SalehTZ</author>
+    <guid>http://localhost:1313/fa/shrinkwrap_vs_slivers/</guid>
+    <description><![CDATA[<iframe width="100%" height="400" src="https://www.youtube.com/embed/LUqDNnv_dh0" title="ShrinkWrap vs Slivers in Flutter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 id="-خلاصه-shrinkwrap-در-برابر-slivers-در-فلاتر">🧠 خلاصه: ShrinkWrap در برابر Slivers در فلاتر</h2>
+<p>در فلاتر، مدیریت صحیح ویجت‌های قابل اسکرول برای دستیابی به عملکرد بهتر و تجربه کاربری روان‌تر اهمیت بالایی دارد. این پست به بررسی دو روش رایج می‌پردازد: استفاده از <code>shrinkWrap</code> و به‌کارگیری <code>Slivers</code>.</p>
+<h3 id="-shrinkwrap">🔹 ShrinkWrap</h3>
+<ul>
+<li><strong>تعریف</strong>: ویژگی‌ای که اگر مقدار آن روی <code>true</code> تنظیم شود، باعث می‌شود ویجت قابل اسکرول، اندازه خود را بر اساس فرزندانش تنظیم کند و نه فضای موجود.</li>
+<li><strong>موارد استفاده</strong>:
+<ul>
+<li>زمانی که یک ویجت قابل اسکرول را داخل ویجت قابل اسکرول دیگری قرار می‌دهید (مثلاً <code>ListView</code> داخل <code>Column</code>).</li>
+<li>زمانی که تعداد ویجت‌های فرزند کم و مشخص است.</li>
+</ul>
+</li>
+<li><strong>نکات مهم</strong>:
+<ul>
+<li>استفاده در لیست‌های بزرگ می‌تواند باعث افت عملکرد شود، زیرا باید اندازه تمام فرزندان را محاسبه کند.</li>
+<li>ممکن است منجر به خطاهای محدودیت و overflow شود اگر به درستی مدیریت نشود.</li>
+</ul>
+</li>
+</ul>
+<h4 id="-مثال-با-shrinkwrap">✅ مثال با <code>shrinkWrap</code></h4>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-dart">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="کپی به کلیپ‌بورد"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="n">Column</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nl">children:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Header&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ListView</span><span class="p">.</span><span class="n">builder</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">shrinkWrap:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">physics:</span> <span class="n">NeverScrollableScrollPhysics</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">itemCount:</span> <span class="m">5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">itemBuilder:</span> <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">ListTile</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;آیتم </span><span class="se">\$</span><span class="s1">index&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
+<h3 id="-slivers">🔹 Slivers</h3>
+<ul>
+<li><strong>تعریف</strong>: ویجت‌هایی تخصصی که ناحیه‌های قابل اسکرول با رفتارهای سفارشی تولید می‌کنند و کنترل دقیق‌تری روی اسکرول فراهم می‌سازند.</li>
+<li><strong>موارد استفاده</strong>:
+<ul>
+<li>ساخت افکت‌های پیچیده اسکرول مانند نوار ابزار جمع‌شونده یا لیست‌های بی‌نهایت.</li>
+<li>بهینه‌سازی عملکرد هنگام کار با مجموعه داده‌های بزرگ.</li>
+</ul>
+</li>
+<li><strong>نکات مهم</strong>:
+<ul>
+<li>نیاز به درک عمیق‌تری از مکانیزم رندر فلاتر دارد.</li>
+<li>پیاده‌سازی آن نسبت به ویجت‌های اسکرول معمولی پیچیده‌تر و طولانی‌تر است.</li>
+</ul>
+</li>
+</ul>
+<h4 id="-مثال-با-slivers">✅ مثال با <code>Slivers</code></h4>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-dart">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="کپی به کلیپ‌بورد"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="n">CustomScrollView</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nl">slivers:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SliverAppBar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">expandedHeight:</span> <span class="m">200.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">floating:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">pinned:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">flexibleSpace:</span> <span class="n">FlexibleSpaceBar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;دموی Sliver&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SliverList</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">delegate:</span> <span class="n">SliverChildBuilderDelegate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">ListTile</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;آیتم </span><span class="se">\$</span><span class="s1">index&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">childCount:</span> <span class="m">20</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
+<h3 id="-مقایسه">🆚 مقایسه</h3>
+<table>
+  <thead>
+      <tr>
+          <th>ویژگی</th>
+          <th>ShrinkWrap</th>
+          <th>Slivers</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>پیچیدگی</strong></td>
+          <td>پیاده‌سازی ساده‌تر</td>
+          <td>پیچیده‌تر، نیازمند درک Sliverها</td>
+      </tr>
+      <tr>
+          <td><strong>عملکرد</strong></td>
+          <td>ناکارآمد در لیست‌های بزرگ</td>
+          <td>بهینه‌شده برای مجموعه داده‌های بزرگ</td>
+      </tr>
+      <tr>
+          <td><strong>سفارشی‌سازی</strong></td>
+          <td>محدود</td>
+          <td>بسیار قابل سفارشی‌سازی</td>
+      </tr>
+      <tr>
+          <td><strong>موارد استفاده</strong></td>
+          <td>ویجت‌های اسکرول کوچک و تو در تو</td>
+          <td>افکت‌های اسکرول پیشرفته و لیست‌های حجیم</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-جمعبندی">📝 جمع‌بندی</h2>
+<p>انتخاب بین <code>shrinkWrap</code> و <code>Slivers</code> به نیازهای خاص اپلیکیشن شما بستگی دارد. برای ویجت‌های اسکرول تو در تو و کوچک با تعداد مشخص فرزندان، استفاده از <code>shrinkWrap</code> ساده و مناسب است. اما اگر به دنبال اسکرول‌های پیچیده یا بهینه‌سازی عملکرد در داده‌های حجیم هستید، استفاده از <code>Slivers</code> گزینه بهتری خواهد بود.</p>
+<p>آشنایی با این ابزارها و استفاده درست از آن‌ها نقش مهمی در توسعه اپلیکیشن‌های سریع و پاسخ‌گو در فلاتر دارد.</p>
+]]></description>
+</item>
+<item>
     <title>اولین پست</title>
     <link>http://localhost:1313/fa/first_post/</link>
     <pubDate>Tue, 25 Mar 2025 11:56:49 &#43;0330</pubDate>

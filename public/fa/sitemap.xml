@@ -2,7 +2,7 @@
     xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
     xmlns:xhtml="http://www.w3.org/1999/xhtml"
     ><url>
-            <loc>http://localhost:1313/fa/posts/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/fa/posts/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://localhost:1313/posts/"
@@ -11,7 +11,7 @@
                     hreflang="fa"
                     href="http://localhost:1313/fa/posts/"
                     /></url><url>
-            <loc>http://localhost:1313/fa/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/fa/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://localhost:1313/"
@@ -20,7 +20,7 @@
                     hreflang="fa"
                     href="http://localhost:1313/fa/"
                     /></url><url>
-            <loc>http://localhost:1313/fa/first_post/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>1</priority><xhtml:link
+            <loc>http://localhost:1313/fa/first_post/</loc><lastmod>2025-03-25T11:56:49&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link
                         rel="alternate"
                         hreflang="en"
                         href="http://localhost:1313/first_post/"
@@ -37,6 +37,15 @@
                     rel="alternate"
                     hreflang="fa"
                     href="http://localhost:1313/fa/about/"
+                    /></url><url>
+            <loc>http://localhost:1313/fa/shrinkwrap_vs_slivers/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://localhost:1313/shrinkwrap_vs_slivers/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fa"
+                    href="http://localhost:1313/fa/shrinkwrap_vs_slivers/"
                     /></url><url>
             <loc>http://localhost:1313/fa/categories/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
@@ -73,6 +82,15 @@
                     rel="alternate"
                     hreflang="fa"
                     href="http://localhost:1313/fa/tags/flutter/"
+                    /></url><url>
+            <loc>http://localhost:1313/fa/tags/tips/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
+                        rel="alternate"
+                        hreflang="en"
+                        href="http://localhost:1313/tags/tips/"
+                        /><xhtml:link
+                    rel="alternate"
+                    hreflang="fa"
+                    href="http://localhost:1313/fa/tags/tips/"
                     /></url><url>
             <loc>http://localhost:1313/fa/categories/tipsntricks/</loc><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"

@@ -3,7 +3,7 @@ title: "Flutter Tip: Optimize Your ListView Performance with `ListView.builder`"
 subtitle: ""
 date: 2025-03-27T11:24:45+03:30
 lastmod: 2025-03-27T11:24:45+03:30
-draft: true
+draft: false
 author: ""
 authorLink: ""
 description: "Improve your Flutter app's performance by using ListView.builder instead of ListView."

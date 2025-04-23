@@ -1,0 +1,133 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Performance - Category - SalehTZ</title>
+        <link>http://localhost:1313/categories/performance/</link>
+        <description>Performance - Category - SalehTZ</description>
+        <generator>Hugo -- gohugo.io</generator><language>en</language><managingEditor>mstalebizadeh@gmail.com (SalehTZ)</managingEditor>
+            <webMaster>mstalebizadeh@gmail.com (SalehTZ)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 23 Apr 2025 08:27:57 &#43;0330</lastBuildDate><atom:link href="http://localhost:1313/categories/performance/" rel="self" type="application/rss+xml" /><item>
+    <title>ShrinkWrap vs Slivers in Flutter</title>
+    <link>http://localhost:1313/shrinkwrap_vs_slivers/</link>
+    <pubDate>Wed, 23 Apr 2025 08:27:57 &#43;0330</pubDate>
+    <author>Mohammad Saleh Talebi Zadeh</author>
+    <guid>http://localhost:1313/shrinkwrap_vs_slivers/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="/images/posts/shrinkwrap-vs-slivers-cover.webp" referrerpolicy="no-referrer">
+            </div><iframe width="100%" height="400" src="https://www.youtube.com/embed/LUqDNnv_dh0" title="ShrinkWrap vs Slivers in Flutter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<h2 id="-summary-shrinkwrap-vs-slivers-in-flutter">🧠 Summary: ShrinkWrap vs Slivers in Flutter</h2>
+<p>In Flutter, managing scrollable widgets efficiently is crucial for optimal performance and user experience. This post explores two primary approaches: utilizing <code>shrinkWrap</code> and employing <code>Slivers</code>.</p>
+<h3 id="-shrinkwrap">🔹 ShrinkWrap</h3>
+<ul>
+<li><strong>Definition</strong>: A property that, when set to <code>true</code>, forces the scrollable widget to size itself based on its children rather than expanding to fill available space.</li>
+<li><strong>Use-Cases</strong>:
+<ul>
+<li>Embedding a scrollable widget inside another scrollable (e.g., a <code>ListView</code> inside a <code>Column</code>).</li>
+<li>Situations where the number of child widgets is limited and known.</li>
+</ul>
+</li>
+<li><strong>Considerations</strong>:
+<ul>
+<li>Can lead to performance issues if used with a large number of children, as it requires computing the size of all children upfront.</li>
+<li>May cause layout constraints and overflow errors if not managed carefully.</li>
+</ul>
+</li>
+</ul>
+<h4 id="-example-with-shrinkwrap">✅ Example with <code>shrinkWrap</code></h4>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-dart">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="n">Column</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nl">children:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Header&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">ListView</span><span class="p">.</span><span class="n">builder</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">shrinkWrap:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">physics:</span> <span class="n">NeverScrollableScrollPhysics</span><span class="p">(),</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">itemCount:</span> <span class="m">5</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">itemBuilder:</span> <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">ListTile</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Item </span><span class="se">\$</span><span class="s1">index&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
+<h3 id="-slivers">🔹 Slivers</h3>
+<ul>
+<li><strong>Definition</strong>: Specialized widgets that can produce scrollable areas with custom behaviors, allowing for more granular control over scrolling effects.</li>
+<li><strong>Use-Cases</strong>:
+<ul>
+<li>Creating complex scrolling effects, such as collapsing toolbars or infinite scrolling lists.</li>
+<li>Optimizing performance for large datasets by rendering only visible items.</li>
+</ul>
+</li>
+<li><strong>Considerations</strong>:
+<ul>
+<li>Requires a deeper understanding of Flutter&rsquo;s rendering pipeline.</li>
+<li>More verbose and complex to implement compared to standard scrollable widgets.</li>
+</ul>
+</li>
+</ul>
+<h4 id="-example-with-slivers">✅ Example with <code>Slivers</code></h4>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-dart">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="n">CustomScrollView</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nl">slivers:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SliverAppBar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">expandedHeight:</span> <span class="m">200.0</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">floating:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">pinned:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">flexibleSpace:</span> <span class="n">FlexibleSpaceBar</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Sliver Demo&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">SliverList</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">delegate:</span> <span class="n">SliverChildBuilderDelegate</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">ListTile</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Item </span><span class="se">\$</span><span class="s1">index&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">childCount:</span> <span class="m">20</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
+<h3 id="-comparison">🆚 Comparison</h3>
+<table>
+  <thead>
+      <tr>
+          <th>Aspect</th>
+          <th>ShrinkWrap</th>
+          <th>Slivers</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>Complexity</strong></td>
+          <td>Simpler to implement</td>
+          <td>More complex, requires understanding of Sliver widgets</td>
+      </tr>
+      <tr>
+          <td><strong>Performance</strong></td>
+          <td>Less efficient with large datasets</td>
+          <td>Optimized for performance with large datasets</td>
+      </tr>
+      <tr>
+          <td><strong>Flexibility</strong></td>
+          <td>Limited customization</td>
+          <td>Highly customizable scrolling behaviors</td>
+      </tr>
+      <tr>
+          <td><strong>Use-Case</strong></td>
+          <td>Small, nested scrollable widgets</td>
+          <td>Advanced scrolling effects and large lists</td>
+      </tr>
+  </tbody>
+</table>
+<hr>
+<h2 id="-conclusion">📝 Conclusion</h2>
+<p>Choosing between <code>shrinkWrap</code> and <code>Slivers</code> depends on the specific requirements of your Flutter application. For simple, nested scrollable widgets with a limited number of children, <code>shrinkWrap</code> offers a straightforward solution. However, for complex scrolling behaviors and performance optimization with large datasets, leveraging <code>Slivers</code> is the recommended approach.</p>
+<p>Understanding these tools and their appropriate use-cases is essential for building efficient and responsive Flutter applications.</p>]]></description>
+</item>
+</channel>
+</rss>
