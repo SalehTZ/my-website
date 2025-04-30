@@ -8,11 +8,9 @@
     <title>ShrinkWrap vs Slivers in Flutter</title>
     <link>http://localhost:1313/shrinkwrap_vs_slivers/</link>
     <pubDate>Wed, 23 Apr 2025 08:27:57 &#43;0330</pubDate>
-    <author>Mohammad Saleh Talebi Zadeh</author>
+    <author>SalehTZ</author>
     <guid>http://localhost:1313/shrinkwrap_vs_slivers/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="/images/posts/shrinkwrap-vs-slivers-cover.webp" referrerpolicy="no-referrer">
-            </div><iframe width="100%" height="400" src="https://www.youtube.com/embed/LUqDNnv_dh0" title="ShrinkWrap vs Slivers in Flutter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <description><![CDATA[<iframe width="100%" height="400" src="https://www.youtube.com/embed/LUqDNnv_dh0" title="ShrinkWrap vs Slivers in Flutter" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <h2 id="-summary-shrinkwrap-vs-slivers-in-flutter">🧠 Summary: ShrinkWrap vs Slivers in Flutter</h2>
 <p>In Flutter, managing scrollable widgets efficiently is crucial for optimal performance and user experience. This post explores two primary approaches: utilizing <code>shrinkWrap</code> and employing <code>Slivers</code>.</p>
 <h3 id="-shrinkwrap">🔹 ShrinkWrap</h3>
