@@ -82,6 +82,38 @@ CustomScrollView(
 | **Flexibility** | Limited customization              | Highly customizable scrolling behaviors                |
 | **Use-Case**    | Small, nested scrollable widgets   | Advanced scrolling effects and large lists             |
 
+
+
+### 💡 Bonus Tip: Don't Lose Lazy Loading
+
+Sometimes, instead of using `shrinkWrap: true`, you can wrap your `ListView` with an `Expanded` widget. This way, Flutter keeps the **lazy loading behavior**, which means better performance with large lists:
+
+```dart
+Column(
+  children: [
+    Text('Header'),
+    Expanded(
+      child: ListView.builder(
+        itemCount: 100,
+        itemBuilder: (context, index) => ListTile(
+          title: Text('Item \$index'),
+        ),
+      ),
+    ),
+  ],
+)
+```
+
+However, be careful: this only works if the parent `Column` is inside a widget that provides **bounded height** (like a `SizedBox`, `Expanded`, or `Scaffold`). If not, you might run into this error:
+
+> "RenderFlex children have non-zero flex but incoming height constraints are unbounded"
+
+To avoid this, make sure:
+
+* The parent `Column` is constrained in height
+* Or use a `SizedBox` with a fixed height for your `ListView`
+* Or fall back to `shrinkWrap` if bounded height isn't an option
+
 ---
 
 ## 📝 Conclusion
@@ -89,5 +121,4 @@ CustomScrollView(
 Choosing between `shrinkWrap` and `Slivers` depends on the specific requirements of your Flutter application. For simple, nested scrollable widgets with a limited number of children, `shrinkWrap` offers a straightforward solution. However, for complex scrolling behaviors and performance optimization with large datasets, leveraging `Slivers` is the recommended approach.
 
 Understanding these tools and their appropriate use-cases is essential for building efficient and responsive Flutter applications.
-
 

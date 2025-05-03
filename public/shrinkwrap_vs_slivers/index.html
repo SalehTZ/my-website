@@ -43,7 +43,7 @@
                             "url": "http:\/\/localhost:1313\/images\/posts\/shrinkwrap-vs-slivers-cover.webp",
                             "width":  1280 ,
                             "height":  720 
-                        }],"genre": "posts","keywords": "Flutter, ShrinkWrap, Slivers, UI Optimization","wordcount":  360 ,
+                        }],"genre": "posts","keywords": "Flutter, ShrinkWrap, Slivers, UI Optimization","wordcount":  496 ,
         "url": "http:\/\/localhost:1313\/shrinkwrap_vs_slivers\/","datePublished": "2025-04-23T08:27:57+03:30","dateModified": "2025-04-23T08:27:57+03:30","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "xxxx","logo": "http:\/\/localhost:1313\/images\/avatar.png"},"author": {
@@ -126,8 +126,8 @@
                     aria-hidden="true"></i>Flutter</a>&nbsp;<a href="/categories/ui/"><i class="far fa-folder fa-fw"
                     aria-hidden="true"></i>UI</a>&nbsp;<a href="/categories/performance/"><i class="far fa-folder fa-fw"
                     aria-hidden="true"></i>Performance</a></span></div>
-        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-04-23">2025-04-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;360 words&nbsp;
-            <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2025-04-23">2025-04-23</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;496 words&nbsp;
+            <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;3 minutes&nbsp;</div>
     </div><div class="details toc" id="toc-static" data-kept="">
         <div class="details-summary toc-title">
             <span>Contents</span>
@@ -148,6 +148,7 @@
           </ul>
         </li>
         <li><a href="#-comparison">🆚 Comparison</a></li>
+        <li><a href="#-bonus-tip-dont-lose-lazy-loading">💡 Bonus Tip: Don&rsquo;t Lose Lazy Loading</a></li>
       </ul>
     </li>
     <li><a href="#-conclusion">📝 Conclusion</a></li>
@@ -173,7 +174,7 @@
 </li>
 </ul>
 <h4 id="-example-with-shrinkwrap">✅ Example with <code>shrinkWrap</code></h4>
-<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+<div class="code-block code-line-numbers" style="counter-reset: code-block 0">
     <div class="code-header language-dart">
         <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
         <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
@@ -265,6 +266,35 @@
       </tr>
   </tbody>
 </table>
+<h3 id="-bonus-tip-dont-lose-lazy-loading">💡 Bonus Tip: Don&rsquo;t Lose Lazy Loading</h3>
+<p>Sometimes, instead of using <code>shrinkWrap: true</code>, you can wrap your <code>ListView</code> with an <code>Expanded</code> widget. This way, Flutter keeps the <strong>lazy loading behavior</strong>, which means better performance with large lists:</p>
+<div class="code-block code-line-numbers open" style="counter-reset: code-block 0">
+    <div class="code-header language-dart">
+        <span class="code-title"><i class="arrow fas fa-angle-right fa-fw" aria-hidden="true"></i></span>
+        <span class="ellipses"><i class="fas fa-ellipsis-h fa-fw" aria-hidden="true"></i></span>
+        <span class="copy" title="Copy to clipboard"><i class="far fa-copy fa-fw" aria-hidden="true"></i></span>
+    </div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-dart" data-lang="dart"><span class="line"><span class="cl"><span class="n">Column</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">  <span class="nl">children:</span> <span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Header&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="n">Expanded</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">      <span class="nl">child:</span> <span class="n">ListView</span><span class="p">.</span><span class="n">builder</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">itemCount:</span> <span class="m">100</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nl">itemBuilder:</span> <span class="p">(</span><span class="n">context</span><span class="p">,</span> <span class="n">index</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="n">ListTile</span><span class="p">(</span>
+</span></span><span class="line"><span class="cl">          <span class="nl">title:</span> <span class="n">Text</span><span class="p">(</span><span class="s1">&#39;Item </span><span class="se">\$</span><span class="s1">index&#39;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">        <span class="p">),</span>
+</span></span><span class="line"><span class="cl">      <span class="p">),</span>
+</span></span><span class="line"><span class="cl">    <span class="p">),</span>
+</span></span><span class="line"><span class="cl">  <span class="p">],</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span></span></span></code></pre></div></div>
+<p>However, be careful: this only works if the parent <code>Column</code> is inside a widget that provides <strong>bounded height</strong> (like a <code>SizedBox</code>, <code>Expanded</code>, or <code>Scaffold</code>). If not, you might run into this error:</p>
+<blockquote>
+<p>&ldquo;RenderFlex children have non-zero flex but incoming height constraints are unbounded&rdquo;</p></blockquote>
+<p>To avoid this, make sure:</p>
+<ul>
+<li>The parent <code>Column</code> is constrained in height</li>
+<li>Or use a <code>SizedBox</code> with a fixed height for your <code>ListView</code></li>
+<li>Or fall back to <code>shrinkWrap</code> if bounded height isn&rsquo;t an option</li>
+</ul>
 <hr>
 <h2 id="-conclusion">📝 Conclusion</h2>
 <p>Choosing between <code>shrinkWrap</code> and <code>Slivers</code> depends on the specific requirements of your Flutter application. For simple, nested scrollable widgets with a limited number of children, <code>shrinkWrap</code> offers a straightforward solution. However, for complex scrolling behaviors and performance optimization with large datasets, leveraging <code>Slivers</code> is the recommended approach.</p>

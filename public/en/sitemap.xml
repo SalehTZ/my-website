@@ -110,8 +110,8 @@
                     hreflang="en"
                     href="http://localhost:1313/tags/ui-optimization/"
                     /></url><url>
-            <loc>http://localhost:1313/tipntrick1/</loc><lastmod>2025-03-27T11:24:45&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url><url>
-            <loc>http://localhost:1313/tags/tips/</loc><lastmod>2025-03-27T11:24:45&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>0.6</priority><xhtml:link
+            <loc>http://localhost:1313/tipntrick1/</loc><lastmod>2025-03-27T11:24:45&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>0.5</priority></url><url>
+            <loc>http://localhost:1313/tags/tips/</loc><lastmod>2025-03-27T11:24:45&#43;03:30</lastmod><changefreq>weekly</changefreq><priority>0.5</priority><xhtml:link
                         rel="alternate"
                         hreflang="fa"
                         href="http://localhost:1313/fa/tags/tips/"

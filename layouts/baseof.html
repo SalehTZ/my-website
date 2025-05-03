@@ -17,21 +17,7 @@
 <body data-header-desktop="{{ .Site.Params.header.desktopMode }}"
     data-header-mobile="{{ .Site.Params.header.mobileMode }}">
 
-    <!-- Default Statcounter code for My Blog http://salehtz.ir -->
-    <script type="text/javascript">
-        var sc_project = 13132441;
-        var sc_invisible = 0;
-        var sc_security = "659720ff";
-        var scJsHost = "https://";
-        document.write("<sc" + "ript type='text/javascript' src='" + scJsHost +
-            "statcounter.com/counter/counter.js'></" + "script>");
-    </script>
-    <noscript>
-        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
-                    class="statcounter" src="https://c.statcounter.com/13132441/0/659720ff/0/" alt="Web Analytics"
-                    referrerPolicy="no-referrer-when-downgrade"></a></div>
-    </noscript>
-    <!-- End of Statcounter Code -->
+
 
     {{- /* Check theme isDark before body rendering */ -}}
     {{- $theme := .Site.Params.defaulttheme -}}
@@ -63,6 +49,22 @@
             <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
         </a>
     </div>
+
+    <!-- Default Statcounter code for My Blog http://salehtz.ir -->
+    <script type="text/javascript">
+        var sc_project = 13132441;
+        var sc_invisible = 0;
+        var sc_security = "659720ff";
+        var scJsHost = "https://";
+        document.write("<sc" + "ript type='text/javascript' src='" + scJsHost +
+            "statcounter.com/counter/counter.js'></" + "script>");
+    </script>
+    <noscript>
+        <div class="statcounter"><a title="Web Analytics" href="https://statcounter.com/" target="_blank"><img
+                    class="statcounter" src="https://c.statcounter.com/13132441/0/659720ff/0/" alt="Web Analytics"
+                    referrerPolicy="no-referrer-when-downgrade"></a></div>
+    </noscript>
+    <!-- End of Statcounter Code -->
 
     {{- /* Load JavaScript scripts and CSS */ -}}
     {{- partial "assets.html" . -}}
