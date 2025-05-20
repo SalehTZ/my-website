@@ -9,3 +9,8 @@ body.fa {
     text-align: start;
     // Add more RTL-specific styles here
 }
+
+.code-block {
+    direction: ltr;
+    text-align: start;
+}
