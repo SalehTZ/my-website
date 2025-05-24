@@ -1,4 +1,392 @@
 // ==============================
-// Override Variables
-// 覆盖变量
+// Override Variables - Custom Vibrant Dark Theme (Monokai/Gemini Inspired)
 // ==============================
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&display=swap');
+
+$code-font-family: Fira Code, Source Code Pro, Menlo, Consolas, Monaco, monospace;
+$global-font-family: Inconsolata, -apple-system, Segoe UI, Roboto, Emoji, Helvetica, Arial, sans-serif;
+
+// Font and Line Height
+$global-font-size: 16px;
+$global-font-weight: 400;
+$global-line-height: 1.5rem;
+
+// --- Custom Vibrant Dark Palette (for general blog theme) ---
+$custom-dark-bg: #1E1E1E;
+$custom-light-bg: #F8F8F8;
+$custom-dark-accent-bg: #2C2C2C; // Slightly lighter dark for headers/non-code blocks
+$custom-light-accent-bg: #EDEDED; // Slightly darker light for headers/non-code blocks
+
+$custom-primary-text-dark: #E0E0E0; // Main body text for dark mode (highly readable)
+$custom-primary-text-light: #333333; // Main body text for light mode
+$custom-secondary-text-dark: #7B7B7B; // Muted grey for comments/secondary info on dark
+$custom-secondary-text-light: #8A8A8A; // Muted grey for comments/secondary info on light
+
+$custom-accent-pink: #FF5577; // Vibrant Pink/Magenta
+$custom-accent-orange: #FFB86C; // Bright Orange (for general theme)
+$custom-accent-green: #50FA7B; // Electric Green (for general theme)
+$custom-accent-blue: #8BE9FD; // Light Cyan/Blue (for general theme)
+$custom-accent-purple: #BD93F9; // Bright Purple (for general theme)
+$custom-accent-yellow: #F1FA8C; // Vibrant Yellow (for general theme)
+$custom-light-green: #b8bb26; // Very prominent, Cyan
+
+// --- End Custom Vibrant Dark Palette ---
+
+
+// --- Dracula Code Palette (for code section only) ---
+$dracula-background: #282A36;
+$dracula-foreground: #F8F8F2;
+$dracula-selection: #44475A;
+$dracula-comment: #6272A4;
+$dracula-cyan: #8BE9FD;
+$dracula-green: #50FA7B;
+$dracula-orange: #FFB86C;
+$dracula-pink: #FF79C6;
+$dracula-purple: #BD93F9;
+$dracula-red: #FF5555;
+$dracula-yellow: #F1FA8C;
+// --- End Dracula Code Palette ---
+
+// ========== Global ========== //
+// Color of the background
+$global-background-color: $custom-light-bg;
+$global-background-color-dark: $custom-dark-bg;
+
+// Color of the text (this will be the main body text)
+$global-font-color: $custom-primary-text-light;
+$global-font-color-dark: $custom-primary-text-dark;
+
+// Color of the secondary text (e.g., dates, categories)
+$global-font-secondary-color: $custom-secondary-text-light;
+$global-font-secondary-color-dark: $custom-secondary-text-dark;
+
+// Color of the link - IMPROVED VISIBILITY FOR LIGHT MODE
+$global-link-color: $custom-light-green; // A strong, clear blue for light mode links
+$global-link-color-dark: $custom-light-green;
+
+// Color of the hover link - IMPROVED VISIBILITY FOR LIGHT MODE
+$global-link-hover-color: darken($custom-accent-pink, 15%); // Darken the blue for hover
+$global-link-hover-color-dark: $custom-accent-pink;
+
+// Color of the border
+$global-border-color: darken($custom-light-bg, 5%);
+$global-border-color-dark: lighten($custom-dark-bg, 10%);
+// ========== Global ========== //
+
+
+// ========== Scrollbar (unchanged) ========== //
+// Color of the scrollbar
+$scrollbar-color: $custom-secondary-text-dark;
+// Color of the hover scrollbar
+$scrollbar-hover-color: $custom-secondary-text-light;
+// ========== Scrollbar ========== //
+
+
+// ========== Selection (unchanged) ========== //
+// Color of the selected text (using a translucent blue)
+$selection-color: rgba($custom-accent-blue, 0.25);
+$selection-color-dark: rgba($custom-accent-blue, 0.25);
+// ========== Selection ========== //
+
+
+// ========== Header (Global Site Header - unchanged) ========== //
+// Height of the header
+$header-height: 3.5rem;
+
+// Font family and size of the header title (e.g., your blog title in the top bar)
+$header-title-font-family: $global-font-family;
+$header-title-font-size: 1.5rem;
+
+// Color of the header background
+$header-background-color: $custom-light-accent-bg;
+$header-background-color-dark: $custom-dark-accent-bg;
+
+// Color of the hover header item (e.g., navigation links in the top header)
+$header-hover-color: $custom-accent-pink;
+$header-hover-color-dark: $custom-accent-pink;
+
+// Color of the search background
+$search-background-color: darken($custom-light-accent-bg, 3%);
+$search-background-color-dark: lighten($custom-dark-accent-bg, 5%);
+// ========== Header ========== //
+
+
+// ========== Single Content (Blog Post Area) ========== //
+// Font size of the TOC
+$toc-title-font-size: 1.2rem;
+$toc-content-font-size: 0.875rem;
+
+// Color of the single link (links within the main content area) - IMPROVED VISIBILITY FOR LIGHT MODE
+$single-link-color: $custom-light-green; // A strong, clear blue for light mode links
+$single-link-color-dark: $custom-light-green;
+
+// Color of the hover single link - IMPROVED VISIBILITY FOR LIGHT MODE
+$single-link-hover-color: darken($custom-accent-pink, 15%); // Darken the blue for hover
+$single-link-hover-color-dark: $custom-accent-pink;
+
+// Color of the table background
+$table-background-color: $custom-light-accent-bg;
+$table-background-color-dark: $custom-dark-accent-bg;
+
+// Color of the table thead
+$table-thead-color: darken($custom-light-accent-bg, 5%);
+$table-thead-color-dark: lighten($custom-dark-accent-bg, 5%);
+
+// Color of the blockquote
+$blockquote-color: $custom-light-green;
+$blockquote-color-dark: $custom-light-green;
+// ========== Single Content ========== //
+
+
+// ========== Pagination ========== //
+// Color of the link in pagination - IMPROVED VISIBILITY FOR LIGHT MODE
+$pagination-link-color: $custom-accent-blue; // A strong, clear blue for light mode links
+$pagination-link-color-dark: $custom-accent-blue;
+
+// Color of the hover link in pagination - IMPROVED VISIBILITY FOR LIGHT MODE
+$pagination-link-hover-color: darken($custom-accent-pink, 15%); // Darken the blue for hover
+$pagination-link-hover-color-dark: $custom-accent-pink;
+// ========== Pagination ========== //
+
+
+// ========== Code (Dracula Palette applied here - unchanged from last step) ========== //
+// Font family and size of the code
+$code-font-size: .875rem;
+
+// Color of the code (general inline code or default code text)
+$code-color: $dracula-foreground; // Dracula foreground
+$code-color-dark: $dracula-foreground; // Dracula foreground
+
+// Color of the code background
+$code-background-color: $dracula-background; // Dracula background
+$code-background-color-dark: $dracula-background; // Dracula background
+
+$code-info-color: $dracula-comment; // Dracula comment for code info
+$code-info-color-dark: $dracula-comment; // Dracula comment for code info
+
+// Code type list (no change needed here as it defines types, not colors)
+$code-type-list: "language-bash" "Bash",
+    "language-c" "C",
+    "language-cs" "C#",
+    "language-cpp" "C++",
+    "language-clojure" "Clojure",
+    "language-coffeescript" "CoffeeScript",
+    "language-css" "CSS",
+    "language-dart" "Dart",
+    "language-diff" "Diff",
+    "language-erlang" "Erlang",
+    "language-go" "Go",
+    "language-go-html-template" "Go HTML Template",
+    "language-groovy" "Groovy",
+    "language-haskell" "Haskell",
+    "language-html" "HTML",
+    "language-http" "HTTP",
+    "language-xml" "XML",
+    "language-java" "Java",
+    "language-js" "JavaScript",
+    "language-javascript" "JavaScript",
+    "language-json" "JSON",
+    "language-kotlin" "Kotlin",
+    "language-latex" "LaTeX",
+    "language-less" "Less",
+    "language-lisp" "Lisp",
+    "language-lua" "Lua",
+    "language-makefile" "Makefile",
+    "language-markdown" "Markdown",
+    "language-matlab" "Matlab",
+    "language-objectivec" "Objective-C",
+    "language-php" "PHP",
+    "language-perl" "Perl",
+    "language-powershell" "PowerShell",
+    "language-posh" "PowerShell",
+    "language-puppet" "Puppet",
+    "language-pwsh" "PowerShell",
+    "language-python" "Python",
+    "language-r" "R",
+    "language-ruby" "Ruby",
+    "language-rust" "Rust",
+    "language-scala" "Scala",
+    "language-scss" "Scss",
+    "language-shell" "Shell",
+    "language-sql" "SQL",
+    "language-swift" "Swift",
+    "language-tex" "TeX",
+    "language-toml" "TOML",
+    "language-ts" "TypeScript",
+    "language-typescript" "TypeScript",
+    "language-vue" "Vue",
+    "language-yml" "YAML",
+    "language-yaml" "YAML",
+;
+
+// Color map of the code highlight (Dracula Palette applied here)
+$code-highlight-dracula-map: (
+    /* Parentheses */
+    "p": $dracula-foreground,
+    /* Keyword */
+    "k": $dracula-pink,
+    /* KeywordConstant */
+    "kc": $dracula-pink,
+    /* KeywordDeclaration */
+    "kd": $dracula-pink,
+    /* KeywordNamespace */
+    "kn": $dracula-pink,
+    /* KeywordPseudo */
+    "kp": $dracula-pink,
+    /* KeywordReserved */
+    "kr": $dracula-pink,
+    /* KeywordType */
+    "kt": $dracula-cyan,
+    /* Name */
+    "n": $dracula-green,
+    /* NameAttribute */
+    "na": $dracula-green,
+    /* NameBuiltin */
+    "nb": $dracula-cyan,
+    /* NameBuiltinPseudo */
+    "bp": $dracula-orange,
+    /* NameClass */
+    "nc": $dracula-green,
+    /* NameConstant */
+    "no": $dracula-purple,
+    /* NameDecorator */
+    "nd": $dracula-purple,
+    /* NameEntity */
+    "ni": $dracula-green,
+    /* NameException */
+    "ne": $dracula-red,
+    /* NameFunction */
+    "nf": $dracula-green,
+    /* NameFunctionMagic */
+    "fm": $dracula-cyan,
+    /* NameLabel */
+    "nl": $dracula-pink,
+    /* NameNamespace */
+    "nn": $dracula-green,
+    /* NameOther */
+    "nx": $dracula-foreground,
+    /* NameProperty */
+    "py": $dracula-foreground,
+    /* NameTag */
+    "nt": $dracula-pink,
+    /* NameVariable */
+    "nv": $dracula-foreground,
+    /* NameVariableClass */
+    "vc": $dracula-foreground,
+    /* NameVariableGlobal */
+    "vg": $dracula-foreground,
+    /* NameVariableInstance */
+    "vi": $dracula-foreground,
+    /* NameVariableMagic */
+    "vm": $dracula-foreground,
+    /* Literal */
+    "l": $dracula-purple,
+    /* LiteralDate */
+    "ld": $dracula-purple,
+    /* LiteralString */
+    "s": $dracula-yellow,
+    /* LiteralStringAffix */
+    "sa": $dracula-yellow,
+    /* LiteralStringBacktick */
+    "sb": $dracula-yellow,
+    /* LiteralStringChar */
+    "sc": $dracula-yellow,
+    /* LiteralStringDelimiter */
+    "dl": $dracula-yellow,
+    /* LiteralStringDoc */
+    "sd": $dracula-yellow,
+    /* LiteralStringDouble */
+    "s2": $dracula-yellow,
+    /* LiteralStringEscape */
+    "se": $dracula-yellow,
+    /* LiteralStringHeredoc */
+    "sh": $dracula-yellow,
+    /* LiteralStringInterpol */
+    "si": $dracula-yellow,
+    /* LiteralStringOther */
+    "sx": $dracula-yellow,
+    /* LiteralStringRegex */
+    "sr": $dracula-yellow,
+    /* LiteralStringSingle */
+    "s1": $dracula-yellow,
+    /* LiteralStringSymbol */
+    "ss": $dracula-yellow,
+    /* LiteralNumber */
+    "m": $dracula-purple,
+    /* LiteralNumberBin */
+    "mb": $dracula-purple,
+    /* LiteralNumberFloat */
+    "mf": $dracula-purple,
+    /* LiteralNumberHex */
+    "mh": $dracula-purple,
+    /* LiteralNumberInteger */
+    "mi": $dracula-purple,
+    /* LiteralNumberIntegerLong */
+    "il": $dracula-purple,
+    /* LiteralNumberOct */
+    "mo": $dracula-purple,
+    /* Operator */
+    "o": $dracula-pink,
+    /* OperatorWord */
+    "ow": $dracula-pink,
+    /* Comment */
+    "c": $dracula-comment,
+    /* CommentHashbang */
+    "ch": $dracula-comment,
+    /* CommentMultiline */
+    "cm": $dracula-comment,
+    /* CommentSingle */
+    "c1": $dracula-comment,
+    /* CommentSpecial */
+    "cs": $dracula-comment,
+    /* CommentPreproc */
+    "cp": $dracula-pink,
+    /* CommentPreprocFile */
+    "cpf": $dracula-pink,
+    /* Generic */
+    "g": $dracula-foreground,
+    /* GenericDeleted */
+    "gd": $dracula-red,
+    /* GenericEmph */
+    "ge": $dracula-foreground,
+    /* GenericError */
+    "gr": $dracula-red,
+    /* GenericHeading */
+    "gh": $dracula-orange,
+    /* GenericInserted */
+    "gi": $dracula-green,
+    /* GenericOutput */
+    "go": $dracula-comment,
+    /* GenericPrompt */
+    "gp": $dracula-comment,
+    /* GenericStrong */
+    "gs": $dracula-foreground,
+    /* GenericSubheading */
+    "gu": $dracula-orange,
+    /* GenericTraceback */
+    "gt": $dracula-red,
+    /* TextWhitespace */
+    "w": $dracula-foreground,
+);
+
+$code-highlight-color-map-dark: $code-highlight-dracula-map;
+$code-highlight-color-map: $code-highlight-dracula-map; // Using the same map for light mode too, as Dracula is a dark theme.
+// ========== Code ========== //
+
+// ========== Admonition (unchanged) ========== //
+// Color list of admonition [$type $color $background-color, ... ]
+$admonition-color-list: "note"$custom-accent-blue rgba($custom-accent-blue, 0.1),
+    "abstract"$custom-accent-purple rgba($custom-accent-purple, 0.1),
+    "info"$custom-accent-blue rgba($custom-accent-blue, 0.1),
+    "tip"$custom-accent-green rgba($custom-accent-green, 0.1),
+    "success"$custom-accent-green rgba($custom-accent-green, 0.1),
+    "question"$custom-accent-orange rgba($custom-accent-orange, 0.1),
+    "warning"$custom-accent-orange rgba($custom-accent-orange, 0.1),
+    "failure"$custom-accent-pink rgba($custom-accent-pink, 0.1),
+    "danger"$custom-accent-pink rgba($custom-accent-pink, 0.1),
+    "bug"$custom-accent-pink rgba($custom-accent-pink, 0.1),
+    "example"$custom-accent-purple rgba($custom-accent-purple, 0.1),
+    "quote"$custom-secondary-text-dark rgba($custom-secondary-text-dark, 0.1),
+;
+// ========== Admonition ========== //
