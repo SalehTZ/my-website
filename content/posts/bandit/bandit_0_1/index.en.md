@@ -3,7 +3,7 @@ title: "Bandit Level 0-1: Your First Steps into the Terminal Abyss (Don't Trip!)
 subtitle: "Connecting, `ls`, `cat`, and the thrilling realization you can now, like, *do stuff* in Linux."
 date: 2025-05-24T08:50:46+03:30
 lastmod: 2025-05-24T08:50:46+03:30
-draft: true
+draft: false
 author: "SalehTZ"
 authorLink: ""
 description: "Welcome to Bandit! In this post, we'll hilariously guide you through connecting to the OverTheWire Bandit server and conquering your first two levels. Prepare to type, to wonder, and to finally feel like a terminal wizard (kinda)."
