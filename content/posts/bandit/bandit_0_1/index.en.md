@@ -11,7 +11,7 @@ license: ""
 images: []
 
 tags: ["Bandit", "OverTheWire", "Cybersecurity", "Linux", "SSH", "Command Line", "Beginner"]
-categories: ["Cybersecurity", "CTF"]
+categories: ["Cybersecurity", "CTF", "Bandit", "OverTheWire"]
 
 featuredImage: ""
 featuredImagePreview: ""

@@ -14,3 +14,14 @@ body.fa {
     direction: ltr;
     text-align: start;
 }
+
+$custom-light-purple : #8B5DFF;
+
+[theme=dark] h1 {
+    color: $custom-light-purple;
+}
+
+[theme=dark] h2,
+[theme=dark] h3 {
+    color: rgba($custom-light-purple, 0.75);
+}
