@@ -6,13 +6,23 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="msvalidate.01" content="2B5137DD4D2465465F80EA7269868C08">
+    <meta name="msvalidate.01" content="2B5137DD4D2465465F80EA7269868C08" />
     <meta name="robots" content="noodp" />
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
 
     {{- partial "head/meta.html" . -}}
     {{- partial "head/link.html" . -}}
     {{- partial "head/seo.html" . -}}
+
+    {{/* custom metas */}}
+    <!-- Clarity tracking code for https://salehtz.ir/ -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "rp170hde5w");
+    </script>
 </head>
 
 <body data-header-desktop="{{ .Site.Params.header.desktopMode }}"
