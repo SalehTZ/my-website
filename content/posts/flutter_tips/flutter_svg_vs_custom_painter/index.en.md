@@ -5,7 +5,7 @@ date: 2025-05-19T09:35:12+03:30
 lastmod: 2025-05-19T09:35:12+03:30
 draft: true
 author: "SalehTz"
-authorLink: ""
+authorLink: "#"
 description: "Explore performance benchmarks comparing SVG and CustomPainter rendering methods in Flutter, using chaos-driven animations, real-time graphs, and auto-benchmarking tools."
 license: "CC BY 4.0"
 images: []

@@ -4,8 +4,8 @@ subtitle: ""
 date: 2025-05-20T11:31:49+03:30
 lastmod: 2025-05-20T11:31:49+03:30
 draft: true
-author: ""
-authorLink: ""
+author: "SalehTZ"
+authorLink: "#"
 description: ""
 license: ""
 images: []

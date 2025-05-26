@@ -5,7 +5,7 @@ date: 2025-05-22T08:21:31+03:30
 lastmod: 2025-05-22T08:21:31+03:30
 draft: false
 author: "SalehTZ"
-authorLink: ""
+authorLink: "#"
 description: "Explore all the major improvements, new features, and breaking changes in Flutter 3.32.0 — including Material 3 as the default, the Impeller rendering engine on Android, Dart 3.3 updates, and more."
 license: ""
 images: []

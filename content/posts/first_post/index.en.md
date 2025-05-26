@@ -4,8 +4,8 @@ subtitle: ""
 date: 2025-03-25T11:56:49+03:30
 lastmod: 2025-03-25T11:56:49+03:30
 draft: false
-author: ""
-authorLink: ""
+author: "SalehTZ"
+authorLink: "#"
 description: ""
 license: ""
 images: []
@@ -60,11 +60,11 @@ seo:
   # ...
 ---
 
+<!--more-->
+
 # Welcome to My Blog 🚀
 
 This is my first post — a small milestone that marks the beginning of my journey here.
-
-<!--more-->
 
 {{< admonition success >}}
 Thank you for visiting my website! 🎉 I’m excited to share my thoughts, projects, and experiences with you.

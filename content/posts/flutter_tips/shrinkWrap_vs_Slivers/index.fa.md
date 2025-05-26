@@ -5,7 +5,7 @@ date: 2025-04-23T08:27:57+03:30
 lastmod: 2025-04-23T08:27:57+03:30
 draft: false
 author: "SalehTZ"
-authorLink: "https://salehtz.ir"
+authorLink: "#"
 description: "A practical breakdown of shrinkWrap and slivers in Flutter with code examples, use-cases, and when to use each approach."
 license: "CC BY-NC-SA 4.0"
 images: ["images/posts/shrinkwrap-vs-slivers-cover.webp"]

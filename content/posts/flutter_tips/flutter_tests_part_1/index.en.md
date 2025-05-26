@@ -5,8 +5,8 @@ date: 2025-05-20T10:46:33+03:30
 lastmod: 2025-05-20T10:46:33+03:30
 draft: true
 author: ""
-authorLink: ""
-description: ""
+authorLink: "SalehTZ"
+description: "#"
 license: ""
 images: []
 

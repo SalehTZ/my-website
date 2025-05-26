@@ -5,8 +5,8 @@ date: 2025-05-20T10:51:19+03:30
 lastmod: 2025-05-20T10:51:19+03:30
 draft: true
 author: ""
-authorLink: ""
-description: ""
+authorLink: "SalehTZ"
+description: "#"
 license: ""
 images: []
 
@@ -61,6 +61,7 @@ seo:
 ---
 
 <!--more-->
+
 # Tests: Widget Testing Part 2 – Getting Hands-On with Flutter UIs
 
 Welcome back! 👋 Now that we've got unit testing under our belt, it's time to roll up our sleeves and get into something a bit more visual: **widget testing**.

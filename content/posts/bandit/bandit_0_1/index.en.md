@@ -5,7 +5,7 @@ date: 2025-05-24T08:50:46+03:30
 lastmod: 2025-05-24T08:50:46+03:30
 draft: false
 author: "SalehTZ"
-authorLink: ""
+authorLink: "#"
 description: "Welcome to Bandit! In this post, we'll hilariously guide you through connecting to the OverTheWire Bandit server and conquering your first two levels. Prepare to type, to wonder, and to finally feel like a terminal wizard (kinda)."
 license: ""
 images: []
@@ -47,6 +47,8 @@ library:
 seo:
   images: []
 ---
+
+<!--more-->
 
 ## Introduction: The Terminal - Your New Happy Place (Maybe?)
 
