@@ -163,3 +163,7 @@ Congratulations, fledgling terminal warrior! You've successfully navigated the d
 Feeling good? You should be! This is just the beginning of your journey. Each level will introduce a new command or concept, building your cybersecurity toolkit piece by piece. Don't be afraid to experiment, to make mistakes (that's how we learn!), and to Google things you don't understand.
 
 Keep that password handy, because next time, we'll be diving into Bandit Level 2, where things get... interesting. Until then, happy hacking (ethically, of course)!
+
+----
+
+**[Continue to Bandit Level 2\!](https://salehtz.ir/bandit_1_2/)**

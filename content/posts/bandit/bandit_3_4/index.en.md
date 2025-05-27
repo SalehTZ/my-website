@@ -200,10 +200,14 @@ Next time, we'll dive into Bandit Level 5, which promises more thrilling file sy
 
 ---
 
-### **SPOILER ALERT: Short Answer for Bandit Level 4**
+## **SPOILER ALERT: Short Answer for Bandit Level 4**
 
 1.  Log in as `bandit4`.
 2.  Change directory: `cd inhere`
 3.  Use the `file` command on each file to find the one that is `ASCII text`. Example: `file -file00`, `file -file01`, etc.
 4.  Once found (e.g., `-file07`), use `cat` to display its content: `cat -file07`.
 5.  The output is the password for `bandit5`.
+
+----
+
+**[Continue to Bandit Level 5\!](https://salehtz.ir/bandit_4_5/)**

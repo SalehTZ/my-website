@@ -170,3 +170,7 @@ Next time, we'll dive into Bandit Level 4, where we'll encounter even more inter
 
 ## TL;DR -> Short Answer
 **TL;DR:** To solve Bandit Level 3, use `cd inhere` to enter the directory, then `ls -a` to list all files (including hidden ones). `cat` the hidden file (which starts with a `.`) to get the password.
+
+----
+
+**[Continue to Bandit Level 4\!](https://salehtz.ir/bandit_3_4/)**

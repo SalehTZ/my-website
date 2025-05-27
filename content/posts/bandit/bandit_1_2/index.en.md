@@ -156,3 +156,7 @@ You've successfully navigated Bandit Level 2, learning a crucial lesson about ho
 This skill is incredibly important not just in wargames, but in real-world Linux environments where filenames aren't always as neat and tidy as you'd like.
 
 Next up, Bandit Level 3! Who knows what linguistic gymnastics or file system trickery awaits? Keep those terminal fingers nimble!
+
+----
+
+**[Continue to Bandit Level 3\!](https://salehtz.ir/bandit_2_3/)**
