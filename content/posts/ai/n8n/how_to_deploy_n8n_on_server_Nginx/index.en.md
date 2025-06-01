@@ -292,7 +292,7 @@ While the Nginx configuration handles the proxying, this environment variable is
 
 By combining both the Nginx WebSocket proxy headers and the `N8N_PUSH_BACKEND=websocket` environment variable, you create a robust and stable **n8n deployment** that eliminates the dreaded "Connection lost" message. This **troubleshooting n8n** solution has been verified on `n8n Version: 1.88.0` and is expected to work for subsequent versions.
 
-## **VI. Step 4: Securing Your n8n Deployment with SSL**
+## VI. Step 4: Securing Your n8n Deployment with SSL
 
 It is critical to secure your **n8n deployment** with SSL/TLS (HTTPS) to encrypt all communication between your users and your n8n server. This is especially important as n8n handles sensitive workflow data and potentially external API keys. We'll use **Certbot** with **Let's Encrypt** for free and easy SSL certificates, following the recommended Snap installation method.
 
