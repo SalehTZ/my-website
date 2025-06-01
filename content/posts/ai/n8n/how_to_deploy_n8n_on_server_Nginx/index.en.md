@@ -13,11 +13,8 @@ images: []
 tags: ["n8n", "Docker", "Nginx", "Deployment", "WebSocket", "Automation"]
 categories: [ "n8n", "Docker", "DevOps", "AI"]
 
-tags: []
-categories: []
-
-featuredImage: ""
-featuredImagePreview: ""
+featuredImage: "images/posts/n8n/n8n.png"
+featuredImagePreview: "images/posts/n8n/n8n.png"
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
@@ -59,7 +56,8 @@ library:
     # Or
     # someJS = "https://cdn.example.com/some.js"
 seo:
-  images: []
+  images: ["images/posts/n8n/n8n.png"]
+
   # ...
 ---
 
