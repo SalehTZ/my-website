@@ -2,7 +2,7 @@
 title: "How to Deploy n8n with Docker and Nginx: The Ultimate Guide. (UPDATE: fix Connection lost issue)"
 subtitle: "A Complete Guide to Stable n8n Self-Hosting on Linux (v1.88.0+)"
 date: 2025-05-31T15:15:54+03:30
-lastmod: 2025-05-31T15:15:54+03:30
+lastmod: 2025-06-01T08:30:00+03:30
 draft: false
 author: ""
 authorLink: ""
