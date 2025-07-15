@@ -3,7 +3,7 @@ title: "Linux Command Line Cheat Sheet"
 subtitle: "Essential Linux Commands Every User Should Know"
 date: 2025-06-23T14:40:53+03:30
 lastmod: 2025-06-23T14:40:53+03:30
-draft: true
+draft: false
 author: "SalehTZ"
 authorLink: "#"
 description: ""
