@@ -12,11 +12,28 @@ math:
   enable: false
 ---
 
-## About Me
+![Flutter](https://img.shields.io/badge/Flutter-%230175C2.svg?style=flat&logo=flutter&logoColor=FFFFFF)
+![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=flat&logo=dart&logoColor=FFFFFF)
+![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54)
+![Django](https://img.shields.io/badge/django-%23092E20.svg?style=flat&logo=django&logoColor=white)
+![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=flat&logo=openjdk&logoColor=white)
+![C](https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white)
+![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white)
+![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat&logo=firebase&logoColor=222222)
+![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=flat&logo=graphql&logoColor=FFFFFF)
+![Figma](https://img.shields.io/badge/-Figma-000000?style=flat&logo=Figma&logoColor=FFFFFF)
+![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=FFFFFF)
+![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=FFFFFF)
+![GitLab](https://img.shields.io/badge/-GitLab-222222?style=flat&logo=GitLab&logoColor=FCC624)
+![Android Studio](https://img.shields.io/badge/-AndroidStudio-3DDC84?style=flat&logo=android-studio&logoColor=FFFFFF)
+![IntelliJ IDEA](https://img.shields.io/badge/-IntelliJIDEA-000000?style=flat&logo=intellij-idea&logoColor=FFFFFF)
+![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat&logo=linux&logoColor=222222)
+
+## 👨‍💻 About Me
 
 I'm a Flutter Application Developer with 5 years of experience, skilled in transforming designs into user-friendly apps to enhance user satisfaction. I have a passion for continuous learning and a sustainable mindset.
 
-## Skills
+## 🛠️ Skills
 
 | Category      | Skills                                                              |
 |---------------|---------------------------------------------------------------------|
@@ -26,7 +43,7 @@ I'm a Flutter Application Developer with 5 years of experience, skilled in trans
 | **Technologies**| Riverpod/Provider, Hive, MQTT, WebSocket, RESTful, GraphQL, AppWrite, Firebase, RxDart, Git, Figma |
 | **Soft Skills** | Adaptability, Flexibility, Quick Learner, Passionate, Attention to detail |
 
-## Experience
+## 🏢 Experience
 
 ### NewElectron (IoT Home Automation)
 
@@ -46,7 +63,7 @@ I'm a Flutter Application Developer with 5 years of experience, skilled in trans
 - Reduced food search time by half with instant menu access and precise truck locations on Map.
 - Using AppWrite BaaS reduced costs and improved app functionality.
 
-## Open-Source Contributions
+## 🌍 Open-Source Contributions
 
 ### Flutter SDK
 
@@ -64,7 +81,7 @@ I'm a Flutter Application Developer with 5 years of experience, skilled in trans
 - Modernized Gradle configuration and fixed deprecation warnings for compatibility with newer Android builds.
 - [View Pull Request](https://github.com/cafebazaar/flutter_poolakey/pull/36)
 
-## Projects
+## 🚀 Projects
 
 ### Local Chat App
 
@@ -84,7 +101,7 @@ This project is a note-taking application developed using the Flutter framework,
 
 - [View on GitHub](https://github.com/SalehTZ/note_app_flutter)
 
-## Education
+## 🎓 Education
 
 **Shahid Bahonar University of Kerman**
 Bachelor of Computer Science (9/2016 - 9/2020)
