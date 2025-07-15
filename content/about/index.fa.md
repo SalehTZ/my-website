@@ -11,105 +11,76 @@ math:
   enable: true
 ---
 
-<p align="center">
-  <img src="https://github.com/mahdidahouei/mahdidahouei/assets/58371632/69870ff3-aee2-4f00-9422-d4bb4da5cf76" width="70">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Dart_logo.png/600px-Dart_logo.png?20220718193800" width="85">
-  <img src="https://i.giphy.com/media/KzJkzjggfGN5Py6nkT/200.webp" width="100">  
-  <img src="https://i.giphy.com/media/IdyAQJVN2kVPNUrojM/200.webp" width="100">
-  <img src="https://cultofthepartyparrot.com/parrots/hd/laptop_parrot.gif" width="100" height="100"/>
-</p>
+## درباره من
 
-<br>
-<br>
+من یک توسعه‌دهنده اپلیکیشن فلاتر با ۵ سال تجربه هستم و در تبدیل طرح‌ها به اپلیکیشن‌های کاربرپسند برای افزایش رضایت کاربر مهارت دارم. من به یادگیری مستمر و داشتن یک ذهنیت پایدار علاقه‌مندم.
 
-## 🧑🏻 About Me
-I'm Saleh Talebizadeh, a passionate and dedicated Flutter Developer with a strong focus on Flutter development. I have a proven track record in the computer software industry and am committed to continuous learning and staying up-to-date with the latest technologies. I'm actively seeking opportunities to excel in the field of Flutter development.
+## مهارت‌ها
 
-<!-- ```psst👀, did you know I love coffee? You can consider donation if you love coffee too.```
+| دسته‌بندی | مهارت‌ها |
+|---|---|
+| **زبان‌ها** | فلاتر/دارت، جاوا، پایتون، SQL، C/C++ |
+| **CI/CD** | GitLab CI، GitHub Actions |
+| **سیستم‌عامل** | اندروید، لینوکس، ویندوز |
+| **تکنولوژی‌ها**| Riverpod/Provider، Hive، MQTT، WebSocket، RESTful، GraphQL، AppWrite، Firebase، RxDart، Git، Figma |
+| **مهارت‌های نرم** | سازگاری، انعطاف‌پذیری، یادگیرنده سریع، پرشور، توجه به جزئیات |
 
-Tron/USDT(trc20): ```TACT68nhFLjeGSh6z1Yw9BDbRfKTs4EDJb```
+## تجربیات
 
-BTC: ```bc1qxl437ktmwpmsyca4qze5f4l6xka0mlrn2xakw6``` -->
+### نیوالکترون (اتوماسیون خانگی اینترنت اشیاء)
+**توسعه‌دهنده فلاتر** (فروردین ۱۴۰۳ - تاکنون، حضوری - کرمان، ایران)
+- یک اپلیکیشن چندسکویی و کاربرپسند ایجاد کردم که کاربران را به طور یکپارچه به دستگاه‌های اینترنت اشیاء خانگی‌شان در پلتفرم‌های مختلف متصل می‌کند.
+- روشی برای اتصال به دستگاه‌ها از طریق UDP محلی یا از طریق اینترنت با استفاده از MQTT، بر اساس وضعیت اتصال دستگاه‌های اینترنت اشیاء و دس��گاه‌های ورودی/خروجی (اپلیکیشن موبایل/دسکتاپ/وب) پیاده‌سازی کردم.
+- مدیریت صدها پیام ورودی از سوکت‌های MQTT و/یا UDP.
+- کار با دستگاه‌های مختلف با دستورات متفاوت برای مدیریت تنظیمات مختلف دستگاه.
 
+### کاتری
+**توسعه‌دهنده جونیور فلاتر** (فروردین ۱۴۰۲ - فروردین ۱۴۰۳، دورکاری - کویت)
+- یک اپلیکیشن موبایل کاربرپسند برای اتصال کاربران به فودتراک‌های محلی در سراسر کویت ایجاد کردم.
+- یک صفحه نقشه سفارشی با انیمیشن‌های جذاب برای لذت‌بخش‌تر کردن تجربه کاربری پیاده‌سازی کردم.
+- زمان جستجوی غذا را با دسترسی فوری به منو و مکان دقیق کامیون‌ها روی نقشه به نصف کاهش دادم.
+- استفاده از AppWrite BaaS هزینه‌ها را کاهش داد و عملکرد اپلیکیشن را بهبود بخشید.
 
-## 📊 GitHub Stats:
+## مشارکت‌های متن‌باز
+
+### Flutter SDK
+- در بهبود عملکرد و مستندات در SDK رسمی فلاتر مشارکت داشتم.
+- مسائل طولانی‌مدتی مانند [#59306](https://github.com/flutter/flutter/issues/59306) مربوط به یکپارچه‌سازی نمای پلتفرم را برطرف کردم.
+- مشکل [#167922](https://github.com/flutter/flutter/issues/167922) را با درخواست pull شماره [#172056](https://github.com/flutter/flutter/pull/172056) بستم.
+- مشکل [#171815](https://github.com/flutter/flutter/issues/171815) را با درخواست pull شماره [#172100](https://github.com/flutter/flutter/pull/172100) بستم.
+- درخواست pull شماره [#172096](https://github.com/flutter/flutter/pull/172096) مشکلات [#171813](https://github.com/flutter/flutter/issues/171813) و [#171814](https://github.com/flutter/flutter/issues/171814) را می‌بندد.
+- درخواست pull شماره [#172099](https://github.com/flutter/flutter/pull/172099) مشکلات [#171816](https://github.com/flutter/flutter/issues/171816) و [#171817](https://github.com/flutter/flutter/issues/171817) را می‌بندد، که منجر به بسته شدن مشکل والد [#171812](https://github.com/flutter/flutter/issues/171812) می‌شود.
+- [مشاهده در گیت‌هاب](https://github.com/flutter/flutter)
+
+### CafeBazaar - flutter_poolakey SDK
+- پلاگین را برای استفاده از آخرین نسخه Flutter SDK و پلاگin Android Gradle ارتقا دادم.
+- پیکربندی Gradle را مدرن‌سازی کرده و هشدارهای منسوخ شدن را برای سازگاری با بیلدهای جدیدتر اندروید برطرف کردم.
+- [مشاهده درخواست Pull](https://github.com/cafebazaar/flutter_poolakey/pull/36)
+
+## پروژه‌ها
+
+### اپلیکیشن چت محلی
+یک اپلیکیشن چت سریع و ساده که با فلاتر ساخته شده و از UDP برای پیام‌رسانی، Riverpod برای مدیریت وضعیت و Hive برای ذخیره‌سازی محلی استفاده می‌کند.
+- برای عملکرد روان، روی یک Isolate جداگانه اجرا می‌شود.
+- با استفاده از ایزوله‌ها برای واگذاری عملیات شبکه، همزمانی را با موفقیت مدیریت کردم.
+- ارتباط UDP بی‌درنگ با RawDatagramSocket برای پیام‌رسانی با تأخیر کم پیاده‌سازی کردم.
+- از Riverpod برای مدیریت وضعیت مقیاس‌پذیر و Hive برای ذخیره‌سازی پایدار استفاده کردم.
+- ارتباط بین ایزوله‌ها را با پورت‌های ارسال/دریافت هماهنگ کردم.
+- با مدیریت خطا برای انتقال داده‌های قابل اعتماد، استحکام را تضمین کرده و تجربه کاربری یکپارچه‌ای را حتی در شرایط شبکه ناپایدار حفظ کردم.
+- [مشاهده در گیت‌هاب](https://github.com/SalehTZ/udp_riverpod_isolate)
+
+### اپلیکیشن یادداشت
+این پروژه یک اپلیکیشن یادداشت‌برداری است که با اس��فاده از فریمورک فلاتر توسعه یافته و Hive به عنوان پایگاه داده آن عمل می‌کند. این اپلیکیشن به کاربران این امکان را می‌دهد که به راحتی یادداشت‌ها را ایجاد، حذف و ویرایش کنند و تجربه یادداشت‌برداری یکپارچه و کارآمدی را فراهم می‌کند.
+- [مشاهده در گیت‌هاب](https://github.com/SalehTZ/note_app_flutter)
+
+## تحصیلات
+
+**دانشگاه شهید باهنر کرمان**
+کارشناسی علوم کامپیوتر (شهریور ۱۳۹۵ - شهریور ۱۳۹۹)
+
+## 📊 آمار گیت‌هاب
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SalehTZ&langs_count=9&layout=compact&theme=dark">
   <img src="https://github-readme-stats.vercel.app/api?username=salehtz&theme=dark&hide_border=false&include_all_commits=true&count_private=true">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=salehtz&theme=dark&hide_border=false">
 </p>
-
-## 🔮 Skills
-![Flutter](https://img.shields.io/badge/Flutter-%230175C2.svg?style=flat&logo=flutter&logoColor=FFFFFF)
-![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=flat&logo=dart&logoColor=FFFFFF)
-![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54)
-![Django](https://img.shields.io/badge/django-%23092E20.svg?style=flat&logo=django&logoColor=white)
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=flat&logo=openjdk&logoColor=white) 
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white)
-![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat&logo=firebase&logoColor=222222)
-![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=flat&logo=graphql&logoColor=FFFFFF)
-![Figma](https://img.shields.io/badge/-Figma-000000?style=flat&logo=Figma&logoColor=FFFFFF)
-![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=FFFFFF)
-![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=FFFFFF)
-![GitLab](https://img.shields.io/badge/-GitLab-222222?style=flat&logo=GitLab&logoColor=FCC624)
-![Android Studio](https://img.shields.io/badge/-AndroidStudio-3DDC84?style=flat&logo=android-studio&logoColor=FFFFFF)
-![IntelliJ IDEA](https://img.shields.io/badge/-IntelliJIDEA-000000?style=flat&logo=intellij-idea&logoColor=FFFFFF)
-![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat&logo=linux&logoColor=222222)
-
-## 🧑🏻‍🎓 Education
-- **Bachelor's Degree**: Computer Science
-  - Shahid Bahonar University, Kerman, Iran <img src="https://cultofthepartyparrot.com/flags/hd/iranparrot.gif" width="30" height="30"/>
-  - Sep 2016 - Sep 2020
-
-## Languages
-- **English**: Fluent
-- **Persian**: Native
-
-</br>
-</br>
-
-<div align="center">
-  <a href="http://www.instagram.com/mr_tz.dev/">
-    <img alt="Instagram" src="https://img.shields.io/badge/instagram-ea4456.svg?&style=for-the-badge&logo=instagram&logoColor=white" />
-  </a>
-  <a href="https://www.linkedin.com/in/salehtz/">
-    <img alt="LinkedIn" src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" />
-  </a>
-</div>
-
-
-<br>
-
-### 🦜 Here are some [parrots](https://cultofthepartyparrot.com)
-
-<div>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/githubparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/flags/hd/iranparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/asyncparrot.gif" width="36" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/60fpsparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/jumpingparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/opensourceparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/dealwithitnowparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/hypnoparrotlight.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/databaseparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/fixparrot.gif" width="36" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/laptop_parrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/spinningparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/levitationparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/meldparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/slomoparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/moonwalkingparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/stableparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/scienceparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/pirateparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/footballparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/illuminatiparrot.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/hypnoparrotdark.gif" width="30" height="30"/>
-    <img src="https://cultofthepartyparrot.com/parrots/hd/mustacheparrot.gif" width="30" height="30"/>
-</div>
-
-<!--
-### 😂 Random Dev Meme
-<img src='https://memer-new.vercel.app/' style="height: 400px;"/>
- -->

@@ -12,67 +12,87 @@ math:
   enable: false
 ---
 
+## About Me
 
-![Flutter](https://img.shields.io/badge/Flutter-%230175C2.svg?style=flat&logo=flutter&logoColor=FFFFFF)
-![Dart](https://img.shields.io/badge/Dart-%230175C2.svg?style=flat&logo=dart&logoColor=FFFFFF)
-![Python](https://img.shields.io/badge/python-3670A0?style=flat&logo=python&logoColor=ffdd54)
-![Django](https://img.shields.io/badge/django-%23092E20.svg?style=flat&logo=django&logoColor=white)
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=flat&logo=openjdk&logoColor=white) 
-![C](https://img.shields.io/badge/c-%2300599C.svg?style=flat&logo=c&logoColor=white)
-![C++](https://img.shields.io/badge/c++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white)
-![Firebase](https://img.shields.io/badge/-Firebase-FFCA28?style=flat&logo=firebase&logoColor=222222)
-![GraphQL](https://img.shields.io/badge/-GraphQL-E10098?style=flat&logo=graphql&logoColor=FFFFFF)
-![Figma](https://img.shields.io/badge/-Figma-000000?style=flat&logo=Figma&logoColor=FFFFFF)
-![Git](https://img.shields.io/badge/-Git-F05032?style=flat&logo=git&logoColor=FFFFFF)
-![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=FFFFFF)
-![GitLab](https://img.shields.io/badge/-GitLab-222222?style=flat&logo=GitLab&logoColor=FCC624)
-![Android Studio](https://img.shields.io/badge/-AndroidStudio-3DDC84?style=flat&logo=android-studio&logoColor=FFFFFF)
-![IntelliJ IDEA](https://img.shields.io/badge/-IntelliJIDEA-000000?style=flat&logo=intellij-idea&logoColor=FFFFFF)
-![Linux](https://img.shields.io/badge/-Linux-FCC624?style=flat&logo=linux&logoColor=222222)
+I'm a Flutter Application Developer with 5 years of experience, skilled in transforming designs into user-friendly apps to enhance user satisfaction. I have a passion for continuous learning and a sustainable mindset.
 
-## 🧑🏻 About Me 🎯
+## Skills
 
-I'm **Mohammad Saleh Talebi Zadeh**, a passionate **Flutter developer** with a strong background in **IoT and smart home technologies**. I specialize in building **efficient, scalable, and high-performance applications**, leveraging my experience in **Riverpod, MQTT, UDP communication, UI/UX using Figma, and Linux/Ubuntu systems**. 
+| Category      | Skills                                                              |
+|---------------|---------------------------------------------------------------------|
+| **Languages**   | Flutter/Dart, Java, Python, SQL, C/C++                              |
+| **CI/CD**       | GitLab CI, GitHub Actions                                           |
+| **OS**          | Android, Linux, Windows                                             |
+| **Technologies**| Riverpod/Provider, Hive, MQTT, WebSocket, RESTful, GraphQL, AppWrite, Firebase, RxDart, Git, Figma |
+| **Soft Skills** | Adaptability, Flexibility, Quick Learner, Passionate, Attention to detail |
 
-## 🔮 What I Do 🚀
+## Experience
 
-- **Flutter Development**: Creating modern, cross-platform mobile applications with **Riverpod, custom widgets, and efficient state management**.
-- **IoT & Smart Home Solutions**: Developing and integrating **local and cloud-based IoT systems** using **MQTT, UDP, and other communication protocols**.
-- **UI/UX**: Designing intuitive and user-friendly interfaces using **Figma**.
-- **Linux & System Administration**: Configuring, optimizing, and maintaining **Ubuntu-based environments** for development and deployment.
-- **Open Source & Community**: Founder of **Persian Flutter Community**, contributing to the growth of Flutter developers in the Persian-speaking world.
-<!-- - **Enterprise Experience**: Worked with **Cateri Kuwait**, gaining expertise in **enterprise-level software solutions**. -->
+### NewElectron (IoT Home Automation)
 
-## 🛠️ Projects & Experience
+**Flutter Developer** (4/2024 - Present, On-Site - Kerman, Iran)
 
-- 🚀 Developed a **smart home app** for controlling **IoT devices** via local UDP and MQTT.
-- 💬 Built a **local chat app** with **UDP socket communication** and Riverpod for state management.
-- 📝 Created a **Note app** with efficient storage and a clean UI.
+- Created a multi-platform, user-friendly application that seamlessly connects users to their home IoT devices across multiple platforms.
+- Implemented a method to connect to devices through local UDP or over the Internet using MQTT, based on the connection state of IoT devices and IO Devices (mobile/desktop/web app).
+- Handling hundreds of incoming messages from MQTT and/or UDP sockets.
+- Working with various devices with different commands to manage different device settings.
 
-## 🎓 Education 📖
+### Cateri
 
-- **Bachelor's Degree**: Computer Science
-  - Shahid Bahonar University, Kerman, Iran&#x20;
-  - Sep 2016 - Sep 2020
+**Junior Flutter Developer** (4/2023 - 3/2024, Remote - Kuwait)
 
-## 🌍 Languages 🗣️
+- Created a user-friendly mobile app connecting users to local food trucks around Kuwait City.
+- Implemented a custom Map screen with cool animations to make the user experience more enjoyable.
+- Reduced food search time by half with instant menu access and precise truck locations on Map.
+- Using AppWrite BaaS reduced costs and improved app functionality.
 
-- **English**: Fluent
-- **Persian**: Native
+## Open-Source Contributions
 
-## 🤝 Get in Touch 📩
+### Flutter SDK
 
-I'm always open to collaboration and discussions on **Flutter, IoT, Linux, and software development**. Let's connect!
+- Contributed to performance and documentation improvements in the official Flutter SDK.
+- Addressed long-standing issues such as [#59306](https://github.com/flutter/flutter/issues/59306) related to the integration of the platform view.
+- Closed issue [#167922](https://github.com/flutter/flutter/issues/167922) with pull request [#172056](https://github.com/flutter/flutter/pull/172056).
+- Closed issue [#171815](https://github.com/flutter/flutter/issues/171815) with pull request [#172100](https://github.com/flutter/flutter/pull/172100).
+- Pull request [#172096](https://github.com/flutter/flutter/pull/172096) closes issues [#171813](https://github.com/flutter/flutter/issues/171813) and [#171814](https://github.com/flutter/flutter/issues/171814).
+- Pull request [#172099](https://github.com/flutter/flutter/pull/172099) closes issues [#171816](https://github.com/flutter/flutter/issues/171816) and [#171817](https://github.com/flutter/flutter/issues/171817), resulting in the closure of parent issue [#171812](https://github.com/flutter/flutter/issues/171812).
+- [View on GitHub](https://github.com/flutter/flutter)
 
+### CafeBazaar - flutter_poolakey SDK
+
+- Upgraded the plugin to use the latest Flutter SDK and Android Gradle Plugin.
+- Modernized Gradle configuration and fixed deprecation warnings for compatibility with newer Android builds.
+- [View Pull Request](https://github.com/cafebazaar/flutter_poolakey/pull/36)
+
+## Projects
+
+### Local Chat App
+
+A fast and simple chat app built with Flutter, using UDP for messaging, Riverpod for state management, and Hive for local storage.
+
+- Runs on a separate Isolate for smooth performance.
+- Successfully managed concurrency by using isolates to offload network operations.
+- Implemented real-time UDP communication with RawDatagramSocket for low-latency messaging.
+- Leveraged Riverpod for scalable state management and Hive for persistent storage.
+- Coordinated cross-isolate communication with send/receive ports.
+- Ensured robustness with error handling for reliable data transfer, maintaining a seamless user experience even under unstable network conditions.
+- [View on GitHub](https://github.com/SalehTZ/udp_riverpod_isolate)
+
+### Note App
+
+This project is a note-taking application developed using the Flutter framework, with Hive serving as the database. The application empowers users to effortlessly create, delete, and edit notes, providing a seamless and efficient note-taking experience.
+
+- [View on GitHub](https://github.com/SalehTZ/note_app_flutter)
+
+## Education
+
+**Shahid Bahonar University of Kerman**
+Bachelor of Computer Science (9/2016 - 9/2020)
 
 ## 📊 GitHub Stats
+
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=SalehTZ&langs_count=9&layout=compact&theme=dark">
   <img src="https://github-readme-stats.vercel.app/api?username=salehtz&theme=dark&hide_border=false&include_all_commits=true&count_private=true">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=salehtz&theme=dark&hide_border=false">
 </p>
-
-<!--
-### 😂 Random Dev Meme
-<img src='https://memer-new.vercel.app/' style="height: 400px;"/>
- -->
