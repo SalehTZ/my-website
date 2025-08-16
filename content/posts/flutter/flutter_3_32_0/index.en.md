@@ -11,7 +11,7 @@ license: ""
 images: []
 
 tags: ["flutter", "flutter update", "flutter 3.32", "dart", "material 3", "impeller", "flutter devtools"]
-categories: ["Flutter", "Release Notes", "Mobile Development"]
+categories: ["Flutter", "Release Notes"]
 
 featuredImage: ""
 featuredImagePreview: ""
