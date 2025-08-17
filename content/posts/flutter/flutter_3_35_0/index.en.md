@@ -13,8 +13,8 @@ images: []
 tags: ["flutter", "flutter update", "flutter 3.35"]
 categories: ["Flutter", "Release Notes"]
 
-featuredImage: "images/posts/flutter_3_35_0.png"
-featuredImagePreview: "images/posts/flutter_3_35_0.png"
+featuredImage: "images/posts/flutter_3_35.png"
+featuredImagePreview: "images/posts/flutter_3_35.png"
 
 hiddenFromHomePage: false
 hiddenFromSearch: false
@@ -40,7 +40,7 @@ share:
 comment:
   enable: true
 seo:
-  images: ["images/posts/flutter_3_35_0.png"]
+  images: ["images/posts/flutter_3_35.png"]
 ---
 
 
