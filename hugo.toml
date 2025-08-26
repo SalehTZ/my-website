@@ -443,7 +443,7 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
         languageCode = ""
       # Telegram comments config (https://comments.app/)
       [params.page.comment.telegram]
-        enable = true
+        enable = false
         siteID = "0fIzTKbA"
         limit = 5
         height = ""
@@ -466,18 +466,18 @@ ignoreErrors = ["error-remote-getjson", "error-missing-instagram-accesstoken"]
       # giscus comment config (https://giscus.app/)
       [params.page.comment.giscus]
         # You can refer to the official documentation of giscus to use the following configuration.
-        enable = false
-        repo = ""
-        repoId = ""
-        category = "Announcements"
-        categoryId = ""
+        enable = true
+        repo = "salehTZ/my-website"
+        repoId = "R_kgDONvuumg"
+        category = "Q&A"
+        categoryId = "DIC_kwDONvuums4Cumh2"
         # automatically adapt the current theme i18n configuration when empty
         lang = ""
         mapping = "pathname"
         reactionsEnabled = "1"
         emitMetadata = "0"
-        inputPosition = "bottom"
-        lazyLoading = false
+        inputPosition = "top"
+        lazyLoading = true
         lightTheme = "light"
         darkTheme = "dark"
     # Third-party library config
