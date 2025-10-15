@@ -1,17 +1,17 @@
 ---
-title: "Bandit Level 2: The Space Odyssey (and How to Tame It)"
-subtitle: "Dealing with spaces in filenames: Because quoting is more than just telling stories."
-date: 2025-05-26T09:08:45+03:30
-lastmod: 2025-05-26T09:08:45+03:30
+title: "Bandit Level 1 to 2: The Case of the Hyphen File"
+subtitle: "Learn how to access files with special names like '-' by specifying their path. A classic Linux command-line trick."
+date: 2025-05-24T08:50:46+03:30
+lastmod: 2025-10-15T12:11:25+02:00
 draft: false
 author: "SalehTZ"
 authorLink: "#"
-description: "You've conquered the basics, but Bandit Level 2 introduces a classic Linux challenge: filenames with spaces! Learn how to 'quote' your way to victory and grab that elusive password."
+description: "A clear walkthrough for solving the OverTheWire Bandit wargame from Level 1 to Level 2. Learn how to handle filenames that start with a special character like a hyphen (-) using './' to specify the path."
 license: ""
 images: []
 
-tags: ["Bandit", "OverTheWire", "Cybersecurity", "Linux", "Command Line", "Filesystem", "Beginner"]
-categories: ["Cybersecurity", "CTF", "Bandit", "OverTheWire"]
+tags: ["Bandit", "OverTheWire", "Cybersecurity", "Linux", "Command Line", "CTF", "File Path"]
+categories: ["Cybersecurity", "CTF"]
 
 featuredImage: ""
 featuredImagePreview: ""
@@ -35,128 +35,119 @@ code:
   maxShownLines: 50
 math:
   enable: false
-  # ...
-mapbox:
-  # ...
 share:
   enable: true
-  # ...
 comment:
   enable: true
-  # ...
 library:
   css:
-    # someCSS = "some.css"
-    # located in "assets/"
-    # Or
-    # someCSS = "https://cdn.example.com/some.css"
   js:
-    # someJS = "some.js"
-    # located in "assets/"
-    # Or
-    # someJS = "https://cdn.example.com/some.js"
 seo:
   images: []
-  # ...
 ---
 
-<!--more-->
+## Introduction
 
-## Introduction: The Unseen Enemy - The Space Character
+Welcome back to the OverTheWire Bandit wargame series! If you've just solved Level 0 -> 1, congratulations on taking your first step. In this guide, we'll tackle the next challenge: finding the password to log into `bandit2`.
 
-Welcome back, intrepid terminal traveler! You've successfully navigated the entry point, found your first `readme`, and you're feeling pretty smug, aren't you? Good. Now prepare for **Bandit Level 2**, where the game throws a curveball so subtle, it might just make you question your life choices.
+This level introduces a common and important concept in the Linux command line: how to handle files with names that can be confused with command-line options. Let's dive in.
 
-The challenge this time? **Spaces in filenames.** Yes, those innocent little gaps between words that make file names readable to us humans. To a Linux shell, however, a space is a command separator, a signal to treat the next word as a new argument or command. It's like telling your dog to "fetch the ball, stick, and frisbee" – it knows you want three distinct things, not one giant item called "ball stick frisbee."
+## The Challenge: Level 1 Goal
 
-The level description for Bandit Level 2 states:
+The official goal on the OverTheWire website states:
 
-> *The password for the next level is stored in a file called **spaces in this filename** located in the home directory.*
+> The password for the next level is stored in a file called **-** located in the home directory.
 
-"Spaces in this filename." Cute, right? Let's tackle this seemingly simple, yet surprisingly tricky, obstacle.
+The key here is the filename: it's a single hyphen (`-`). This is where the trick lies.
 
-## Level 2: The Case of the Spaced-Out Filename
+## Step-by-Step Walkthrough
 
-You've just logged in as `bandit2` (using the password you found in Level 1). Your first instinct, as always, should be:
+Let's work through this puzzle step by step.
 
-```bash
-ls
-```
+### Step 1: Log into `bandit1`
 
-And what do you see?
-
-```
-spaces in this filename
-```
-
-Looks harmless enough. Now, remembering your newfound `cat` wisdom from Level 1, you confidently type:
+First, use the password you obtained from the previous level to SSH into the `bandit1` user.
 
 ```bash
-cat spaces in this filename
-```
+ssh bandit1@bandit.labs.overthewire.org -p 2220
+````
 
-...and the terminal stares back at you with a confused expression. You might get an error like:
+Enter the password for `bandit1` when prompted.
 
-```
-cat: spaces: No such file or directory
-cat: in: No such file or directory
-cat: this: No such file or directory
-cat: filename: No such file or directory
-```
+### Step 2: Explore the Home Directory
 
-"What?! I *just* saw it there!" you exclaim, shaking your fist at the screen. This, my friend, is the shell telling you, "I don't know what 'spaces' is, or 'in', or 'this', or 'filename' as separate entities." Because to the shell, each word separated by a space is a different argument. It's trying to `cat` four different (non-existent) files!
-
-### The Solution: Taming the Spaces with Quotes (or Backslashes)
-
-To make the shell understand that "spaces in this filename" is *one single filename*, you need to tell it explicitly. You have two primary ways to do this:
-
-#### Method 1: The Double Quotes ("") - Your New Best Friend
-
-The easiest and most common way to handle spaces (and other special characters) in filenames is to wrap the entire filename in double quotes. This tells the shell, "Hey, everything inside these quotes is part of the same argument, even if there are spaces."
+Once you're logged in, the first thing to do is list the files in the current directory to see what we're working with. The `ls -la` command is perfect for this as it shows all files, including hidden ones, with details.
 
 ```bash
-cat "spaces in this filename"
+bandit1@bandit:~$ ls -la
+total 20
+drwxr-xr-x  2 root    root    4096 Oct 15 10:00 .
+drwxr-xr-x 31 root    root    4096 Oct 15 10:00 ..
+-rw-r--r--  1 root    root    220 May 15  2017 .bash_logout
+-rw-r--r--  1 root    root   3771 May 15  2017 .bashrc
+-rw-r--r--  1 root    root    675 May 15  2017 .profile
+-r--r-----  1 bandit2 bandit1   33 Oct 15 10:00 -
 ```
 
-Hit Enter, and *bam!* The password for `bandit3` is revealed. It's like magic, but it's just proper quoting.
+As promised by the level goal, we can see a file named `-`.
 
-#### Method 2: The Backslash (`\`) - The Escape Artist
+### Step 3: The Problem with `cat`
 
-Another way to handle spaces is to "escape" each individual space with a backslash (`\`). The backslash tells the shell to treat the character immediately following it literally, rather than interpreting it as a special command.
+Our first instinct is to use the `cat` command to read the file's content. Let's try it:
 
 ```bash
-cat spaces\ in\ this\ filename
+cat -
 ```
 
-This also works perfectly and will spit out the password. It's a bit more typing, which is why double quotes are generally preferred for multi-spaced filenames, but it's good to know both methods.
+You'll notice that the command doesn't return the password. Instead, the cursor just moves to a new, blank line. This is because many command-line tools, including `cat`, interpret a lone hyphen (`-`) as an argument representing **standard input (stdin)**. Essentially, the `cat` command is now waiting for you to type something.
 
-### Moving Onward:
+You can exit this waiting state by pressing `Ctrl+C`.
 
-Copy that password for `bandit3`! Then, as before:
+### Step 4: The Solution - Specifying the Path
+
+So, how do we tell the shell that we mean the *file* named `-` and not the *argument* for standard input? We need to be more specific with the file's path.
+
+In Linux, `./` is a reference to the current directory. By prepending the filename with `./`, we are giving the `cat` command an unambiguous path to the file.
+
+Let's try that:
 
 ```bash
-exit
+cat ./-
 ```
 
-And connect to the next level:
+Success\! The command will now print the contents of the file, which is the password for the next level.
 
 ```bash
-ssh bandit3@bandit.labs.overthewire.org -p 2220
+# yours might be different 
+263JGJPfgU6LtdEvgfWU1XP5yac29mFx
 ```
 
-Enter your newly acquired password, and you're in! Congratulations, you've conquered the space-time continuum (or at least, spaces in filenames).
+**Alternative Solution:** You can also use the full path to the file:
 
-## Conclusion: Quotes - More Than Just for Shakespeare!
+```bash
+cat /home/bandit1/-
+```
 
-You've successfully navigated Bandit Level 2, learning a crucial lesson about how shells interpret commands and arguments. You've mastered:
+This works for the exact same reason—it provides a clear, unambiguous path to the file.
 
-* Why spaces in filenames can be a pain.
-* How to properly quote filenames using double quotes (`""`).
-* The alternative method of escaping spaces with backslashes (`\ `).
+## Key Concepts Learned
 
-This skill is incredibly important not just in wargames, but in real-world Linux environments where filenames aren't always as neat and tidy as you'd like.
+This level is simple but teaches a fundamental lesson about the Linux command line:
 
-Next up, Bandit Level 3! Who knows what linguistic gymnastics or file system trickery awaits? Keep those terminal fingers nimble!
+1. **Special Characters in Filenames:** Files can have names that include characters the shell interprets in special ways (like `-`, `*`, `|`, `>`).
+2. **Disambiguation with Paths:** You can force the shell to treat a special filename as a literal file by providing a more explicit path, such as `./filename` (for the current directory) or `/path/to/your/filename` (an absolute path).
+3. **Standard Input (`stdin`):** The single hyphen (`-`) is a conventional way to tell a program to read from standard input instead of a file.
 
-----
+## Frequently Asked Questions (FAQ)
 
-**[Continue to Bandit Level 3\!](https://salehtz.ir/bandit_2_3/)**
+**Q: Why does `cat -` wait for input?**
+A: The `-` is a POSIX convention that tells a program to read data from standard input (the keyboard, by default) rather than from a file argument.
+
+**Q: What exactly does `./` mean?**
+A: In Linux/Unix systems, `.` refers to the current working directory, and `..` refers to the parent directory. So `./-` is the explicit path to a file named `-` located in your current directory.
+
+## Conclusion
+
+And that's it\! You've successfully navigated a classic command-line trick and captured the password for `bandit2`. Make sure to save the password securely.
+
+You're now ready to log out of `bandit1` and tackle the next challenge. Good luck with Level 2 -\> 3\!
