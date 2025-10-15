@@ -1,17 +1,17 @@
 ---
-title: "Bandit Level 5: The Goldilocks File Hunt (Just Right!)"
-subtitle: "Using `find` to pinpoint the perfect file by size, readability, and permission."
+title: "Bandit Level 4 to 5: Finding Human-Readable Text in a Data Maze"
+subtitle: "Using the 'file' command to distinguish ASCII text from binary data and locate the password file."
 date: 2025-05-26T09:09:12+03:30
-lastmod: 2025-05-26T09:09:12+03:30
+lastmod: 2025-10-15T12:52:43+02:00
 draft: false
 author: "SalehTZ"
 authorLink: "#"
-description: "Bandit Level 5 challenges your file-finding skills! Learn to use the powerful `find` command to locate a file with specific properties: human-readable, a precise size, and not executable."
+description: "A complete guide for solving OverTheWire Bandit Level 4 to 5. Learn how to use the powerful 'file' command to analyze a directory of files and identify the single human-readable ASCII text file containing the password."
 license: ""
 images: []
 
-tags: ["Bandit", "OverTheWire", "Cybersecurity", "Linux", "Command Line", "Find Command", "File Permissions", "File Size", "Beginner"]
-categories: ["Cybersecurity", "CTF", "Bandit", "OverTheWire"]
+tags: ["Bandit", "OverTheWire", "Cybersecurity", "Linux", "Command Line", "CTF", "file command", "ASCII", "Binary"]
+categories: ["Cybersecurity", "CTF"]
 
 featuredImage: ""
 featuredImagePreview: ""
@@ -35,150 +35,123 @@ code:
   maxShownLines: 50
 math:
   enable: false
-  # ...
-mapbox:
-  # ...
 share:
   enable: true
-  # ...
 comment:
   enable: true
-  # ...
 library:
   css:
-    # someCSS = "some.css"
-    # located in "assets/"
-    # Or
-    # someCSS = "https://cdn.example.com/some.css"
   js:
-    # someJS = "some.js"
-    # located in "assets/"
-    # Or
-    # someJS = "https://cdn.example.com/some.js"
 seo:
   images: []
-  # ...
 ---
 
-<!--more-->
+## Introduction
 
-## Introduction: When "Just Find It" Isn't Enough
+In the last level, we learned to find files that were intentionally hidden from view. Now, in Bandit Level 4 to 5, the challenge is different. The password file isn't hidden, but it's lost in a crowd of other files that are unreadable to humans.
 
-You've successfully navigated directories, unmasked hidden files, and even differentiated between plain text and binary goo. You're becoming quite the file system connoisseur! But **Bandit Level 5** ups the ante. It's no longer about *just* finding a file; it's about finding the *right* file, based on a very specific shopping list of properties.
+This level teaches us a critical skill: how to programmatically identify the *type* of data a file contains, allowing us to quickly find the needle in the haystack.
 
-The level description for Bandit Level 5 reads:
+## The Challenge: Level 4 Goal
 
-> *The password for the next level is stored in a file somewhere in the **inhere** directory and has the following properties:*
-> * human-readable
-> * 1033 bytes in size
-> * not executable
+The official goal on the OverTheWire website states:
 
-"Human-readable" we know. "1033 bytes"? That's a very precise size. "Not executable"? Ah, file permissions are joining the party! This is a job for the Swiss Army knife of Linux commands: `find`.
+> The password for the next level is stored in the only human-readable file in the **inhere** directory.
 
----
+The key phrase here is "human-readable." We need a tool that can tell us which file is plain text and which ones are binary data.
 
-## Level 5: The `find` Command - Your Digital Bloodhound
+## Step-by-Step Walkthrough
 
-You've logged in as `bandit5` with the password from Level 4. A quick `ls` will show you our familiar entry point:
+Let's dive in and analyze these files.
+
+### Step 1: Log into `bandit4`
+
+Use the password you found in the `.hidden` file from the previous level to SSH into `bandit4`.
 
 ```bash
-ls
-```
+ssh bandit4@bandit.labs.overthewire.org -p 2220
+````
 
-Output:
+### Step 2: Investigate the `inhere` Directory
 
-```
-inhere
-```
-
-Naturally, we'll `cd` into that `inhere` directory:
+First, `cd` into the `inhere` directory as instructed.
 
 ```bash
 cd inhere
 ```
 
-Now, if you try an `ls` or even `ls -a`, you'll likely see a massive number of files and directories. Manually checking each one for human-readability, size, and executability would be a tedious, soul-crushing task. This is exactly what the `find` command was made for.
-
-### The `find` Command: Filtering Like a Pro
-
-The `find` command is incredibly powerful for locating files and directories based on various criteria. You tell it *where* to look and *what* properties the files should have.
-
-Here's the breakdown of the options we'll use for Bandit Level 5:
-
-* **`.`**: This tells `find` to start searching in the *current directory* (and its subdirectories).
-* **`-type f`**: We're looking for a *file*, not a directory. (`f` for file).
-* **`-size 1033c`**: We want a file exactly `1033` bytes in size. The `c` stands for bytes.
-* **`-readable`**: This filters for files that are human-readable (like plain text). This is often equivalent to `grep`ping for `ASCII text` from `file` output, but `find` has a built-in option!
-* **`!-executable`**: This is a bit tricky. The `!` negates the next condition. So, `! -executable` means "NOT executable." This is important because the password file should *not* be a program.
-
-Putting it all together, the command looks like this:
+Now, list its contents.
 
 ```bash
-find . -type f -size 1033c -readable ! -executable
+ls
 ```
 
-Type this into your terminal and press Enter. If you've got it right, `find` will spit out the name of the file that matches *all* these criteria!
-
-It might look something like:
-
-```
-./maybehereisyourpasswordfile
-```
-
-Or just `f77777777777777777777777` or similar. The actual name doesn't matter as long as it's the *only* one.
-
-### The Grand Reveal: `cat`ting the Perfect File
-
-Once `find` has done its detective work and presented you with the path to the perfect file, you know what to do! Use `cat` to display its contents:
+You'll see a list of ten files, all with similar names.
 
 ```bash
-cat ./maybehereisyourpasswordfile # (Use the actual filename find gave you!)
+-file00  -file02  -file04  -file06  -file08
+-file01  -file03  -file05  -file07  -file09
 ```
 
-And there it is! The password for `bandit6`. Copy that precious string!
+### Step 3: The Problem of Trial and Error
 
-### Moving Onward:
-
-Got that password? Awesome!
+You could try to `cat` each file one by one, but you'll quickly run into a problem. Most of the files contain binary data, and trying to print them to your terminal will result in a mess of garbled characters and might even cause your terminal to behave strangely.
 
 ```bash
-exit
+cat ./-file00 
+# ^<83>^C^C^@^B^@^ ... (gibberish output)
 ```
 
-Then, you know the drill – connect to the next level:
+We need a smarter approach.
+
+### Step 4: The Solution - The `file` Command
+
+The perfect tool for this job is the `file` command. It examines a file's contents and tells you what type of file it is. We can use a wildcard (`*`) to run the command on all the files in the directory at once.
 
 ```bash
-ssh bandit6@bandit.labs.overthewire.org -p 2220
+file ./*
 ```
 
-Enter your freshly found password, and just like that, you're on `bandit6`. You're mastering the art of targeted file discovery!
+This command will produce a clean, informative list.
 
----
+```bash
+-file00: data
+-file01: data
+-file02: data
+-file03: data
+-file04: data
+-file05: data
+-file06: data
+-file07: ASCII text
+-file08: data
+-file09: data
+```
 
-## Conclusion: `find` - The Power to Pinpoint
+The output clearly shows that `-file07` is "ASCII text," which is the human-readable file we're looking for\!
 
-You've successfully conquered Bandit Level 5, adding a seriously powerful tool to your Linux command-line arsenal:
+### Step 5: Retrieve the Password
 
-* The versatile and incredibly useful `find` command, allowing you to locate files based on multiple criteria (type, size, readability, executability, and much more!).
-* A deeper understanding of file properties and permissions.
+Now that we have identified the correct file, we can safely use `cat` to read its contents. Since the filename starts with a hyphen, it's best practice to use the `./` prefix.
 
-The `find` command is invaluable for system administration, scripting, and of course, wargames. Mastering it will save you countless hours of manual searching.
+```bash
+cat ./-file07
+```
 
-Next time, we'll dive into Bandit Level 6, where the challenges continue to evolve. Keep that `find` command handy!
+This will print the password for `bandit5`.
 
----
+```bash
+# yours might be different
+4oQYVPkxZOOEOO5pTW81FB8j8lxXGUQw
+```
 
-## SPOILER ALERT: Short Answer for Bandit Level 5
+## Key Concepts Learned
 
-1.  Log in as `bandit5`.
-2.  Change directory: `cd inhere`
-3.  Use the `find` command with the specified criteria:
-    ```bash
-    find . -type f -size 1033c -readable ! -executable
-    ```
-4.  `cat` the filename that `find` outputs (e.g., `cat ./the_found_filename`).
-5.  The output is the password for `bandit6`.
+1. **File Content Analysis:** We learned that you cannot rely on filenames or extensions to know what a file contains. The `file` command inspects the actual data to make a determination.
+2. **ASCII vs. Binary Data:** This level provides a practical example of the difference between human-readable text (ASCII) and machine-readable data (binary).
+3. **Shell Wildcards (`*`):** The asterisk is a powerful tool for applying a command to multiple files at once, saving significant time and effort.
 
-----
+## Conclusion
 
-**[Continue to Bandit Level 6\!](https://salehtz.ir/bandit_5_6/)**
+You've successfully sifted through a directory of miscellaneous data to find the one piece of useful information. The `file` command is an indispensable utility in cybersecurity and system administration for quickly understanding the contents of a filesystem.
+
+Save the password and get ready for Level 5\!
