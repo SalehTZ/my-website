@@ -82,7 +82,7 @@ ls
 
 You should see the `inhere` directory listed.
 
-```
+```bash
 inhere
 ```
 
@@ -114,7 +114,7 @@ ls -a
 
 The output will now show the hidden file, which normal `ls` did not.
 
-```
+```bash
 .  ..  ...Hiding-From-You
 ```
 
@@ -130,7 +130,7 @@ cat ...Hiding-From-You
 
 The command will print the password for `bandit4` to your terminal.
 
-```
+```bash
 # yours might be different
 2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 ```
