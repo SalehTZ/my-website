@@ -120,8 +120,8 @@ bandit2@bandit:~$ cat "./--spaces in this filename--"
 This command works perfectly and will display the password for `bandit3`.
 
 ```bash
-# Example Output
-CV1DtqXWVFXBCYIOVb796AbknockLkY5
+# yours might be different
+MNk8KNH3Usiio41PRUEoDFPqfxLPlSmx
 ```
 
 #### Method 2: Using the `--` Separator
