@@ -141,3 +141,5 @@ The password for `bandit9` is the text part of that line.
 Congratulations\! You've just created and executed a sophisticated data processing pipeline, a skill that is fundamental to working effectively on the command line. This pattern of `sort | uniq -c` is extremely common for analyzing log files and other text-based data.
 
 Save your password and get ready for the next challenge\!
+
+[Bandit 10](https://salehtz.ir/bandit_9_10)
