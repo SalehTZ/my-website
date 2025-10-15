@@ -1,17 +1,17 @@
 ---
-title: "Bandit Level 4: The Human-Readable Hunt (No, Not a Book Club)"
-subtitle: "Using `file` to find the needle in the binary haystack, or: when `cat` fails you."
+title: "Bandit Level 3 to 4: Uncovering Dot-Prefixed Files"
+subtitle: "The password is in a file that starts with '...'. A guide to finding hidden files in Linux with 'ls -a'."
 date: 2025-05-26T09:08:57+03:30
-lastmod: 2025-05-26T09:08:57+03:30
+lastmod: 2025-10-15T12:48:30+02:00
 draft: false
 author: "SalehTZ"
 authorLink: "#"
-description: "Bandit Level 4 challenges you to find the *only* human-readable file. Learn how to use the `file` command to identify text files versus weird binary blobs and get that elusive password!"
+description: "Follow this step-by-step guide for OverTheWire's Bandit Level 3 to 4. Learn how files starting with dots, like '...Hiding-From-You', are hidden by default and how to reveal them using the 'ls -a' command."
 license: ""
 images: []
 
-tags: ["Bandit", "OverTheWire", "Cybersecurity", "Linux", "Command Line", "File Types", "File Command", "Beginner"]
-categories: ["Cybersecurity", "CTF", "Bandit", "OverTheWire"]
+tags: ["Bandit", "OverTheWire", "Cybersecurity", "Linux", "Command Line", "CTF", "Hidden Files", "ls"]
+categories: ["Cybersecurity", "CTF"]
 
 featuredImage: ""
 featuredImagePreview: ""
@@ -35,179 +35,114 @@ code:
   maxShownLines: 50
 math:
   enable: false
-  # ...
-mapbox:
-  # ...
 share:
   enable: true
-  # ...
 comment:
   enable: true
-  # ...
 library:
   css:
-    # someCSS = "some.css"
-    # located in "assets/"
-    # Or
-    # someCSS = "https://cdn.example.com/some.css"
   js:
-    # someJS = "some.js"
-    # located in "assets/"
-    # Or
-    # someJS = "https://cdn.example.com/some.js"
 seo:
   images: []
-  # ...
 ---
 
-<!--more-->
+## Introduction
 
-## Introduction: Not All Files Are Created Equal
+After navigating tricky filenames, Bandit Level 3 to 4 introduces us to a core concept of Linux/Unix-like operating systems: hidden files. These files, often used for configuration, don't show up in normal directory listings simply because their names begin with a dot.
 
-You've navigated directories and uncovered hidden files. You're practically a digital Indiana Jones! But sometimes, even when you find the right file, it just stares back at you like a jumbled mess of symbols. Welcome to **Bandit Level 4**, where you'll learn that not every file is meant for human eyes, and how to tell the difference.
+This level will teach you how to look past the obvious and uncover the secrets hidden within a directory.
 
-The description for Bandit Level 4 is intriguing:
+## The Challenge: Level 3 Goal
 
-> *The password for the next level is stored in the only human-readable file in the **inhere** directory.*
+The official goal on the OverTheWire website states:
 
-"Only human-readable file." This implies two things: first, we're going into an `inhere` directory (again!), and second, there will be multiple files, but only one we can actually understand. This is where your new best friend, the `file` command, comes in!
+> The password for the next level is stored in a hidden file in the **inhere** directory.
 
----
+The clues are clear: we need to find a directory named `inhere` and then find a hidden file inside it. In this case, the file is named `...Hiding-From-You`.
 
-## Level 4: The Typist's Trial (and the `file` Command's Triumph)
+## Step-by-Step Walkthrough
 
-You've just logged in as `bandit4` (using the password from Level 3). As per our ritual, `ls` first:
+Let's find that hidden password.
+
+### Step 1: Log into `bandit3`
+
+Use the password you acquired from the previous level to SSH into the `bandit3` user.
+
+```bash
+ssh bandit3@bandit.labs.overthewire.org -p 2220
+````
+
+### Step 2: Find the `inhere` Directory
+
+Once logged in, list the contents of the home directory to locate the `inhere` directory.
 
 ```bash
 ls
 ```
 
-You'll see:
+You should see the `inhere` directory listed.
 
 ```
 inhere
 ```
 
-Ah, the familiar `inhere` directory. Let's `cd` into it:
+### Step 3: Change Into the Directory
+
+Now, navigate into the `inhere` directory using the `cd` (change directory) command.
 
 ```bash
 cd inhere
 ```
 
-Now that you're inside, let's `ls` again to see what treasures (or trash) await:
+### Step 4: The Mystery of the Empty Directory
+
+If you try listing the files with the standard `ls` command, it will look like the directory is empty.
 
 ```bash
 ls
 ```
 
-This time, you're greeted with a sight that might make your eyes glaze over:
+The command returns nothing. This is the core of the challenge. The file is hidden because its name starts with a `.` character.
 
-```
--file00
--file01
--file02
--file03
--file04
--file05
--file06
--file07
--file08
--file09
-```
+### Step 5: Reveal the Hidden File
 
-Ten files! And by their names, they give no clue about their content. You might be tempted to just `cat` each one, hoping for the best.
+In Linux, any file or directory that starts with a dot is considered hidden. To see these files, you must use the `-a` (all) flag with the `ls` command.
 
 ```bash
-cat -file00
+ls -a
 ```
 
-...and you might get lucky on the first try, or you might see a screen full of garbled nonsense, a "binary file" warning, or even your terminal getting weird. This is because many of these are likely *binary* files – programs, images, or other data not designed for direct human reading. Trying to `cat` a binary file is like trying to read a textbook written in alien hieroglyphs.
+The output will now show the hidden file, which normal `ls` did not.
 
-### Command 1: `file` (The Digital Forensics Expert)
+```
+.  ..  ...Hiding-From-You
+```
 
-This is where the super-handy `file` command shines. It inspects a file and tells you its *type*. It's like a digital X-ray machine for your files.
+We can see the file we're looking for: `...Hiding-From-You`. The `.` and `..` entries represent the current and parent directories, respectively.
 
-Let's try it on `-file00`:
+### Step 6: Read the Password
+
+Now that we know the filename, we can use the `cat` command to read its contents and get the password for the next level.
 
 ```bash
-file -file00
+cat ...Hiding-From-You
 ```
 
-You'll probably get something like:
+The command will print the password for `bandit4` to your terminal.
 
 ```
--file00: data
+# yours might be different
+2WmrDFRmJIq3IPxneAaMGhap0pFhF3NJ
 ```
 
-"Data" is usually a polite way of saying "not human-readable text." You'll have to repeat this for each file, or get a bit more efficient.
+## Key Concepts Learned
 
-### Becoming a `file` Master: Loop or Specificity
+1. **Hidden Files (Dotfiles):** Files and directories starting with a `.` are hidden from standard `ls` listings. This is a convention, not a security feature.
+2. **The `ls -a` Command:** The `-a` or `--all` flag for the `ls` command is essential for viewing all entries in a directory, including hidden ones.
+3. **Directory Navigation:** The `cd` command is a fundamental tool for moving through the filesystem.
 
-You could go through each file manually: `file -file00`, `file -file01`, etc. Eventually, one of them will stand out.
+## Conclusion
 
-You'll see something like:
+Congratulations\! You've successfully uncovered a hidden file and captured the password for `bandit4`. This skill is crucial, as you'll often need to inspect or modify hidden configuration files when working with Linux systems.
 
-```bash
-file -file07 # Or whatever the correct one is for your game instance
-```
-
-And the output might be:
-
-```
--file07: ASCII text
-```
-
-**"ASCII text!"** That's your golden ticket! "ASCII text" means it's a plain text file, ready for your reading pleasure.
-
-### Command 2: `cat` (The Final Reveal)
-
-Once you've identified the "ASCII text" file (let's say it's `-file07` for this example, but it could be different in your game instance), you know what to do:
-
-```bash
-cat -file07
-```
-
-And there it is! The password for `bandit5` will be displayed. Copy it carefully!
-
-### Moving Onward:
-
-Got that password? Excellent!
-
-```bash
-exit
-```
-
-Then, connect to the next level:
-
-```bash
-ssh bandit5@bandit.labs.overthewire.org -p 2220
-```
-
-Enter your new password, and you're officially on `bandit5`! You're learning some serious detective skills!
-
----
-
-## Conclusion: The `file` Command, Your New Best Friend
-
-You've successfully navigated Bandit Level 4, adding another critical tool to your command-line arsenal:
-
-* The versatile `file` command for identifying file types, separating the wheat from the binary chaff.
-* The persistence to go through multiple files (or use a clever loop, for the overachievers!).
-
-This knowledge isn't just for wargames; it's essential for understanding your Linux system and dealing with various file formats in the real world.
-
-Next time, we'll dive into Bandit Level 5, which promises more thrilling file system antics!
-
----
-
-## **SPOILER ALERT: Short Answer for Bandit Level 4**
-
-1.  Log in as `bandit4`.
-2.  Change directory: `cd inhere`
-3.  Use the `file` command on each file to find the one that is `ASCII text`. Example: `file -file00`, `file -file01`, etc.
-4.  Once found (e.g., `-file07`), use `cat` to display its content: `cat -file07`.
-5.  The output is the password for `bandit5`.
-
-----
-
-**[Continue to Bandit Level 5\!](https://salehtz.ir/bandit_4_5/)**
+Proceed to the next level with your newfound knowledge\!
