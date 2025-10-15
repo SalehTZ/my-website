@@ -1,17 +1,17 @@
 ---
-title: "Bandit Level 9: The Pattern Spotter (`grep` with a Twist)"
-subtitle: "Finding the password hiding behind the 'equals' sign: Because details matter!"
+title: "Bandit Level 8 to 9: Finding the Unique Line"
+subtitle: "Harnessing the power of 'sort', 'uniq', and 'grep' to isolate the one-of-a-kind password."
 date: 2025-05-27T09:01:30+03:30
-lastmod: 2025-05-27T09:01:30+03:30
+lastmod: 2025-10-15T13:30:55+02:00
 draft: false
 author: "SalehTZ"
 authorLink: "#"
-description: "Bandit Level 9 challenges you to find a password that's marked by a unique pattern. Learn to use `grep` with specific string matching to pinpoint exactly what you're looking for, even in a noisy file."
+description: "Solve Bandit Level 8 to 9 by creating a powerful command-line pipeline. Learn to use 'sort', 'uniq -c', and 'grep' to find the only line that appears just once in a large dataset."
 license: ""
 images: []
 
-tags: ["Bandit", "OverTheWire", "Cybersecurity", "Linux", "Command Line"]
-categories: ["Cybersecurity", "CTF", "Bandit", "OverTheWire"]
+tags: ["Bandit", "OverTheWire", "Cybersecurity", "Linux", "Command Line", "CTF", "sort", "uniq", "grep", "pipeline"]
+categories: ["Cybersecurity", "CTF"]
 
 featuredImage: ""
 featuredImagePreview: ""
@@ -35,130 +35,109 @@ code:
   maxShownLines: 50
 math:
   enable: false
-  # ...
-mapbox:
-  # ...
 share:
   enable: true
-  # ...
 comment:
   enable: true
-  # ...
 library:
   css:
-    # someCSS = "some.css"
-    # located in "assets/"
-    # Or
-    # someCSS = "https://cdn.example.com/some.css"
   js:
-    # someJS = "some.js"
-    # located in "assets/"
-    # Or
-    # someJS = "https://cdn.example.com/some.js"
 seo:
   images: []
-  # ...
 ---
 
-<!--more-->
+## Introduction
 
-*(The short answer for this challenge is available at the end of this post.)*
+In the last level, we used `grep` to find a known pattern in a file. For Bandit Level 8 to 9, the challenge is more abstract: we need to find a line that is unique within a file filled with duplicates. The password isn't next to a keyword; the password *is* the unique line itself.
 
----
+This requires us to move beyond single commands and learn how to create a **pipeline**, chaining multiple tools together to perform a complex data analysis task in a single line.
 
-## Introduction: The Password with a Flair for Drama
+## The Challenge: Level 8 Goal
 
-You've mastered finding unique lines with `sort` and `uniq`, and you're already a `grep` wizard for simple word searches. But what if the password isn't just a word, but a line marked by a very specific, almost theatrical, preamble? Welcome to **Bandit Level 9**, where the password proudly announces itself with a string of equal signs.
+The level's objective is as follows:
 
-The level description for Bandit Level 9 states:
+> The password for the next level is stored in the file **data.txt** and is the only line of text that occurs only once.
 
-> *The password for the next level is stored in the file **data.txt** in one of the few human-readable lines, preceded by several '====' characters.*
+Our task is to count the occurrences of every line and find the one with a count of 1.
 
-"Preceded by several '====' characters." This is a perfect job for `grep`, but we need to tell `grep` to look for lines that *start* with this specific pattern. It's like finding a treasure chest that always has a big "X" painted directly on its lid.
+## Step-by-Step Walkthrough
 
----
+Let's build a powerful command-line pipeline to solve this.
 
-## Level 9: `grep` - The Pattern Matcher (Anchors Away!)
+### Step 1: Log into `bandit8`
 
-You've just logged in as `bandit9` with the password from Level 8. A quick `ls` will confirm the target file:
+Use the password found with `grep` in the previous level to SSH into the `bandit8` user.
 
-{{< highlight bash >}}
-ls
-{{< /highlight >}}
+```bash
+ssh bandit8@bandit.labs.overthewire.org -p 2220
+````
 
-You'll see:
+### Step 2: Examine the File
 
-```
-data.txt
-```
+A quick `ls` shows our target, `data.txt`. Viewing the first few lines with `head data.txt` will reveal that the file contains many repeated lines of text. A manual search is out of the question.
 
-Again, if you `cat data.txt`, you'll likely be overwhelmed by a lot of seemingly random text. We need to be more precise than a simple `grep`.
+### Step 3: Building the Pipeline
 
-### `grep` with Start-of-Line Matching (`^`)
+We will solve this by chaining three commands together using the pipe (`|`) operator. The pipe sends the output of one command to be the input of the next.
 
-You already know `grep` searches for patterns. What you might not know is that `grep` understands basic regular expressions. One of the most useful regular expression characters is the **caret (`^`)**.
+#### Part 1: Sorting the Data
 
-* `^`: In `grep`, the caret means "the beginning of the line."
+The key to finding unique lines is the `uniq` command, but it has one important requirement: it can only detect duplicates that are **adjacent** to each other. Therefore, our first step must be to sort the file.
 
-So, if we want to find lines that start with "====", we combine the caret with our pattern: `^====`.
-
-The command to find our password will be:
-
-{{< highlight bash >}}
-grep '^====' data.txt
-{{< /highlight >}}
-
-Type this into your terminal and press Enter. `grep` will diligently scan `data.txt` and print out any lines that begin with four or more equal signs.
-
-The output should be a single line, something like:
-
-```
-==== [THIS IS YOUR PASSWORD] ====
+```bash
+sort data.txt
 ```
 
-The string of characters between the `====` signs is your password for `bandit10`! Copy it down carefully.
+This command reads `data.txt` and outputs a new version where all identical lines are grouped together.
 
-### Moving Onward:
+#### Part 2: Counting the Unique Lines
 
-Got that password? You're a regex master in the making!
+Now that the data is sorted, we can pipe it to `uniq`. We'll use the `-c` flag, which tells `uniq` to prefix each line with its frequency count.
 
-{{< highlight bash >}}
-exit
-{{< /highlight >}}
+```bash
+sort data.txt | uniq -c
+```
 
-And now, for the next challenge:
+The output of this command will look something like this:
 
-{{< highlight bash >}}
-ssh bandit10@bandit.labs.overthewire.org -p 2220
-{{< /highlight >}}
+```bash
+      8 EN632PlfYiZBNKiN9K9tQ11RkR2nN13J
+     10 Fv430J02120232120002131230230213
+      5 G3020213Fv430J021202321200021312
+...
+      1 UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR
+...
+```
 
-Enter your hard-won password, and you're logged into `bandit10`. You're getting dangerously good at this!
+#### Part 3: Filtering for the One
 
----
+We are almost there\! The list is now perfectly formatted for our final step. We just need to find the line that has a count of `1`. This is a job for our old friend, `grep`. We can pipe the output of our `sort | uniq` chain directly into `grep`.
 
-## Conclusion: `grep` - Your Precision Tool
+We will search for lines that start with a `1` followed by a space.
 
-You've successfully conquered Bandit Level 9, refining your `grep` skills to pinpoint specific patterns:
+```bash
+sort data.txt | uniq -c | grep " 1 "
+```
 
-* Using the `^` (caret) character to match patterns at the **beginning of a line**.
-* Applying this knowledge to extract crucial information from noisy files.
+### Step 4: Final Command and Output
 
-Understanding basic regular expressions within `grep` (and other Linux tools) is a powerful skill for anyone working with text data. It allows for highly precise and efficient searches.
+Executing the full pipeline gives us exactly what we need: the one unique line and its count.
 
----
+```bash
+      1 4CKMh1JI91bUIZZPXDqGanal4xvAg0JM
+```
 
-## SPOILER ALERT: Short Answer for Bandit Level 9
+The password for `bandit9` is the text part of that line.
 
-1.  Log in as `bandit9`.
-2.  Use `grep` to find the line starting with `====`:
-    {{< highlight bash >}}
-    grep '^====' data.txt
-    {{< /highlight >}}
-3.  The output contains the password for `bandit10`.
-4.  Copy the password.
+## Key Concepts Learned
 
----
+1. **Command-Line Pipelines (`|`):** This is the most crucial concept of this level. The pipe operator is the glue that allows you to combine simple, specialized tools (`sort`, `uniq`, `grep`) to perform complex tasks.
+2. **`sort`:** An essential utility for ordering data, often used as a preparatory step for other commands like `uniq`.
+3. **`uniq -c`:** A powerful command for counting occurrences of adjacent lines in a sorted stream of data.
+4. **Data Munging:** This entire process is a form of "data munging" or "data wrangling"—the process of cleaning, transforming, and filtering data to make it useful.
 
-Ready for what Bandit Level 10 has in store?
+## Conclusion
 
-**[Continue to Bandit Level 10!](https://salehtz.ir/bandit_9_10/)**
+Congratulations\! You've just created and executed a sophisticated data processing pipeline, a skill that is fundamental to working effectively on the command line. This pattern of `sort | uniq -c` is extremely common for analyzing log files and other text-based data.
+
+Save your password and get ready for the next challenge\!
