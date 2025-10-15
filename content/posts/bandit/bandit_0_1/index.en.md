@@ -64,7 +64,7 @@ The goal of Level 0 is deceptively simple: **just log in.** But for the uninitia
 
 Bandit uses `SSH` (Secure Shell) for connections. Think of SSH as a super-secure, encrypted tunnel that lets you control a remote computer as if you were sitting right in front of it. It's basically teleportation for your keyboard strokes.
 
-### The Magic Command:
+### The Magic Command
 
 To connect to Bandit Level 0, you'll need a terminal (or command prompt for Windows users – though a proper terminal like Git Bash or WSL is highly recommended for less pain).
 
@@ -80,7 +80,7 @@ Let's break down this mystical phrase:
 * `bandit0@bandit.labs.overthewire.org`: This is like saying "I want to log in as `bandit0` (the username) on the server located at `bandit.labs.overthewire.org`." It's their digital address.
 * `-p 2220`: "And by the way, use port `2220`." Why not the default SSH port 22, you ask? Because life isn't always simple, and this is a wargame. It's like a secret knock.
 
-### The Password Prompt:
+### The Password Prompt
 
 When you hit Enter, the server might ask you about a "host key fingerprint" (it's basically verifying that you're connecting to the right server and not some imposter). Type `yes` and hit Enter.
 
@@ -88,7 +88,7 @@ Then, you'll be prompted for a password. The password for `bandit0` is, quite fi
 
 **Pro-tip:** When you type a password into a Linux terminal, it typically *doesn't show any characters* (not even asterisks). This isn't a bug; it's a feature for security. Just type the password and press Enter. If you've entered it correctly, you'll be greeted by a glorious welcome message from OverTheWire!
 
-```
+```bash
 Welcome to the OverTheWire Bandit Wargame!
 ...
 bandit0@bandit:~$
@@ -116,7 +116,7 @@ ls
 
 And behold! You should see something like:
 
-```
+```bash
 readme
 ```
 
@@ -134,7 +134,7 @@ cat readme
 
 And there it is! A string of seemingly random characters. That, my friend, is your password for `bandit1`. Copy it carefully! It will look something like `boJ9jbbUNNfktd78OOpsqOltutMc3MY1` (though it changes periodically, so don't just copy mine!).
 
-### Moving Onward:
+### Moving Onward
 
 Once you have that glorious password, you're ready to exit this level and hop onto `bandit1`.
 
@@ -152,7 +152,7 @@ ssh bandit1@bandit.labs.overthewire.org -p 2220
 
 Enter the password you found, and *voilà!* You're logged into `bandit1`. You've officially ascended a level in the hacker game. Take a moment. Breathe it in. You just navigated a remote Linux system!
 
-## Conclusion: You're Not Just Playing, You're Learning!
+## Conclusion: You're Not Just Playing, You're Learning
 
 Congratulations, fledgling terminal warrior! You've successfully navigated the daunting landscape of SSH and tackled your first two Bandit levels. You've learned:
 
