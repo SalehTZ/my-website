@@ -101,7 +101,7 @@ strings data.txt
 
 This will produce a lot of output, but it's all readable text\! The password is in this list somewhere. Manually scrolling through it is possible, but not efficient.
 
-```
+```bash
 /lib64/ld-linux-x86-64.so.2
 libc.so.6
 __libc_start_main
