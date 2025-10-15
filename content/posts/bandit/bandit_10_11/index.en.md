@@ -121,7 +121,7 @@ cat data.txt | base64 -d
 
 This is a common pattern when you're working with streams of data rather than just files.
 
------
+--
 
 ## Key Concepts Learned
 
