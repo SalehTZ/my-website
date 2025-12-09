@@ -15,15 +15,56 @@ body.fa {
     text-align: start;
 }
 
-$custom-light-purple : #8B5DFF;
-
+// Ocean/Sunset Theme - Dark Mode Headings
 [theme=dark] h1 {
-    color: $custom-light-purple;
+    color: #8ecae6;  // Sky blue - most prominent
+    font-weight: 600;
 }
 
-[theme=dark] h2,
+[theme=dark] h2 {
+    color: #8ecae6;  // Sky blue - consistent with h1
+    font-weight: 600;
+}
+
 [theme=dark] h3 {
-    color: rgba($custom-light-purple, 0.75);
+    color: #8ecae6;  // Sky blue - consistent hierarchy
+    font-weight: 600;
+}
+
+[theme=dark] h4,
+[theme=dark] h5,
+[theme=dark] h6 {
+    color: #8ecae6;  // Sky blue for smaller headings
+    font-weight: 500;
+}
+
+// Light Mode Headings
+[theme=light] h1 {
+    color: #023047;  // Deep navy - professional
+    font-weight: 600;
+}
+
+[theme=light] h2 {
+    color: #219ebc;  // Ocean blue - vibrant
+    font-weight: 600;
+}
+
+[theme=light] h3 {
+    color: #fb8500;  // Orange - pop of color
+    font-weight: 600;
+}
+
+[theme=light] h4,
+[theme=light] h5,
+[theme=light] h6 {
+    color: #023047;  // Deep navy for consistency
+    font-weight: 500;
+}
+
+// Subtitle styling for dark mode
+[theme=dark] .single .single-subtitle {
+    color: #5a8a9f;  // Darker, muted blue-gray for subtitles
+    opacity: 0.85;
 }
 
 .bookmark-card {

@@ -1,5 +1,5 @@
 // ==============================
-// Override Variables - Custom Vibrant Dark Theme (Monokai/Gemini Inspired)
+// Override Variables - Custom Ocean/Sunset Theme
 // ==============================
 
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Inconsolata:wght@200..900&display=swap');
@@ -12,41 +12,44 @@ $global-font-size: 17px;
 $global-font-weight: 400;
 $global-line-height: 1.7rem;
 
-// --- Custom Vibrant Dark Palette (for general blog theme) ---
-$custom-dark-bg: #1E1E1E;
-$custom-light-bg: #F8F8F8;
-$custom-dark-accent-bg: #2C2C2C; // Slightly lighter dark for headers/non-code blocks
-$custom-light-accent-bg: #EDEDED; // Slightly darker light for headers/non-code blocks
+// --- Custom Ocean/Sunset Theme Palette ---
+// DARK MODE: Ocean & Sunset Colors
+$dark-sky-blue: #8ecae6;      // Sky Blue (light, calm)
+$dark-ocean-blue: #219ebc;    // Ocean Blue (medium, vibrant)
+$dark-deep-navy: #023047;     // Deep Navy (dark, professional)
+$dark-amber: #ffb703;          // Amber (warm accent)
+$dark-orange: #fb8500;         // Orange (vibrant accent)
 
-$custom-primary-text-dark: #E0E0E0; // Main body text for dark mode (highly readable)
-$custom-primary-text-light: #333333; // Main body text for light mode
-$custom-secondary-text-dark: #7B7B7B; // Muted grey for comments/secondary info on dark
-$custom-secondary-text-light: #8A8A8A; // Muted grey for comments/secondary info on light
+// LIGHT MODE: Warm Earth Tones
+$light-orange: #fb8500;        // Vibrant Orange
+$light-sage: #e9edc9;          // Sage Green
+$light-cream: #fefae0;         // Cream
+$light-tan: #faedcd;           // Tan
+$light-brown: #d4a373;         // Brown
 
-$custom-accent-pink: #FF5577; // Vibrant Pink/Magenta
-$custom-accent-orange: #FFB86C; // Bright Orange (for general theme)
-$custom-accent-green: #50FA7B; // Electric Green (for general theme)
-$custom-accent-blue: #8BE9FD; // Light Cyan/Blue (for general theme)
-$custom-accent-purple: #BD93F9; // Bright Purple (for general theme)
-$custom-accent-yellow: #F1FA8C; // Vibrant Yellow (for general theme)
-$custom-light-green: #b8bb26; // Very prominent, Cyan
+// Derived colors for better UX
+$custom-dark-bg: $dark-deep-navy;              // #023047
+$custom-light-bg: $light-cream;                // #fefae0
+$custom-dark-accent-bg: lighten($dark-deep-navy, 5%);  // Slightly lighter navy
+$custom-light-accent-bg: $light-tan;           // #faedcd
 
-// --- End Custom Vibrant Dark Palette ---
+$custom-primary-text-dark: $dark-sky-blue;     // #8ecae6 - Highly readable on navy
+$custom-primary-text-light: darken($light-brown, 20%); // Dark brown for readability
+$custom-secondary-text-dark: darken($dark-sky-blue, 20%); // Muted sky blue
+$custom-secondary-text-light: $light-brown;    // #d4a373
 
+$custom-accent-pink: $dark-amber;              // Using amber as primary accent
+$custom-accent-orange: $dark-orange;           // #fb8500
+$custom-accent-green: $dark-ocean-blue;        // #219ebc as "green" alternative
+$custom-accent-blue: $dark-sky-blue;           // #8ecae6
+$custom-accent-purple: $dark-ocean-blue;       // Reusing ocean blue
+$custom-accent-yellow: $dark-amber;            // #ffb703
+$custom-light-green: $dark-ocean-blue;         // #219ebc
 
-// --- Dracula Code Palette (for code section only) ---
-$dracula-background: #282A36;
-$dracula-foreground: #F8F8F2;
-$dracula-selection: #44475A;
-$dracula-comment: #6272A4;
-$dracula-cyan: #8BE9FD;
-$dracula-green: #50FA7B;
-$dracula-orange: #FFB86C;
-$dracula-pink: #FF79C6;
-$dracula-purple: #BD93F9;
-$dracula-red: #FF5555;
-$dracula-yellow: #F1FA8C;
-// --- End Dracula Code Palette ---
+// Light mode specific accents
+$light-accent-primary: $light-orange;          // #fb8500
+$light-accent-secondary: $light-brown;         // #d4a373
+// --- End Custom Ocean/Sunset Theme Palette ---
 
 // ========== Global ========== //
 // Color of the background
@@ -61,13 +64,13 @@ $global-font-color-dark: $custom-primary-text-dark;
 $global-font-secondary-color: $custom-secondary-text-light;
 $global-font-secondary-color-dark: $custom-secondary-text-dark;
 
-// Color of the link - IMPROVED VISIBILITY FOR LIGHT MODE
-$global-link-color: $custom-light-green; // A strong, clear blue for light mode links
-$global-link-color-dark: $custom-light-green;
+// Color of the link
+$global-link-color: $light-accent-primary;        // Orange #fb8500 for light mode
+$global-link-color-dark: $dark-ocean-blue;        // Ocean blue #219ebc for dark mode
 
-// Color of the hover link - IMPROVED VISIBILITY FOR LIGHT MODE
-$global-link-hover-color: darken($custom-accent-pink, 15%); // Darken the blue for hover
-$global-link-hover-color-dark: $custom-accent-pink;
+// Color of the hover link
+$global-link-hover-color: $light-brown;           // Brown #d4a373 for light mode
+$global-link-hover-color-dark: $dark-amber;       // Amber #ffb703 for dark mode
 
 // Color of the border
 $global-border-color: darken($custom-light-bg, 5%);
@@ -99,12 +102,12 @@ $header-title-font-family: $global-font-family;
 $header-title-font-size: 1.5rem;
 
 // Color of the header background
-$header-background-color: $custom-light-accent-bg;
-$header-background-color-dark: $custom-dark-accent-bg;
+$header-background-color: $light-tan;                    // Tan #faedcd for light mode
+$header-background-color-dark: darken($dark-deep-navy, 3%); // Darker navy for dark mode
 
 // Color of the hover header item (e.g., navigation links in the top header)
-$header-hover-color: $custom-accent-pink;
-$header-hover-color-dark: $custom-accent-pink;
+$header-hover-color: $light-orange;                // Orange #fb8500 for light mode
+$header-hover-color-dark: $dark-amber;             // Amber #ffb703 for dark mode
 
 // Color of the search background
 $search-background-color: darken($custom-light-accent-bg, 3%);
@@ -117,13 +120,13 @@ $search-background-color-dark: lighten($custom-dark-accent-bg, 5%);
 $toc-title-font-size: 1.2rem;
 $toc-content-font-size: 0.875rem;
 
-// Color of the single link (links within the main content area) - IMPROVED VISIBILITY FOR LIGHT MODE
-$single-link-color: $custom-light-green; // A strong, clear blue for light mode links
-$single-link-color-dark: $custom-light-green;
+// Color of the single link (links within the main content area)
+$single-link-color: $light-accent-primary;          // Orange #fb8500 for light mode
+$single-link-color-dark: $dark-sky-blue;            // Sky blue #8ecae6 for dark mode
 
-// Color of the hover single link - IMPROVED VISIBILITY FOR LIGHT MODE
-$single-link-hover-color: darken($custom-accent-pink, 15%); // Darken the blue for hover
-$single-link-hover-color-dark: $custom-accent-pink;
+// Color of the hover single link
+$single-link-hover-color: $light-brown;             // Brown #d4a373 for light mode
+$single-link-hover-color-dark: $dark-amber;         // Amber #ffb703 for dark mode
 
 // Color of the table background
 $table-background-color: $custom-light-accent-bg;
@@ -134,36 +137,36 @@ $table-thead-color: darken($custom-light-accent-bg, 5%);
 $table-thead-color-dark: lighten($custom-dark-accent-bg, 5%);
 
 // Color of the blockquote
-$blockquote-color: $custom-light-green;
-$blockquote-color-dark: $custom-light-green;
+$blockquote-color: $light-accent-secondary;        // Brown #d4a373 for light mode
+$blockquote-color-dark: $dark-sky-blue;            // Sky blue #8ecae6 for dark mode
 // ========== Single Content ========== //
 
 
 // ========== Pagination ========== //
-// Color of the link in pagination - IMPROVED VISIBILITY FOR LIGHT MODE
-$pagination-link-color: $custom-accent-blue; // A strong, clear blue for light mode links
-$pagination-link-color-dark: $custom-accent-blue;
+// Color of the link in pagination
+$pagination-link-color: $light-orange;               // Orange #fb8500 for light mode
+$pagination-link-color-dark: $dark-ocean-blue;       // Ocean blue #219ebc for dark mode
 
-// Color of the hover link in pagination - IMPROVED VISIBILITY FOR LIGHT MODE
-$pagination-link-hover-color: darken($custom-accent-pink, 15%); // Darken the blue for hover
-$pagination-link-hover-color-dark: $custom-accent-pink;
+// Color of the hover link in pagination
+$pagination-link-hover-color: $light-brown;          // Brown #d4a373 for light mode
+$pagination-link-hover-color-dark: $dark-amber;      // Amber #ffb703 for dark mode
 // ========== Pagination ========== //
 
 
-// ========== Code (Dracula Palette applied here - unchanged from last step) ========== //
+// ========== Code (Updated for Ocean/Sunset Theme) ========== //
 // Font family and size of the code
 $code-font-size: .875rem;
 
-// Color of the code (general inline code or default code text)
-$code-color: $dracula-foreground; // Dracula foreground
-$code-color-dark: $dracula-foreground; // Dracula foreground
+// Color of the code (inline code)
+$code-color: $light-orange;                      // Orange #fb8500 for light mode
+$code-color-dark: $dark-amber;                   // Amber #ffb703 for dark mode
 
 // Color of the code background
-$code-background-color: $dracula-background; // Dracula background
-$code-background-color-dark: $dracula-background; // Dracula background
+$code-background-color: $light-sage;             // Sage green #e9edc9 for light mode
+$code-background-color-dark: lighten($dark-deep-navy, 8%); // Lighter navy for dark mode
 
-$code-info-color: $dracula-comment; // Dracula comment for code info
-$code-info-color-dark: $dracula-comment; // Dracula comment for code info
+$code-info-color: $light-brown;                  // Brown for light mode info
+$code-info-color-dark: darken($dark-sky-blue, 15%); // Muted sky blue for dark mode
 
 // Code type list (no change needed here as it defines types, not colors)
 $code-type-list: "language-bash" "Bash",
@@ -220,173 +223,173 @@ $code-type-list: "language-bash" "Bash",
     "language-yaml" "YAML",
 ;
 
-// Color map of the code highlight (Dracula Palette applied here)
-$code-highlight-dracula-map: (
+// Color map of the code highlight (Ocean/Sunset Theme)
+$code-highlight-ocean-map: (
     /* Parentheses */
-    "p": $dracula-foreground,
+    "p": $dark-sky-blue,
     /* Keyword */
-    "k": $dracula-pink,
+    "k": $dark-amber,
     /* KeywordConstant */
-    "kc": $dracula-pink,
+    "kc": $dark-amber,
     /* KeywordDeclaration */
-    "kd": $dracula-pink,
+    "kd": $dark-amber,
     /* KeywordNamespace */
-    "kn": $dracula-pink,
+    "kn": $dark-amber,
     /* KeywordPseudo */
-    "kp": $dracula-pink,
+    "kp": $dark-orange,
     /* KeywordReserved */
-    "kr": $dracula-pink,
+    "kr": $dark-amber,
     /* KeywordType */
-    "kt": $dracula-cyan,
+    "kt": $dark-ocean-blue,
     /* Name */
-    "n": $dracula-green,
+    "n": $dark-sky-blue,
     /* NameAttribute */
-    "na": $dracula-green,
+    "na": $dark-ocean-blue,
     /* NameBuiltin */
-    "nb": $dracula-cyan,
+    "nb": $dark-ocean-blue,
     /* NameBuiltinPseudo */
-    "bp": $dracula-orange,
+    "bp": $dark-orange,
     /* NameClass */
-    "nc": $dracula-green,
+    "nc": $dark-sky-blue,
     /* NameConstant */
-    "no": $dracula-purple,
+    "no": $dark-amber,
     /* NameDecorator */
-    "nd": $dracula-purple,
+    "nd": $dark-orange,
     /* NameEntity */
-    "ni": $dracula-green,
+    "ni": $dark-sky-blue,
     /* NameException */
-    "ne": $dracula-red,
+    "ne": $dark-orange,
     /* NameFunction */
-    "nf": $dracula-green,
+    "nf": $dark-ocean-blue,
     /* NameFunctionMagic */
-    "fm": $dracula-cyan,
+    "fm": $dark-ocean-blue,
     /* NameLabel */
-    "nl": $dracula-pink,
+    "nl": $dark-amber,
     /* NameNamespace */
-    "nn": $dracula-green,
+    "nn": $dark-sky-blue,
     /* NameOther */
-    "nx": $dracula-foreground,
+    "nx": $dark-sky-blue,
     /* NameProperty */
-    "py": $dracula-foreground,
+    "py": $dark-sky-blue,
     /* NameTag */
-    "nt": $dracula-pink,
+    "nt": $dark-amber,
     /* NameVariable */
-    "nv": $dracula-foreground,
+    "nv": $dark-sky-blue,
     /* NameVariableClass */
-    "vc": $dracula-foreground,
+    "vc": $dark-sky-blue,
     /* NameVariableGlobal */
-    "vg": $dracula-foreground,
+    "vg": $dark-sky-blue,
     /* NameVariableInstance */
-    "vi": $dracula-foreground,
+    "vi": $dark-sky-blue,
     /* NameVariableMagic */
-    "vm": $dracula-foreground,
+    "vm": $dark-sky-blue,
     /* Literal */
-    "l": $dracula-purple,
+    "l": $dark-amber,
     /* LiteralDate */
-    "ld": $dracula-purple,
+    "ld": $dark-amber,
     /* LiteralString */
-    "s": $dracula-yellow,
+    "s": $dark-orange,
     /* LiteralStringAffix */
-    "sa": $dracula-yellow,
+    "sa": $dark-orange,
     /* LiteralStringBacktick */
-    "sb": $dracula-yellow,
+    "sb": $dark-orange,
     /* LiteralStringChar */
-    "sc": $dracula-yellow,
+    "sc": $dark-orange,
     /* LiteralStringDelimiter */
-    "dl": $dracula-yellow,
+    "dl": $dark-orange,
     /* LiteralStringDoc */
-    "sd": $dracula-yellow,
+    "sd": $dark-orange,
     /* LiteralStringDouble */
-    "s2": $dracula-yellow,
+    "s2": $dark-orange,
     /* LiteralStringEscape */
-    "se": $dracula-yellow,
+    "se": $dark-amber,
     /* LiteralStringHeredoc */
-    "sh": $dracula-yellow,
+    "sh": $dark-orange,
     /* LiteralStringInterpol */
-    "si": $dracula-yellow,
+    "si": $dark-orange,
     /* LiteralStringOther */
-    "sx": $dracula-yellow,
+    "sx": $dark-orange,
     /* LiteralStringRegex */
-    "sr": $dracula-yellow,
+    "sr": $dark-orange,
     /* LiteralStringSingle */
-    "s1": $dracula-yellow,
+    "s1": $dark-orange,
     /* LiteralStringSymbol */
-    "ss": $dracula-yellow,
+    "ss": $dark-orange,
     /* LiteralNumber */
-    "m": $dracula-purple,
+    "m": $dark-amber,
     /* LiteralNumberBin */
-    "mb": $dracula-purple,
+    "mb": $dark-amber,
     /* LiteralNumberFloat */
-    "mf": $dracula-purple,
+    "mf": $dark-amber,
     /* LiteralNumberHex */
-    "mh": $dracula-purple,
+    "mh": $dark-amber,
     /* LiteralNumberInteger */
-    "mi": $dracula-purple,
+    "mi": $dark-amber,
     /* LiteralNumberIntegerLong */
-    "il": $dracula-purple,
+    "il": $dark-amber,
     /* LiteralNumberOct */
-    "mo": $dracula-purple,
+    "mo": $dark-amber,
     /* Operator */
-    "o": $dracula-pink,
+    "o": $dark-amber,
     /* OperatorWord */
-    "ow": $dracula-pink,
+    "ow": $dark-amber,
     /* Comment */
-    "c": $dracula-comment,
+    "c": darken($dark-sky-blue, 25%),
     /* CommentHashbang */
-    "ch": $dracula-comment,
+    "ch": darken($dark-sky-blue, 25%),
     /* CommentMultiline */
-    "cm": $dracula-comment,
+    "cm": darken($dark-sky-blue, 25%),
     /* CommentSingle */
-    "c1": $dracula-comment,
+    "c1": darken($dark-sky-blue, 25%),
     /* CommentSpecial */
-    "cs": $dracula-comment,
+    "cs": darken($dark-sky-blue, 25%),
     /* CommentPreproc */
-    "cp": $dracula-pink,
+    "cp": $dark-amber,
     /* CommentPreprocFile */
-    "cpf": $dracula-pink,
+    "cpf": $dark-amber,
     /* Generic */
-    "g": $dracula-foreground,
+    "g": $dark-sky-blue,
     /* GenericDeleted */
-    "gd": $dracula-red,
+    "gd": $dark-orange,
     /* GenericEmph */
-    "ge": $dracula-foreground,
+    "ge": $dark-sky-blue,
     /* GenericError */
-    "gr": $dracula-red,
+    "gr": $dark-orange,
     /* GenericHeading */
-    "gh": $dracula-orange,
+    "gh": $dark-amber,
     /* GenericInserted */
-    "gi": $dracula-green,
+    "gi": $dark-ocean-blue,
     /* GenericOutput */
-    "go": $dracula-comment,
+    "go": darken($dark-sky-blue, 20%),
     /* GenericPrompt */
-    "gp": $dracula-comment,
+    "gp": darken($dark-sky-blue, 20%),
     /* GenericStrong */
-    "gs": $dracula-foreground,
+    "gs": $dark-sky-blue,
     /* GenericSubheading */
-    "gu": $dracula-orange,
+    "gu": $dark-amber,
     /* GenericTraceback */
-    "gt": $dracula-red,
+    "gt": $dark-orange,
     /* TextWhitespace */
-    "w": $dracula-foreground,
+    "w": $dark-sky-blue,
 );
 
-$code-highlight-color-map-dark: $code-highlight-dracula-map;
-$code-highlight-color-map: $code-highlight-dracula-map; // Using the same map for light mode too, as Dracula is a dark theme.
+$code-highlight-color-map-dark: $code-highlight-ocean-map;
+$code-highlight-color-map: $code-highlight-ocean-map;
 // ========== Code ========== //
 
-// ========== Admonition (unchanged) ========== //
+// ========== Admonition (Ocean/Sunset Theme) ========== //
 // Color list of admonition [$type $color $background-color, ... ]
-$admonition-color-list: "note"$custom-accent-blue rgba($custom-accent-blue, 0.1),
-    "abstract"$custom-accent-purple rgba($custom-accent-purple, 0.1),
-    "info"$custom-accent-blue rgba($custom-accent-blue, 0.1),
-    "tip"$custom-accent-green rgba($custom-accent-green, 0.1),
-    "success"$custom-accent-green rgba($custom-accent-green, 0.1),
-    "question"$custom-accent-orange rgba($custom-accent-orange, 0.1),
-    "warning"$custom-accent-orange rgba($custom-accent-orange, 0.1),
-    "failure"$custom-accent-pink rgba($custom-accent-pink, 0.1),
-    "danger"$custom-accent-pink rgba($custom-accent-pink, 0.1),
-    "bug"$custom-accent-pink rgba($custom-accent-pink, 0.1),
-    "example"$custom-accent-purple rgba($custom-accent-purple, 0.1),
-    "quote"$custom-secondary-text-dark rgba($custom-secondary-text-dark, 0.1),
+$admonition-color-list: "note"$dark-ocean-blue rgba($dark-ocean-blue, 0.1),
+    "abstract"$dark-sky-blue rgba($dark-sky-blue, 0.1),
+    "info"$dark-ocean-blue rgba($dark-ocean-blue, 0.1),
+    "tip"$dark-ocean-blue rgba($dark-ocean-blue, 0.1),
+    "success"$dark-ocean-blue rgba($dark-ocean-blue, 0.1),
+    "question"$dark-amber rgba($dark-amber, 0.1),
+    "warning"$dark-orange rgba($dark-orange, 0.1),
+    "failure"$dark-orange rgba($dark-orange, 0.1),
+    "danger"$dark-orange rgba($dark-orange, 0.1),
+    "bug"$dark-orange rgba($dark-orange, 0.1),
+    "example"$dark-sky-blue rgba($dark-sky-blue, 0.1),
+    "quote"$dark-amber rgba($dark-amber, 0.1),
 ;
 // ========== Admonition ========== //
