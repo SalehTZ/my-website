@@ -8,6 +8,8 @@
     ],
     "cSpell.words": [
         "Appwrite",
+        "waydroid",
         "yourdomain"
-    ]
+    ],
+    "editor.formatOnSave": false
 }
