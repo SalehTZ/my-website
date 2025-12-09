@@ -1,0 +1,13 @@
+<a href="{{ .Get "url" }}" target="_blank" class="bookmark-card">
+    <div class="bookmark-content">
+        <div class="bookmark-title">{{ .Get "title" }}</div>
+        <div class="bookmark-desc">{{ .Get "desc" }}</div>
+        <div class="bookmark-site">
+            <img src="https://www.google.com/s2/favicons?domain={{ .Get "url" }}&sz=32" alt="icon" />
+            {{ .Get "url" | replaceRE "^https?://([^/]+).*" "$1" }}
+        </div>
+    </div>
+    {{ with .Get "image" }}
+    <div class="bookmark-image" style="background-image: url('{{ . }}');"></div>
+    {{ end }}
+</a>
