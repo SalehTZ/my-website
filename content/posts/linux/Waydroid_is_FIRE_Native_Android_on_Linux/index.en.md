@@ -3,7 +3,7 @@ title: "Waydroid is FIRE: Native Android on Linux (X11 & Wayland Guide)"
 subtitle: "How to run Android apps natively on Linux using Waydroid. Includes a guide for both X11 (using Weston) and Wayland users, plus Flutter development setup."
 date: 2025-12-08T14:30:44+03:30
 lastmod: 2025-12-08T14:30:44+03:30
-draft: true
+draft: false
 author: ""
 authorLink: ""
 description: ""
