@@ -5,7 +5,7 @@ date: 2025-12-08T14:30:44+03:30
 lastmod: 2025-12-08T14:30:44+03:30
 draft: false
 author: ""
-authorLink: ""
+authorLink: "#"
 description: ""
 license: ""
 images: []
